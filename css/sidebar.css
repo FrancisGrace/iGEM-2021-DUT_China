@@ -1,0 +1,74 @@
+/*
+ *sidebar.css--Styles used on sidebar
+ */
+
+#sidebar {
+    position: fixed;
+    left: 30px;
+    top: 150px;
+    max-width: 15%;
+    visibility: hidden;
+    opacity: 0;
+    -o-transition: 800ms ease;
+    -moz-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+    transition: 800ms ease;
+}
+
+#sidebar.sidebar-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#sidebar table {
+    border: none;
+    background: transparent;
+}
+
+#sidebar tr {
+    height: 48px;
+}
+
+#sidebar tr:first-child {
+    width: 40px;
+}
+
+#sidebar td {
+    padding: 0;
+    margin: 0;
+    border: none;
+    vertical-align: middle;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+#sidebar .side-item a {
+    display: block;
+    color: black;
+    font-family: "Raleway", "Segoe UI", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    -o-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -webkit-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+
+/*.side-item-active, .side-item:hover {*/
+/*    background-color: #63a2c2;*/
+/*}*/
+
+#sidebar .side-item-active a, #sidebar .side-item:hover a {
+    color: #63a2c2;
+}
+
+/*Responsive*/
+
+@media only screen and (max-width: 992px) {
+    #sidebar {
+        display: none;
+    }
+}

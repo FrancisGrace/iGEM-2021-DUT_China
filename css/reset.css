@@ -1,0 +1,38 @@
+/*
+ *reset.css--Styles used to reset the default styles
+ */
+
+#globalWrapper {
+    padding: 0 !important;
+}
+
+#content {
+    margin-top: -17px;
+    line-height: normal;
+}
+
+.top_bar, .extra_space {
+    display: none !important;
+}
+
+.igem_column_wrapper {
+    margin: 0 !important;
+    width: unset !important;
+    max-width: unset !important;
+}
+
+.igem_content_wrapper .igem_column_wrapper a {
+    font-weight: normal;
+    text-decoration: unset;
+}
+
+.igem_content_wrapper .igem_column_wrapper p {
+    color: black;
+    padding: 0;
+}
+
+.igem_content_wrapper .igem_column_wrapper ul, .igem_content_wrapper .igem_column_wrapper ol {
+    font-family: inherit;
+    font-size: inherit;
+    padding: unset;
+}

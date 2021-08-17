@@ -1,0 +1,111 @@
+/*
+ *team.css--Styles used on team page
+ */
+
+/*Titles*/
+
+#main-container > h1 {
+    font-family: "Noto Sans", "Segoe UI", Arial, sans-serif;;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*A whole card*/
+
+#main-container .flip-card {
+    margin: 20px;
+    -moz-perspective: 1000px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+#main-container .flip-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-transition: transform 0.8s;
+    -moz-transition: transform 0.8s;
+    -webkit-transition: transform 0.8s;
+    transition: transform 0.8s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#main-container .flip-card:hover .flip-card-inner {
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+#main-container .flip-card, #main-container .flip-card-front img {
+    width: 320px;
+    height: 400px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+#main-container .flip-card-front, #main-container .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+/*Text on the back sides*/
+
+#main-container .flip-card-back {
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-family: "Noto Sans", "Segoe UI", Arial, sans-serif;;
+    background: #0073bb;
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+#main-container .flip-card-back h1, #main-container .flip-card-back h4, #main-container .flip-card-back h6 {
+    padding: 0;
+    margin-bottom: 0.5rem;
+    color: inherit;
+    font-family: inherit;
+}
+
+#main-container .flip-card-back h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#main-container .flip-card-back h4:nth-child(2) {
+    font-style: italic;
+}
+
+#main-container .flip-card-back h6 {
+    font-weight: bold;
+}
+
+#main-container .flip-card-inner p, #main-container .flip-card-inner li {
+    font-family: inherit;
+    font-size: 1rem;
+    text-align: left;
+}
+
+#main-container .flip-card-inner ul {
+    padding-left: 0.5em;
+    margin: 0;
+    list-style-type: disc;
+}
+
+#main-container .flip-card-back .teacher-info ul li {
+    font-size: 12px;
+}

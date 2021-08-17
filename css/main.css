@@ -1,0 +1,15 @@
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+.MathJax nobr > span.math > span {
+    border-left-width: 0 !important
+}
+
+
+.sth-useful {
+    background: tan;
+    border-radius: .8em;
+    padding: 1em;
+    box-shadow: 0 0 0 .6em #655;
+    outline: .6em solid #655;
+}
