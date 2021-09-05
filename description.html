@@ -3,112 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Description</title>
+    <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
     <link rel="stylesheet" href="css/general.css">
     <script src="js/general.js"></script>
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/article.css">
-    <script src="js/sidebar.js"></script>
+    <script src="js/sidebar.js" defer></script>
 </head>
 <body>
-<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top">
-    <a class="navbar-brand" href="https://2021.igem.org/Team:DUT_China">
-        <img src="https://2021.igem.org/wiki/images/d/d4/T--DUT_China--team_logo.svg" alt="DUT_China">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav1">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="nav1">
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="https://2021.igem.org/Team:DUT_China">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                    <span>Project</span>
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Description">Description</a>
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Engineering">Engineering
-                        Success</a>
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Protocols">Protocols</a>
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Contribution">Contribution</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                    <span>Model</span>
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Model">Electroporation</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                    <span>Human Practices</span>
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Human_Practices">Integrated
-                        Human Practices</a>
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Education">Education</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                    <span>Implementation</span>
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Implementation">Business
-                        Proposals</a>
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Legislative">Legislative
-                        Proposals</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                    <span>Team</span>
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Team">Members</a>
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Attributions">Attributions</a>
-                    <a class="dropdown-item"
-                       href="https://2021.igem.org/Team:DUT_China/Collaborations">Collaborations</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://2021.igem.org/Team:DUT_China/Safety">
-                    <span>Safety</span>
-                </a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                    <span>Awards</span>
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Human_Practices">Integrated
-                        Human Practices</a>
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Model">Model</a>
-                    <a class="dropdown-item" href="https://2021.igem.org/Team:DUT_China/Education">Education</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav>
-<div id="top-scroll">
-    <svg class="icon" style="width: 40px;height: 40px;vertical-align: middle;fill: #397689;overflow: hidden;"
-         viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1985">
-        <path d="M76.8 480l422.4-422.4c6.4-6.4 19.2-6.4 25.6 0l422.4 422.4c6.4 6.4 12.8 6.4 19.2 6.4 6.4 0 12.8 0 19.2-6.4 12.8-12.8 12.8-25.6 0-38.4L556.8 19.2c-25.6-25.6-76.8-25.6-102.4 0L32 441.6C25.6 448 25.6 467.2 32 480S64 492.8 76.8 480zM32 672 140.8 672 140.8 1017.6 192 1017.6 192 672 300.8 672 300.8 633.6 32 633.6ZM499.2 627.2c-57.6 0-102.4 19.2-134.4 57.6-32 38.4-51.2 89.6-51.2 147.2 0 57.6 19.2 102.4 51.2 140.8C396.8 1004.8 441.6 1024 492.8 1024c57.6 0 102.4-19.2 134.4-57.6s51.2-89.6 51.2-147.2c0-57.6-19.2-102.4-51.2-140.8C601.6 640 556.8 627.2 499.2 627.2zM595.2 940.8c-25.6 25.6-57.6 38.4-96 38.4-38.4 0-70.4-12.8-96-44.8-25.6-25.6-38.4-64-38.4-115.2 0-44.8 12.8-83.2 38.4-115.2 25.6-25.6 57.6-44.8 96-44.8 38.4 0 70.4 12.8 96 38.4 25.6 25.6 32 64 32 115.2C627.2 876.8 614.4 908.8 595.2 940.8zM960 659.2c-25.6-19.2-57.6-32-96-32l-108.8 0 0 384 51.2 0 0-147.2 51.2 0c38.4 0 76.8-12.8 102.4-32 25.6-25.6 38.4-51.2 38.4-89.6C998.4 710.4 985.6 678.4 960 659.2zM921.6 806.4c-12.8 12.8-38.4 19.2-70.4 19.2l-44.8 0 0-153.6 51.2 0c57.6 0 89.6 25.6 89.6 76.8C947.2 774.4 934.4 793.6 921.6 806.4z"
-              p-id="1986"></path>
-    </svg>
-</div>
+
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
 <div id="title" class="col-12" style='-o-background-image: url("https://img1.baidu.com/it/u=1600852025,3161565393&fm=26&fmt=auto&gp=0.jpg");
     -moz-background-image: url("https://img1.baidu.com/it/u=1600852025,3161565393&fm=26&fmt=auto&gp=0.jpg");
     -webkit-background-image: url("https://img1.baidu.com/it/u=1600852025,3161565393&fm=26&fmt=auto&gp=0.jpg");
     background-image: url("https://img1.baidu.com/it/u=1600852025,3161565393&fm=26&fmt=auto&gp=0.jpg");'>
     <div>Description</div>
+</div>
+<div id="sidebar">
+    <table>
+        <tr v-for="(value,key,index) in articles">
+            <td>
+                <canvas width="40" height="40" class="canvas"></canvas>
+            </td>
+            <td class="side-item">
+                <a v-bind:href="'#article'+(index+1)">
+                    {{value.innerHTML}}
+                </a>
+            </td>
+        </tr>
+    </table>
 </div>
 <section id="main-text">
     <article class="article">
@@ -205,103 +131,19 @@
         </p>
     </article>
 </section>
-<footer id="footer">
-    <img class="flower flower1" src="https://2020.igem.org/wiki/images/0/05/T--DUT_China--flower1.png" alt="">
-    <img class="flower flower2" src="https://2020.igem.org/wiki/images/0/0b/T--DUT_China--flower2.png" alt="">
-    <p class="copyright">© 2021 Dalian University of Technology iGEM Team</p>
-    <div class="row">
-        <div class="col-lg-8 footer-left">
-            <h3>Contact Us</h3>
-            <div class="d-lg-flex align-content-center">
-                <img src="https://2021.igem.org/wiki/images/c/cb/T--DUT_China--logo.svg" alt="School Logo">
-                <p class="plain-text text-start my-auto">
-                    <svg class="icon"
-                         viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1374">
-                        <path d="M512 12c-199.11 0-361.11 162-361.11 361.11 0 191.45 325.36 610.46 339.22 628.2a27.76 27.76 0 0 0 43.78 0c13.86-17.74 339.22-436.75 339.22-628.2C873.11 174 711.11 12 512 12z m0 926.54C409.87 803.08 206.44 505.87 206.44 373.11c0-168.48 137.08-305.55 305.56-305.55s305.56 137.07 305.56 305.55c0 132.76-203.43 429.97-305.56 565.43z"
-                              p-id="1375"></path>
-                        <path d="M512 178.67c-107.2 0-194.44 87.23-194.44 194.44S404.8 567.56 512 567.56s194.44-87.23 194.44-194.44S619.2 178.67 512 178.67zM512 512c-76.58 0-138.89-62.31-138.89-138.89S435.42 234.22 512 234.22s138.89 62.31 138.89 138.89S588.58 512 512 512z"
-                              p-id="1376"></path>
-                    </svg>
-                    No.2 Linggong Road, Ganjingzi District, Dalian City, Liaoning Province, P.R.C.,
-                    116024<br>
-                    <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                         p-id="1551">
-                        <path d="M290.0992 409.6H155.136a371.4048 371.4048 0 0 0-14.2848 102.4c0 35.5328 4.9664 69.888 14.336 102.4h134.9632c-5.632-32.768-8.4992-66.9184-8.4992-102.4 0-35.4816 2.8672-69.632 8.4992-102.4z m52.0704 0a542.1056 542.1056 0 0 0-9.3696 102.4c0 35.7376 3.072 69.888 9.3696 102.4H486.4V409.6H342.1696z m75.008 461.3632A491.8784 491.8784 0 0 1 301.568 665.6H173.9776a372.0704 372.0704 0 0 0 243.2 205.3632z m69.2224-3.584V665.6H354.9696c24.064 77.1072 67.84 144.2304 131.4304 201.8304zM417.1776 153.088A372.0704 372.0704 0 0 0 173.9776 358.4H301.568a491.8784 491.8784 0 0 1 115.5584-205.3632z m69.2224 3.584C422.8096 214.1184 379.0848 281.2416 354.9696 358.4H486.4V156.5696zM733.9008 409.6c5.632 32.768 8.4992 66.9184 8.4992 102.4 0 35.4816-2.8672 69.632-8.4992 102.4h135.0144c9.3184-32.512 14.2848-66.8672 14.2848-102.4s-4.9664-69.888-14.336-102.4h-134.9632z m-52.0704 0H537.6v204.8h144.2304c6.2464-32.512 9.3696-66.6624 9.3696-102.4s-3.072-69.888-9.3696-102.4z m-75.008 461.3632A372.0704 372.0704 0 0 0 850.0224 665.6H722.432a491.8784 491.8784 0 0 1-115.5584 205.3632z m-69.2224-3.584c63.5904-57.5488 107.3152-124.672 131.4304-201.7792H537.6v201.8304zM606.8224 153.088A491.8784 491.8784 0 0 1 722.432 358.4h127.6416a372.0704 372.0704 0 0 0-243.2-205.3632z m-69.2224 3.584V358.4h131.4304c-24.064-77.1072-67.84-144.2304-131.4304-201.8304zM512 947.2a435.2 435.2 0 1 1 0-870.4 435.2 435.2 0 0 1 0 870.4z"
-                              p-id="1552"></path>
-                    </svg>
-                    <a href="http://en.dlut.edu.cn/" target="_blank">http://en.dlut.edu.cn/</a><br>
-                    <svg class="icon"
-                         viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2399">
-                        <path d="M873.8 225.2 150.1 225.2c-28.8 0-52.2 23.4-52.2 52.2l0 469.1c0 28.8 23.4 52.2 52.2 52.2l723.7 0c28.8 0 52.3-23.4 52.3-52.2L926.1 277.5C926.1 248.7 902.6 225.2 873.8 225.2zM885.2 266.1l0 491.8L138.8 757.9 138.8 266.1 885.2 266.1zM168.9 327.3 168.9 327.3l314.4 278.2c7.9 6.8 18 10.6 28.7 10.6 10.6 0 20.8-3.8 28.7-10.6L855 327.2c8.9-7.8 9.8-21.4 2-30.2-7.8-8.9-21.4-9.8-30.3-2L512.6 573.2c-0.2 0.1-0.8 0.1-1 0L197.2 295.1c-8.9-7.8-22.4-6.9-30.2 2-3.8 4.3-5.7 9.8-5.3 15.5C162 318.3 164.6 323.6 168.9 327.3z"
-                              p-id="2400"></path>
-                    </svg>
-                    <a href="mailto:igem_dlut@163.com"
-                       title="Click to contact us">igem_dlut@163.com</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-lg-4 footer-right">
-            <div>
-                <h3>Follow Us</h3>
-                <div class="d-flex justify-content-center">
-                    <a target="_blank" href="https://mp.weixin.qq.com/s/aAJiu5asozErsNIPAFV9LQ">
-                        <div class="contact">
-                            <svg class="icon"
-                                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3894">
-                                <path d="M1024 659.2c0-147.2-147.2-262.4-307.2-262.4-172.8 0-307.2 115.2-307.2 262.4 0 147.2 134.4 262.4 307.2 262.4 38.4 0 70.4-6.4 108.8-19.2l102.4 51.2L896 870.4C972.8 812.8 1024 742.4 1024 659.2zM614.4 614.4c-19.2 0-38.4-19.2-38.4-38.4 0-19.2 19.2-38.4 38.4-38.4 25.6 0 44.8 19.2 44.8 38.4C659.2 595.2 646.4 614.4 614.4 614.4zM812.8 614.4c-19.2 0-38.4-19.2-38.4-38.4 0-19.2 19.2-38.4 38.4-38.4 25.6 0 44.8 19.2 44.8 38.4C864 595.2 844.8 614.4 812.8 614.4zM364.8 128C166.4 128 0 262.4 0 435.2c0 102.4 51.2 179.2 147.2 243.2l-38.4 108.8 128-64c44.8 6.4 83.2 19.2 128 19.2 12.8 0 25.6 0 32 0C390.4 716.8 384 691.2 384 665.6c0-160 134.4-288 307.2-288 12.8 0 25.6 0 32 0C697.6 236.8 537.6 128 364.8 128zM243.2 371.2C217.6 371.2 192 352 192 326.4c0-25.6 25.6-44.8 57.6-44.8s44.8 19.2 44.8 44.8C288 352 268.8 371.2 243.2 371.2zM499.2 371.2c-25.6 0-57.6-19.2-57.6-44.8 0-25.6 25.6-44.8 57.6-44.8 25.6 0 44.8 19.2 44.8 44.8C544 352 524.8 371.2 499.2 371.2z"
-                                      p-id="3895"></path>
-                            </svg>
-                        </div>
-                    </a>
-                    <a target="_blank" href="https://space.bilibili.com/494554805/">
-                        <div class="contact">
-                            <svg class="icon"
-                                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5026">
-                                <path d="M306.005333 117.632L444.330667 256h135.296l138.368-138.325333a42.666667 42.666667 0 0 1 60.373333 60.373333L700.330667 256H789.333333A149.333333 149.333333 0 0 1 938.666667 405.333333v341.333334a149.333333 149.333333 0 0 1-149.333334 149.333333h-554.666666A149.333333 149.333333 0 0 1 85.333333 746.666667v-341.333334A149.333333 149.333333 0 0 1 234.666667 256h88.96L245.632 177.962667a42.666667 42.666667 0 0 1 60.373333-60.373334zM789.333333 341.333333h-554.666666a64 64 0 0 0-63.701334 57.856L170.666667 405.333333v341.333334a64 64 0 0 0 57.856 63.701333L234.666667 810.666667h554.666666a64 64 0 0 0 63.701334-57.856L853.333333 746.666667v-341.333334A64 64 0 0 0 789.333333 341.333333zM341.333333 469.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v85.333333a42.666667 42.666667 0 0 1-85.333333 0v-85.333333a42.666667 42.666667 0 0 1 42.666666-42.666667z m341.333334 0a42.666667 42.666667 0 0 1 42.666666 42.666667v85.333333a42.666667 42.666667 0 0 1-85.333333 0v-85.333333a42.666667 42.666667 0 0 1 42.666667-42.666667z"
-                                      p-id="5027"></path>
-                            </svg>
-                        </div>
-                    </a>
-                    <a target="_blank" href="https://github.com/FrancisGrace/iGEM-2021-DUT_China">
-                        <div class="contact">
-                            <svg class="icon"
-                                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5400">
-                                <path d="M958.815566 364.415116c0-63.830795-21.276932-119.150818-59.575408-170.215454 12.766159-55.320023 8.510773-114.895431-12.766159-165.960067-4.255386-12.766159-12.766159-21.276932-25.532319-25.532318-17.021545-4.255386-72.341568-12.766159-187.236999 59.575409-93.6185-21.276932-191.492386-21.276932-280.855499 0C277.953751-10.058882 222.633728-1.54811 205.612183 2.707277c-12.766159 4.255386-21.276932 12.766159-25.532318 25.532318-25.532318 55.320023-29.787704 110.640045-12.766159 165.960067-38.298477 51.064636-59.575409 110.640045-59.575409 170.215454 0 229.790863 127.66159 302.132431 246.812408 327.664749-8.510773 29.787704-12.766159 55.320023-12.766159 80.852341v4.255386c-89.363113 17.021545-119.150818-17.021545-153.193908-63.830795-21.276932-29.787704-46.80925-63.830795-93.6185-72.341568-21.276932-4.255386-46.80925 8.510773-51.064636 29.787704-4.255386 21.276932 8.510773 46.80925 29.787704 51.064636 12.766159 4.255386 29.787704 21.276932 46.80925 42.553864 38.298477 51.064636 93.6185 119.150818 221.28009 102.129272V938.892273c0 25.532318 17.021545 42.553863 42.553864 42.553864s42.553863-17.021545 42.553863-42.553864v-123.406204-42.553863c0-29.787704 8.510773-55.320023 29.787704-76.596955 12.766159-12.766159 17.021545-29.787704 8.510773-42.553863-4.255386-17.021545-17.021545-25.532318-34.043091-29.787705-123.406204-17.021545-238.301635-55.320023-238.301635-255.32318 0-51.064636 17.021545-93.6185 51.064636-131.916977 12.766159-12.766159 12.766159-29.787704 8.510773-42.553864-12.766159-38.298477-12.766159-72.341568-4.255386-106.384658 21.276932 4.255386 59.575409 17.021545 110.640045 55.320022 12.766159 8.510773 25.532318 8.510773 38.298477 4.255387 89.363113-25.532318 187.236999-25.532318 276.600112 0 12.766159 4.255386 25.532318 0 34.043091-4.255387 55.320023-38.298477 93.6185-51.064636 110.640045-55.320022 8.510773 34.043091 8.510773 68.086182-4.255386 102.129272-4.255386 17.021545-4.255386 34.043091 8.510772 42.553864 34.043091 34.043091 51.064636 80.852341 51.064636 131.916976 0 200.003158-114.895431 242.557022-238.301635 255.323181-17.021545 0-29.787704 12.766159-34.043091 29.787704-4.255386 17.021545 0 34.043091 8.510773 42.553864 21.276932 21.276932 29.787704 51.064636 29.787704 80.852341V938.892273c0 25.532318 17.021545 42.553863 42.553864 42.553864s42.553863-17.021545 42.553863-42.553864v-161.704681c4.255386-29.787704 0-55.320023-12.766159-80.852341 102.129272-21.276932 246.812408-89.363113 246.812408-331.920135z"
-                                      p-id="5401"></path>
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 sponsors">
-        <h3>Sponsors</h3>
-        <div class="d-flex flex-wrap justify-content-around align-content-center align-items-center">
-            <img src="https://2021.igem.org/wiki/images/a/a3/T--DUT_China--biology.svg" alt="School of Bioengineering">
-            <img src="https://2021.igem.org/wiki/images/c/ce/T--DUT_China--spon_snapgene.svg" alt="SnapGene">
-            <img src="https://2021.igem.org/wiki/images/1/1f/T--DUT_China--spon_yinfo.png" alt="Yinfo Technology">
-            <img src="https://2021.igem.org/wiki/images/d/d0/T--DUT_China--spon_tuohe.png" alt="Tuohe">
-            <img src="https://2021.igem.org/wiki/images/9/9d/T--DUT_China--spon_gensci.png" alt="GenSci">
-            <img src="https://2021.igem.org/wiki/images/7/7d/T--DUT_China--spon_genscript.png" alt="GenScript">
-            <img src="https://2021.igem.org/wiki/images/9/9c/T--DUT_China--spon_twist.png" alt="Twist Bioscience" style="height: 150px;">
-        </div>
-    </div>
-</footer>
+<div id="footer-point"></div>
 <script>
-    //About the sidebar & top-scroll--linked to sidebar.js & general.js
+    //About the top-scroll--linked to general.js
     window.onload = function () {
         checkBrowser();
-        initArticles();
-        generateSidebar();
         setTopScroll();
     };
-
-    //About the sidebar
-    window.onresize = window.onscroll = function () {
-        respondChange();
-    };
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
 </script>
 </body>
 </html>
