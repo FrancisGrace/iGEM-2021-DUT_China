@@ -10,7 +10,7 @@ function checkBrowser() {
     if (navigator.userAgent.indexOf('Trident') !== -1) {
         let mainText = document.getElementById('main-text');
         let hint = document.createElement('div');
-        hint.setAttribute('class','alert alert-warning');
+        hint.setAttribute('class', 'alert alert-warning');
         hint.innerHTML = 'For your better experience, please use Chrome or Firefox browser.';
         document.body.insertBefore(hint, mainText);
     }
@@ -20,7 +20,21 @@ function checkBrowser() {
  * Implement the function of top-scroll button
  */
 function setTopScroll() {
-    var ts = document.getElementById('top-scroll').childNodes[1];
+    let f = function () {
+        let textT = document.getElementById("main-text").offsetTop;
+        let footerT = document.getElementById("footer").offsetTop;
+        let sidebarH = document.getElementById("sidebar").clientHeight;
+        let currentH = document.documentElement.scrollTop || document.body.scrollTop;
+        let topScroll = document.getElementById("top-scroll");
+        if (currentH > textT - 130 && currentH + sidebarH < footerT - 130) {
+            topScroll.setAttribute("class", "top-scroll-active");
+        } else {
+            topScroll.setAttribute("class", "");
+        }
+    }
+    window.addEventListener('resize', f);
+    window.addEventListener('scroll', f);
+    let ts = document.getElementById('top-scroll').childNodes[1];
     ts.addEventListener('click', function () {
         scroll({
             top: 0,

@@ -6,6 +6,7 @@
 new Vue({
     el: '#sidebar',
     data: {
+        isActive: false,
         articles: document.querySelectorAll('article>h1'),
         articleArray: document.getElementsByClassName('article'),
         canvasArray: document.getElementsByClassName('canvas'),
@@ -80,8 +81,7 @@ new Vue({
             }
         })
 
-
-        window.onresize = window.onscroll = function () {
+        let f = function () {
             //Respond changes when user scrolls or resizes
             for (let i = 0; i < canvasArray.length; i++) {
                 that.$options.methods.pageView(canvasArray[i], itemArray[i], articleArray[i]);//Update
@@ -91,14 +91,13 @@ new Vue({
             let sidebarH = document.getElementById("sidebar").clientHeight;
             let currentH = document.documentElement.scrollTop || document.body.scrollTop;
             let sidebar = document.getElementById("sidebar");
-            let topScroll = document.getElementById("top-scroll");
-            if (currentH > textT - 130 && currentH + sidebarH < footerT - 130) {
-                sidebar.setAttribute("class", "sidebar-active");
-                topScroll.setAttribute("class", "top-scroll-active");
-            } else {
-                sidebar.setAttribute("class", "");
-                topScroll.setAttribute("class", "");
-            }
+            if (currentH > textT - 130 && currentH + sidebarH < footerT - 130)
+                that.isActive = true;
+            else
+                that.isActive = false;
         };
+
+        window.addEventListener('resize', f);
+        window.addEventListener('scroll', f);
     }
 })
