@@ -22,7 +22,7 @@
     background-image: url("https://img1.baidu.com/it/u=1600852025,3161565393&fm=26&fmt=auto&gp=0.jpg");'>
     <div>Description</div>
 </div>
-<div id="sidebar">
+<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
     <table>
         <tr v-for="(value,key,index) in articles">
             <td>
