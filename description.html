@@ -28,8 +28,8 @@
             <td>
                 <canvas width="40" height="40" class="canvas"></canvas>
             </td>
-            <td class="side-item">
-                <a v-bind:href="'#article'+(index+1)">
+            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
+                <a v-bind:href="'#article'+(key+1)">
                     {{value.innerHTML}}
                 </a>
             </td>
