@@ -44,27 +44,24 @@
     src: url("https://2021.igem.org/wiki/images/3/36/T--DUT_China--Raleway-BoldItalic.ttf");
 }
 
+* {
+    font-variant-numeric: lining-nums;
+    -webkit-font-feature-settings: "lnum";
+    -moz-font-feature-settings: "lnum";
+    font-feature-settings: "lnum";
+}
+
 /*Title*/
 
 #title {
     padding: 150px 0;
     padding: 15vw 0;
-    /*background-color: white;*/
-    /*-o-background-image: -o-linear-gradient(left, rgba(154, 176, 210, .5) 50%, transparent 50%), -o-linear-gradient(rgba(154, 176, 210, .5) 50%, transparent 50%);*/
-    /*-moz-background-image: -moz-linear-gradient(left, rgba(154, 176, 210, .5) 50%, transparent 50%), -moz-linear-gradient(rgba(154, 176, 210, .5) 50%, transparent 50%);*/
-    /*-webkit-background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(154, 176, 210, .5)), color-stop(50%, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(154, 176, 210, .5)), color-stop(50%, transparent));*/
-    /*-webkit-background-image: -webkit-linear-gradient(left, rgba(154, 176, 210, .5) 50%, transparent 50%), -webkit-linear-gradient(rgba(154, 176, 210, .5) 50%, transparent 50%);*/
-    /*background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(154, 176, 210, .5)), color-stop(50%, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(154, 176, 210, .5)), color-stop(50%, transparent));*/
-    /*background-image: linear-gradient(90deg, rgba(154, 176, 210, .5) 50%, transparent 50%), linear-gradient(rgba(154, 176, 210, .5) 50%, transparent 50%);*/
     -o-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -webkit-background-size: 100% auto;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    /*-o-background-size: 80px 80px;*/
-    /*-moz-background-size: 80px 80px;*/
-    /*-webkit-background-size: 80px 80px;*/
-    /*background-size: 80px 80px;*/
+    background-position: center;
 }
 
 #title div {
@@ -158,18 +155,9 @@
         text-align: center;
     }
 
-    #nav-bar .nav-item * {
-        /*display: block;*/
-        /*margin: 0 auto;*/
-    }
-
     #nav-bar .nav-link {
         padding: 0 !important;
         margin: 0 0.5rem;
-    }
-
-    #nav-bar .nav-link:hover {
-        /*background-color: #63a2c2;*/
     }
 
     #nav-bar .dropdown-menu {

@@ -55,99 +55,24 @@
     font-variant-ligatures: none;
 }
 
-#main-text p.no-indent {
-    text-indent: 0;
-}
-
-#main-text p.caption {
-    margin: 5px 0;
-    font-size: 15px;
-    text-indent: 0;
-}
-
-#main-text a {
-    color: #397689;
-}
-
-#main-text a:hover {
-    text-decoration: underline;
-}
-
 #main-text img {
-    display: block;
+    max-width: 100%;
     height: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
-#main-text div.too-long {
+#main-text .figures {
     width: 100%;
-    height: auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
 }
 
-#main-text div.too-long img {
-    height: 100%;
+#main-text .figures * {
+    text-align: center;
+
 }
 
-.MathJax nobr > span.math > span {
-    border-left-width: 0 !important
-}
-
-#main-text .formula {
-    display: -o-flex;
-    display: -ms-flex;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 10px auto;
-}
-
-#main-text .formula img.double{
-    height: 50px;
-    margin: 0 auto;
-}
-
-#main-text .formula img.single{
-    height: 25px;
-    margin: 0 auto;
-}
-
-#main-text .formula p {
-    margin-bottom: 0;
+#main-text .caption, #main-text .figures p {
     text-indent: 0;
-}
-
-#main-text .formula-new {
-    display: -o-flex;
-    display: -ms-flex;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    /*margin: 10px auto;*/
-}
-
-#main-text .formula-new .equation{
-    margin: 0 auto;
-}
-
-#main-text .formula-new .equation img{
-    margin:0;
-}
-
-#main-text .text-right a {
-    font-size: 25px;
+    font-weight: bold;
 }
 
 /*Responsive*/
@@ -156,11 +81,5 @@
     #main-text {
         width: 90%;
         margin: 0 auto;
-    }
-
-    #main-text .formula img {
-        width: auto;
-        height: auto;
-        max-width: 100%;
     }
 }
