@@ -17,7 +17,7 @@ new Vue({
         //Update the sidebar
         pageView: function (canvas, index, article) {
             let navH = document.getElementById('nav-bar').offsetHeight;
-            console.log(this.itemActive);
+            // console.log(this.itemActive);
             //Something about an article
             let elementH = article.clientHeight;
             let currentH = document.documentElement.scrollTop || document.body.scrollTop;
