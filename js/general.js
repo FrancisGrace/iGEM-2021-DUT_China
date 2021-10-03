@@ -4,6 +4,15 @@
  */
 
 /**
+ * Initialise
+ */
+function init() {
+    checkBrowser();
+    setTopScroll();
+    setNav();
+}
+
+/**
  * Give a hint to user who uses IE
  */
 function checkBrowser() {
@@ -42,4 +51,15 @@ function setTopScroll() {
             behavior: 'smooth'
         });
     });
+}
+
+/**
+ * Set the top of the navigation bar
+ */
+function setNav() {
+    let igemNav = document.getElementById('top_menu_14');
+    let h = '0';
+    if (igemNav)
+        h = igemNav.offsetHeight + 'px';
+    document.getElementById('nav-bar').style.top = h;
 }
