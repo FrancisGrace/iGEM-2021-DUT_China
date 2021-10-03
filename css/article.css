@@ -27,9 +27,9 @@
 }
 
 #main-text {
-    /*width: 60%;*/
     padding: 10px;
     margin: 0 10% 0 20%;
+    font-family: "Raleway", "Segoe UI", Arial, sans-serif;
     background-color: white;
 }
 
@@ -39,16 +39,17 @@
 
 #main-text h1, #main-text h2, #main-text h3, #main-text h4 {
     color: #397689;
-    font-family: "Raleway", "Segoe UI", Arial, sans-serif;
+    font-family: inherit;
     font-weight: bold;
 }
 
 #main-text h1 {
     border-bottom: 2px solid;
+    text-transform: uppercase;
 }
 
 #main-text p {
-    font-family: "Raleway", "Segoe UI", Arial, sans-serif;
+    font-family: inherit;
     font-size: 20px;
     text-indent: 2em;
     text-align: justify;
@@ -67,10 +68,14 @@
 
 #main-text .figures * {
     text-align: center;
-
+    text-indent: 0;
 }
 
-#main-text .caption, #main-text .figures p {
+#main-text .figures p {
+    margin: auto 0 0 0;
+}
+
+#main-text .caption {
     text-indent: 0;
     font-weight: bold;
 }
