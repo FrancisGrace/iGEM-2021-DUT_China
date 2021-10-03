@@ -7,7 +7,7 @@ new Vue({
     el: '#sidebar',
     data: {
         isActive: false,
-        articles: document.querySelectorAll('article>h1'),
+        articles: document.querySelectorAll('article>h1,article>h2.marked'),
         articleArray: document.getElementsByClassName('article'),
         canvasArray: document.getElementsByClassName('canvas'),
         itemArray: document.getElementsByClassName('side-item'),
