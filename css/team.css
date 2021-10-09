@@ -1,0 +1,76 @@
+/*
+ *team.css--Styles used on team page
+ */
+
+/*Titles*/
+
+#main-container > h1 {
+    font-family: "Raleway", "Segoe UI", Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrapper {
+    height: auto;
+    width: 500px;
+    margin: 20px;
+    background-color: #e5f0bc;
+    border-radius: 7px;
+    -webkit-box-shadow: 0 14px 32px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 14px 32px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 14px 32px 0 rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+    height: auto;
+    width: 50%;
+    float: left;
+}
+
+.product-img img {
+    height: auto;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.product-info {
+    padding: 40px 0 0 38px;
+    height: 100%;
+    width: 50%;
+    font-family: "Raleway", "Segoe UI", Arial, sans-serif;
+    float: left;
+}
+
+.product-text h1 {
+    color: #474747;
+    font-size: 34px;
+}
+
+.product-text h2 {
+    color: #aaa;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.product-text p, .product-text ul {
+    color: #8d8d8d;
+    font-size: 15px;
+    /*line-height: 1.7em;*/
+    overflow: hidden;
+}
+
+/*Responsive*/
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 85%;
+    }
+
+    .product-img, .product-info {
+        height: auto;
+        width: 100%;
+        float: none;
+    }
+}
