@@ -56,6 +56,11 @@
     font-variant-ligatures: none;
 }
 
+#main-text a {
+    color: #63a2c2;
+    text-decoration: underline;
+}
+
 #main-text img {
     max-width: 100%;
     height: auto;
