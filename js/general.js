@@ -32,7 +32,7 @@ function setTopScroll() {
     let f = function () {
         let textT = document.getElementById("main-text").offsetTop;
         let footerT = document.getElementById("footer").offsetTop;
-        let sidebarH = document.getElementById("sidebar").clientHeight;
+        let sidebarH = document.getElementById("sidebar") ? document.getElementById("sidebar").clientHeight : 0;
         let currentH = document.documentElement.scrollTop || document.body.scrollTop;
         let topScroll = document.getElementById("top-scroll");
         if (currentH > textT - 130 && currentH + sidebarH < footerT - 130) {
