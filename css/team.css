@@ -21,6 +21,8 @@
     width: 500px;
     margin: 20px;
     background-color: #e5f0bc;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
     border-radius: 7px;
     -webkit-box-shadow: 0 14px 32px 0 rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0 14px 32px 0 rgba(0, 0, 0, 0.15);
@@ -36,6 +38,8 @@
 #main-text .product-img img {
     height: auto;
     width: 100%;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
     border-radius: 7px;
 }
 
