@@ -44,7 +44,7 @@
 }
 
 #main-text .product-info {
-    padding: 40px 30px 0 30px;
+    padding: 25px 30px 0 30px;
     height: 100%;
     width: 50%;
     font-family: "Raleway", "Segoe UI", Arial, sans-serif;
@@ -66,11 +66,12 @@
 
 #main-text .product-text .badge {
     font-size: 12px;
+    margin-bottom: 0.5rem;
 }
 
 #main-text .product-text p, #main-text .product-text ul {
     color: #8d8d8d;
-    font-size: 15px;
+    font-size: 18px;
     overflow: hidden;
 }
 
@@ -78,6 +79,10 @@
     padding: 0;
     margin: 0;
     list-style: disc inside none;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 }
 
 /*Responsive*/
@@ -91,5 +96,12 @@
         height: auto;
         width: 100%;
         float: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #main-text .product-text ul.smaller {
+        font-size: 12px;
+        line-height: 1.25;
     }
 }
