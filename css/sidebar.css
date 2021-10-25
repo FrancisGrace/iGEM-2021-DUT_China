@@ -38,10 +38,6 @@
     margin: 0;
     border: none;
     vertical-align: middle;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow-wrap: break-word;
 }
 
 #sidebar .side-item a {
@@ -51,15 +47,15 @@
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
     -o-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
     -webkit-transition: all 200ms ease-out;
     transition: all 200ms ease-out;
 }
-
-/*.side-item-active, .side-item:hover {*/
-/*    background-color: #63a2c2;*/
-/*}*/
 
 #sidebar .side-item-active a, #sidebar .side-item:hover a {
     color: #63a2c2;

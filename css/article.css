@@ -4,26 +4,26 @@
 
 @font-face {
     font-family: "Raleway";
-    src:url("https://2021.igem.org/wiki/images/5/54/T--DUT_China--Raleway-Regular.ttf");
+    src: url("https://2021.igem.org/wiki/images/5/54/T--DUT_China--Raleway-Regular.ttf");
 }
 
 @font-face {
     font-family: "Raleway";
     font-weight: bold;
-    src:url("https://2021.igem.org/wiki/images/3/35/T--DUT_China--Raleway-Bold.ttf");
+    src: url("https://2021.igem.org/wiki/images/3/35/T--DUT_China--Raleway-Bold.ttf");
 }
 
 @font-face {
     font-family: "Raleway";
     font-style: italic;
-    src:url("https://2021.igem.org/wiki/images/b/be/T--DUT_China--Raleway-Italic.ttf");
+    src: url("https://2021.igem.org/wiki/images/b/be/T--DUT_China--Raleway-Italic.ttf");
 }
 
 @font-face {
     font-family: "Raleway";
     font-weight: bold;
     font-style: italic;
-    src:url("https://2021.igem.org/wiki/images/3/36/T--DUT_China--Raleway-BoldItalic.ttf");
+    src: url("https://2021.igem.org/wiki/images/3/36/T--DUT_China--Raleway-BoldItalic.ttf");
 }
 
 #main-text {
@@ -33,7 +33,7 @@
     background-color: white;
 }
 
-#main-text .article {
+#main-text > .article {
     padding: 10px 0;
 }
 
@@ -48,12 +48,58 @@
     text-transform: uppercase;
 }
 
-#main-text p {
+#main-text h1 i {
+    text-transform: initial;
+}
+
+#main-text h1 a, #main-text h2 a, #main-text h3 a, #main-text h4 a {
+    text-decoration: none;
+}
+
+#main-text p, #main-text table {
     font-family: inherit;
     font-size: 20px;
+    font-variant-ligatures: none;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+#main-text p {
     text-indent: 2em;
     text-align: justify;
-    font-variant-ligatures: none;
+}
+
+#main-text > .ref > p {
+    text-indent: 0;
+}
+
+/*Thesis-style Tables*/
+
+#main-text table {
+    width: auto;
+    margin: 1rem auto;
+    border-width: 2px 0;
+    border-style: solid;
+    border-color: black;
+}
+
+#main-text table th, #main-text table td {
+    padding: 5px;
+    font-size: inherit;
+    text-align: center;
+    vertical-align: middle;
+    background-color: unset;
+}
+
+#main-text table th {
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+#main-text table td {
+    border: none;
 }
 
 #main-text a {
@@ -64,8 +110,9 @@
 #main-text img {
     max-width: 100%;
     height: auto;
-    margin: 10px 0;
 }
+
+/*Thesis-style figures*/
 
 #main-text .figures {
     width: 100%;
@@ -76,13 +123,33 @@
     text-indent: 0;
 }
 
-#main-text .figures p {
-    margin: auto 0 0 0;
+#main-text .figures .row > * {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-text .figures .row > * > img {
+    margin: auto 0;
 }
 
 #main-text .caption {
     text-indent: 0;
     font-weight: bold;
+}
+
+#main-text .formula {
+    text-align: center;
+}
+
+#main-text .formula img {
+    max-width: 100%;
+    margin: 1rem auto;
+}
+
+#main-text code, #main-text .mono {
+    color: rgb(214, 51, 132);
+    font-family: Consolas, monospace;
+    font-size: 20px;
 }
 
 /*Responsive*/
@@ -91,5 +158,11 @@
     #main-text {
         width: 90%;
         margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #main-text h1, #main-text h2, #main-text h3, #main-text h4 {
+        font-size: 24px;
     }
 }

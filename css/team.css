@@ -44,7 +44,7 @@
 }
 
 #main-text .product-info {
-    padding: 25px 30px 0 30px;
+    padding: 35px 30px 0 30px;
     height: 100%;
     width: 50%;
     font-family: "Raleway", "Segoe UI", Arial, sans-serif;
@@ -53,12 +53,13 @@
 
 #main-text .product-text h1 {
     color: #474747;
-    font-size: 34px;
+    font-size: 24px;
+    font-weight: bolder;
 }
 
 #main-text .product-text h2 {
     color: #aaa;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.2em;
