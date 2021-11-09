@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Engineering Success</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script src="js/sidebar.js" defer></script>
+</head>
+<body>
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/c/c7/T--DUT_China--engineering.png");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/c/c7/T--DUT_China--engineering.png");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/c/c7/T--DUT_China--engineering.png");
+    background-image: url("https://2021.igem.org/wiki/images/c/c7/T--DUT_China--engineering.png");'>
+    <div>Engineering Success</div>
+</div>
+<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
+    <table>
+        <tr v-for="(value,key,index) in articles">
+            <td>
+                <canvas width="40" height="40" class="canvas"></canvas>
+            </td>
+            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
+                <a v-bind:href="'#article'+(key+1)">
+                    {{value.innerHTML}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<section id="main-text">
+    <article class="article">
+        <h1>1st ITERATION</h1>
+        <h2>1st ITERATION – design:</h2>
+        <p>In our 1st iteration design, RIAD or RIDD was fused to the N termini of hydrophobin 4 and PETase was linked
+            by a flexible linker (GGGGS)<sub>3</sub>, respectively. Moreover, RIDD was fused to the C termini of MHETase
+            by a
+            flexible linker (GGGGS)<sub>3</sub>. MHETase and PETase were linked (as shown in structure calculations) via
+            RIDD
+            peptides to accelerate MHET removement and reduce competitive inhibition to PETase. Meanwhile, short
+            peptides RIDD fused to enzymes can effectively avoid disturbances to enzymes active sites. As for prudential
+            and rational design, the multicomplex enzyme system we designed were evaluated via Molecular Dynamic
+            simulations (MD) to ensure the structure designing feasibilities. The binding stability of the components
+            was measured and the whole system was revealed to maintain its components binding stably while enzymes were
+            fixed in relative near positions to each other in liquid environment. Furthermore, analysis of the key
+            residues in enzymatic active sites and residues distances to Ca<sup>2+</sup> ion in Ca<sup>2+</sup> binding
+            site showed
+            maintenance of structure stability (more details in <a href="https://2021.igem.org/Team:DUT_China/Model">Model</a>)
+            . In order to purify the target protein by
+            affinity chromatography, we add a His-tag to the C-terminus of each protein.</p>
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/e/e2/T--DUT_China--es11.png" alt=""
+                     class="col-12 col-md-8 mx-auto">
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 1: Gene routes in 1st iteration</p>
+        <p>In the first iteration, we plan to independently verify that each target gene (part) is useful, which means
+            they were properly expressed and secreted into the culture medium . Therefore, we plan to construct three
+            plasmids with targeted gene and introduce them into three <i>E. coli</i> chassis cells, and analyze the
+            expressibility, secretability, and activity of three separate proteins in the three different engineered
+            bacteria.</p>
+        <h2>1st ITERATION – build:</h2>
+        <p>The three target genes were synthesized (GenScript). To obtain three different expression vectors, the
+            synthesized target genes were then cloned into three pET28a vectors, which were introduced into
+            <i>E.coli</i> BL21
+            by heat shock, respectively. After screening, we successfully obtained three engineered bacteria that can
+            recombinantly express the target protein. So we named these three kinds of engineering bacteria <i>
+                BL21/pET28a-PD, <i>E.coli</i> BL21/pET28a-MD, <i>E.coli</i> BL21/pET28a-hA (E.coli BL21/pET28a-PD</i>
+            means bacteria
+            containing <i>pET28a-PETase-RIDD</i>, <i>E.coli BL21/pET28a-MD </i>means bacteria containing
+            pET28a-MHETase-RIDD,
+            while
+            <i>E.coli BL21/pET28a-hA</i> means bacteria containing pET28a-hydrophobin4-RIAD) .</p>
+        <h2>1st ITERATION – test:</h2>
+        <p>We obtained three engineered bacteria that can secrete RIDD-PETase, RIDD-MHETase, and RIAD-hydrophobin4
+            through the previous design and build process respectively. SDS-PAGE was shown as following. (taking
+            RIDD-PETase as an example)</p>
+
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/9/9b/T--DUT_China--es12.png" alt=""
+                     class="col-12 col-md-8 mx-auto">
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 2: SDS-PAGE result</p>
+
+        <p>Channel 1: <i>E.coli BL21/pET28a-PD’s </i>cell pellet ( suspended in 10 mM Tris-HCl, pH = 8.0);</p>
+        <p>Channel 3: <i>E.coli BL21/pET28a-PD’s </i>medium; Channel 5 and 7: <i>E.coli</i> BL21/pET28a-PD’s LB culture
+            medium.</p>
+
+        <h2>1st ITERATION – learn:</h2>
+        <p>The results showed that the target protein was not detected in the the culture medium, while there are many
+            target proteins in the bacterial fragmentation, which indicates that our recombinant protein is not properly
+            secreted. However, our results contradicted with the previous report that PETase can be secreted through the
+            pelB signal peptide[1].</p>
+        <p>To find the reasons of this difference, we consulted with Dr. Feng Yanbin, an associate professor in DUT. He
+            is one of the specialists studying <i>E. coli</i> recombinant protein. Through discussion with Dr. Feng, we
+            learned
+            that the pelB signal peptide has strict requirements for the hydrophobicity of the first 20 amino acids at
+            its N-terminal. According to the literatures, the sequence following pelB is PETase[1],while in our
+            design it is the amino acid sequence of RIDD linked to pelB. Due to the significant difference between the
+            strong hydrophobicity of RIDD and the general hydrophobicity of the first 20 amino acids of PETase, PETase
+            might not be secreted in our study. Similarly, the hydrophobicity of RIAD and RIDD exceeds that of ordinary
+            proteins, pelB becomes ineffective and cannot function well. We took the suggestions from Dr. Feng and made
+            two proposals for follow-up work. One is to change the signal peptide. The other is to remove the signal
+            peptide once and for all, break the bacteria after expressing the recombinant protein and purify the
+            recombinant protein for further study.</p>
+        <p>The main goal of our design is based on the construction of multi-enzyme complexes, so the current priority
+            is to verify that the multi-enzyme complexes can be prepared by <i>E. coli</i> and are active. Therefore,
+            the
+            signal peptide from the plasmid was removed, and the bacteria were lysed to obtain the protein. The
+            subsequent researches were conducted using the enzyme complex. Aside of pelB, we have also researched
+            several other kinds of signal peptides, which is discussed in more details in the <a
+                    href="https://2021.igem.org/Team:DUT_China/Proof_Of_Concept">proof of
+                concept</a>.</p>
+
+
+    </article>
+    <article class="article">
+        <h1>2nd ITERATION</h1>
+        <h2>2nd ITERATION – design :</h2>
+        <p>In the 2nd iteration, we learned from the failure of the signal peptide in the first iteration. To improve
+            the strategy, we plan to remove the signal peptide and construct three engineering bacteria to continue the
+            experiment, but in this iteration we only explore separately whether the three proteins can be expressed and
+            remain active in bacteria. The gene routes of this iteration are shown in Figure 3.</p>
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/c/cd/T--DUT_China--es13.png" alt=""
+                     class="col-12 col-md-8 mx-auto">
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 3: Gene routes in 2nd iteration</p>
+        <h2>2nd ITERATION – build:</h2>
+        <p>We used PCR to amplify each target gene along with its promoter, lac operator, terminator, and RBS. Then we
+            use overlapping PCR to remove the pelB sequence on all three genes(Figure 4).</p>
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/4/40/T--DUT_China--es14.png" alt=""
+                     class="col-12">
+            </div>
+        </div>
+        <p class="caption">Figure 4: Agarose gel electrophoresis diagram of each DNA fragment after removing pelB.
+            Channel 1: DNA
+            Marker(the label of each band is shown in the figures); Channel 2: RIDD-PETase; Channel 3:
+            RIAD-hydrophobin4 ( with promoter, lac operator, terminator, and RBS); Channel 4: RIDD-MHETase ( with
+            promoter, lac operator, terminator, and RBS).</p>
+        <p>After obtaining the target gene sequence without pelB, we use seamless clone to construct vectors, and
+            transformed the three vectors into three <i>E.coli</i> BL21 by heat shock transformation. We cultivated
+            three kinds
+            of bacteria, inducing them with IPTG for 24 hours, and then ruptured the cells to obtain cell pellets and
+            medium.</p>
+        <h2>2nd ITERATION – test :</h2>
+        <h3>SDS-PAGE</h3>
+        <p>In the second project, we removed the signal peptide, and obtained three engineering bacteria that can
+            express RIDD-PETase, RIDD-MHETase, and RIAD-hydrophobin4, respectively. The results showed that
+            corresponding target proteins were present in the fragments of the three bacteria. However, due to its
+            smaller molecular weight (11 kDA), RIAD-hydrophobin 4 was not detectable on 10% separation gel.</p>
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/6/6d/T--DUT_China--es21.png" alt=""
+                     class="col-12 col-md-8 mx-auto">
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 5: SDS-PAGE result s of PETase-RIDD and MHETase-RIDD expression</p>
+        <p>Channel 1: No expected bands were found in the medium of <i>E.coli</i> BL21 without induced PETase expression
+            after
+            resuspension and centrifugation; Channel 2: No expected bands were found in the precipitate of <i>E.coli</i>
+            BL21
+            expressing PETase without IPTG induction after centrifugation; Channel 4: M: marker; Channel 3: There were
+            expected bands in the medium of <i>E.coli</i> BL21 where RIDD-PETase expression was induced following by
+            cell
+            disruption and resuspension, but the concentration was low; Channel 4: There were significant correlation
+            bands in the precipitate of induced RIDD-PETase expressing <i>E.coli</i> BL21 after cell disruption,
+            resuspension
+            and centrifugation, exhibiting high concentration. Channel 5: There were expected bands in the medium of
+            <i>E.coli</i> BL21 where RIDD-MHETase expression was induced following by cell disruption and resuspension,
+            but the
+            concentration was low; Channel 6: There were significant correlation bands in the precipitate of induced
+            RIDD-MHETase expressing <i>E.coli</i> BL21 after cell disruption, resuspension and centrifugation,
+            exhibiting high concentration.</p>
+
+        <h3>Western blot</h3>
+        <p>Take the supernatant for SDS-PAGE electrophoresis (70 V 30 min, 110 V 2 h);</p>
+        <p>After the electrophoresis, cut off the protein gel block, place it in a protein semi-dry transfer instrument,
+            and transfer the target protein to the PVDF membrane under the condition of 15 V 13 min; Put the PVDF
+            membrane into 50 g/L skimmed milk powder and leave it at room temperature for 2 hours (slowly shake); Use 20
+            g/L skimmed milk powder to dilute the anti-His mouse antibody at a ratio of 1:2000, and add an appropriate
+            amount of the diluted antibody. Submerge the PVDF membrane in a self-made closed bag containing PVDF
+            membrane, and incubate overnight at 4 °C (slowly shaking); Take out the PVDF membrane from the primary
+            antibody solution and place it in a petri dish, wash with TBST 5 times, each time 15 min; Use 20 g/L skimmed
+            milk powder to dilute goat anti-mouse IgG (called secondary antibody) at a ratio of 1:3000, and add an
+            appropriate amount of diluted secondary antibody to a self-made closed bag with PVDF membrane to submerge
+            the PVDF membrane and incubated at room temperature for 2 hours (slowly shake); Then, take out the PVDF
+            membrane from the secondary antibody solution and place it in a plate, wash five times with TBST, 15 minutes
+            each time; After washing, dry the PVDF membrane and drop it on the front. Add the prepared color developer
+            until it is completely covered, place it at room temperature for 2 minutes, place it in an ECL luminescence
+            imager for exposure and photographing, and record the result.</p>
+
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/4/49/T--DUT_China--es211.png" alt=""
+                     class="col-12 col-md-8 mx-auto">
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 6: Western blot results</p>
+
+        <h3>Enzyme activity</h3>
+        <p>As is seen in the SDS-PAGE results, after cytoclasis, RIAD-hydrophobin 4, RIDD-PETase, RIDD-MHETase all
+            primarily existed in the precipitate, while almost none were found in the lysis medium. It was known that
+            most proteins in the precipitate are in the form of inclusion bodies and not active. It is difficult to tell
+            whether the target proteins were present in the medium after the cell disruption by direct observation.
+            Therefore, we performed western-blot analysis. The results showed that there was still a small amount of
+            RIDD-PETase in the medium, indicating that instead of waiting for the results of renaturation experiment,
+            the medium can be used to determine the enzyme activity of RIDD-PETase, RIDD-MHETase as crude enzyme
+            solution.</p>
+        <p>Since it takes a long time to degrade PET plastics, it is impossible to effectively and scientifically
+            measure the enzyme activity of MHETase alone, so we referred to the method of iGEM16_Harvard_BioDesign team
+            and designed a set of methods suitable for our <a href="https://2021.igem.org/Team:DUT_China/Experiments">project</a>
+            . The enzyme activity
+            was measured using pNPB, a universal substrate for esterases. Under the reaction of pNPB esterase,
+            p-nitrophenol can be generated, which has a strong absorption peak at 405 nm. In a set period of time, the
+            higher the absorbance of the mixture of pNPB and enzyme solution is at 405nm, the higher the yield of
+            p-nitrophenol and the greater the enzyme activity.</p>
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/3/39/T--DUT_China--es22.png" alt=""
+                     class="col-12 col-md-8 mx-auto">
+            </div>
+        </div>
+        <p class="caption">Figure 7: Enzyme activity analysis of pNPB . PD: RIDD-PETase enzyme solution, ; MD:
+            RIDD-MHETase enzyme
+            solution; Blank: normal <i>E.coli</i> BL21’s broken medium.</p>
+
+        <p>Based on the results (Figure 5), we found that both RIDD-PETase and RIDD-MHETase have esterase activity.
+            After
+            20 minutes of reaction, each resulted in absorption peaks as high as 3.4873 and 2.7654 at 405nm.</p>
+
+        <h2>2nd ITERATION – learn:</h2>
+        <p>The results showed that the three engineered bacteria we constructed could produce various target proteins
+            (Figure 5). The presence of protein can be detected in the medium by Western blot. After we added the
+            scaffold of RIDD to PETase and MHETase, the enzymes still exhibited esterase activity and the substrate pNPB
+            was degraded. This indicates that the addition of the short peptide RIDD is likely to have no effect on the
+            PET degradation activity of the enzyme. Because hydrophobin 4 itself does not have enzymatic activity, as
+            any ordinary hydrophobin, after adding hydrophobic RIAD, the hydrophobicity will not change
+            dramatically.</p>
+
+
+    </article>
+    <article class="article">
+        <h1>3rd ITERATION</h1>
+        <h2>3rd ITERATION – design</h2>
+        <p>We are trying to construct a three-enzyme complex, so the secretion of the three target proteins is expected
+            to be close to or equal to 1:1:1. This can minimize mismatches (PD-PD-hA, MD-MD-hA), and it is also
+            beneficial to make full use of the produced protein to form a complex and avoid waste. To ensure that the
+            target proteins are produced at a ratio close to or equal to 1:1:1, we decided to use the same exact
+            promoter, lactose operon, RBS, and terminator to regulate the three target genes after discussion with Prof.
+            Zhu Zhiwei in DUT. Also, we decided to integrate PD, MD and hA into one plasmid (Figure 8).</p>
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/f/f7/T--DUT_China--es31.png" alt=""
+                     class="col-12">
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 8: Plasmid construction strategy.</p>
+
+        <h2>3rd ITERATION – build</h2>
+        <p>With the help of team Tianjin, who used the CEPC method to connect the genes in the sequence of PD → MD → hA
+            (as is shown in Figure 6), we obtained a plasmid that can express all three proteins at the same time.
+            After the ligation product was transformed into <i>E.coli</i> DH5α, through colony PCR (Figure 7) and
+            restriction
+            enzyme digestion verification (Figure 8), we proved that the engineered bacteria containing the target
+            plasmid were obtained. We transformed the extracted plasmid into <i>E.coli</i> BL21 and then induced protein
+            expression with IPTG. The engineering bacteria was then lysed to obtain medium and cell pellet.</p>
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/e/ef/T--DUT_China--es32.png" alt=""
+                     class="col-12">
+            </div>
+        </div>
+        <p class="caption">Figure 9: Colony PCR results. Channel 3 &4 are positive results, which means this bacteria
+            containing
+            pET28a-PD-MD-hA; Channel 1,2,5,6,7,&8: False positives.</p>
+
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/f/fc/T--DUT_China--es33.png" alt=""
+                     class="col-12 col-sm-4 mx-auto">
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 10: Restriction enzyme digestion (XhoⅠ) verification of
+            pET28a-PD-MD-hA.</p>
+
+        <h2>3rd ITERATION – test</h2>
+        <h3>SDS-PAGE</h3>
+        <p>According to the first two rounds of engineering and the third round of design and construction, we have
+            obtained engineered bacteria that can theoretically secrete all three target proteins simultaneously. After
+            IPTG induction of these engineered bacteria, we obtained a large amount of <i>E.coli</i> <i>BL21/pET28a-PD-MD-hA</i>,
+            and
+            the enzyme was extracted. However, due to the small molecular weight of RIAD-hydrophobin 4, it can not be
+            found on SDS-PAGE.. (As for the three protein moulecular weight, RIDD-PETase is 32kDa, RIDD-MHETase is
+            68kDa, RIAD-hydrophobin is 11kDa.</p>
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/c/c9/T--DUT_China--es34.jpeg" alt=""
+                     class="col-12 col-md-10 mx-auto">
+            </div>
+        </div>
+        <p class="caption">Figure 11: SDS-PAGE results of the three enzyme complex expression (channel 1: <i>E.coli</i>
+            <i>BL21/pET28a-PD-MD-hA</i>
+            medium, channel 2: <i>E.coli</i> <i>BL21/pET28a-PD-MD-hA</i> precipitation resuspension) </p>
+
+        <h3>Enzyme activity</h3>
+        <p>The results of SDS-PAGE showed that there is still a large amount of target protein in the precipitates (only
+            RIDD-PETase and RIDD-MHETase). Based on the previous Western blot results, it was reasonable to speculate
+            that the target protein might be present in the cytolysis medium, so we again employed the pNPB method. The
+            enzyme activity was tested with the medium of <i>E. coli</i> <i>BL21/pET28a-PD-MD-hA</i> as crude enzyme
+            solution. To
+            control variables, the volume of crude enzyme solution in this experiment was the same as that used in the
+            previous determination of the RIDD-PETase crude enzyme solution and RIDD-MHETase crude enzyme solution. The
+            enzyme activity determination curve was shown in Figure 9.</p>
+        <p>It is not difficult to conclude that the slope of PD-MD-hA is higher than that of PD or MD, which indicates
+            that as a crude enzyme solution, the medium of <i>E.coli</i> <i>BL21/pET28a-PD-MD-hA</i> has esterase
+            activity. What’s
+            more, the final concentration of p-nitrophenol was higher than that of the two esterases alone, which
+            suggested that the three-enzyme complex was successfully constructed.</p>
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/b/b1/T--DUT_China--es35.png" alt=""
+                     class="col-12 col-md-8 mx-auto">
+            </div>
+        </div>
+        <p class="caption">Figure 12: Enzyme activity analysis of pNPB. PD: RIDD-PETase enzyme solution, abbreviated PD;
+            dark grey: RIDD-MHETase enzyme solution, abbreviated PD; pink: <i>E.coli</i> <i>BL21/pET28a-PD-MD-hA</i>
+            broken medium, abbreviated PD-MD-hA; black: normal <i>E.coli</i> BL21’s broken medium, abbreviated
+            blank.</p>
+
+        <h3>PET plastic sheet degradation test</h3>
+        <p>We obtained PET plastic sheet with 12% crystallinity ( scientific research only) from TJUSLS_China, and cut
+            it into 5mm*5mm fragments (0.07g per fragment). We incubated 1.5 mL of <i>E.coli</i> BL21, <i>E.coli</i>
+            BL21/pET28a-PD,
+            <i>E.coli</i> BL21/pET28a-M, <i>E.coli</i> <i>BL21/pET28a-PD-MD-hA</i> cell pellet and medium in several EP
+            tubes, and added three
+            5mm*5mm fragments, respectively. We then incubated the reaction mixture at 37℃ for 7 days. After 7 days, the
+            degradation product, erephthalic acid (TPA), was detected by UV Spectrophotometry and thus determined PET
+            degradation efficiency.</p>
+        <p>In terms of measurement, we chose to use UV spectrophotometry to detect the output of TPA. Binding with
+            RIDD-PETase and RIDD-MHETase, PET will be decomposed with ethylene glycol (EG) and terephthalic acid (TPA)
+            as final product. Ethylene glycol is volatile, and the test results are not credible, so we decided to
+            detect TPA. Through previous literature research, we found that there are two mainstream detection methods
+            for TPA. One is to directly perform UV spectrophotometry on the sample. The increase in absorbance of the
+            reaction mixture in the ultraviolet region of the light spectrum (at 240 nm) indicates the release of
+            soluble TPA or its esters from an insoluble PET substrate. This compound shares an identical strong
+            absorbance peak around 240–244 nm with an identical extinction coefficient as all three compounds contain
+            the same number of carbonyl groups. The second is to adopt reverse-phase HPLC. Reverse-phase HPLC systems
+            have been widely used to analyze the products derived from the enzymatic hydrolysis of PET owing to their
+            powerful resolving capability and reproducibility. The different compounds produced by PET hydrolytic
+            enzymes (i.e., TPA, MHET, and BHET) can be efficiently separated on a C18 reverse-phase HPLC column: The
+            reaction mixture is loaded into a column equilibrated with a polar mobile phase and the concentration of the
+            organic solvent (acetonitrile).</p>
+        <p>Considering our experimental cycle, throughput, and laboratory conditions, we chose UV spectrophotometry to
+            detect TPA. Then we made the standard curve of TPA at OD240 (Figure 13) .</p>
+        <p>The liquid obtained after incubation of the above eight samples was tested for TPA content, and the blank
+            absorption was subtracted. The data obtained is shown in Figure 10.</p>
+        <p>It can be seen from the concentration of TPA product that the concentration of TPA in PD-MD-hA’s medium is
+            higher than that in PD’s medium or MD’s medium. This strongly supported the engineering success of our
+            three-enzyme complex construction.</p>
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/f/f5/T--DUT_China--es36.jpeg" alt=""
+                     class="col-12 col-md-8 mx-auto">
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 13: standard curve of TPA at OD240</p>
+
+        <div class="figures">
+            <div class="row">
+                <img src="https://2021.igem.org/wiki/images/7/71/T--DUT_China--es37.jpeg" alt=""
+                     class="col-12 col-md-8 mx-auto">
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 14: The concentration of TPA product in each experiment group</p>
+
+        <h3>Scanning electron microscopy</h3>
+        <p>To further confirm the activity of the three-enzyme complex we constructed, we also selected PET plastic
+            sheets in <i>E.coli</i> BL21, <i>E.coli</i> BL21/pET28a-PD, <i>E.coli</i> BL21/pET28a-M, <i>E.coli</i> <i>BL21/pET28a-PD-MD-hA</i>
+            medium to be
+            examined by scanning electron microscopy The results were consistent with expectations. The plastic sheet
+            treated with either <i>E.coli</i> BL21 medium or MD medium has almost no scratches or holes. The plastic
+            sheet
+            after PD treatment has some obvious scratches, while the plastic sheet after PD-MD-hA treatment showed
+            surface covered with scratches, and at the same time, densely packed with holes of various shapes. This
+            scanning electron microscopy further proved that the three-enzyme complex we constructed has a better PET
+            plastic degradation activity than single-enzyme degradation.</p>
+        <div class="figures">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/3/32/T--DUT_China--es38.jpeg" alt="">
+                    <p>(a)</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/f/f6/T--DUT_China--es39.jpeg" alt="">
+                    <p>(b)</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/7/78/T--DUT_China--es310.jpeg" alt="">
+                    <p>(c)</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/e/ed/T--DUT_China--es311.jpeg" alt="">
+                    <p>(d)</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="caption">Figure 15: Scanning electron microscopy (a) PET plastic sheets treated in <i>E.coli</i> BL21.
+            (b) PET plastic
+            sheets
+            treated in <i>E.coli</i> BL21/pET28a-PD. (c) PET plastic sheets treated in <i>E.coli</i> BL21/pET28a-M. (d)
+            PET plastic
+            sheets treated in <i>E.coli</i> <i>BL21/pET28a-PD-MD-hA</i> medium.</p>
+        <h2>3rd ITERATION – learn</h2>
+        <p>The third engineering cycle is the last cycle of our main line of experimental tasks. Briefly, we
+            successfully constructed three-enzyme complex as expected, measured the complex's enzyme activity, and
+            performed scanning electron microscopy and TPA detection experiments. The degradation effect of the
+            three-enzyme complex on PET plastic was evaluated qualitatively and quantitatively.</p>
+        <p>Through the qualitative test of scanning electron microscopy, the enzyme complex created in our project has
+            better effect on PET plastic sheets than PETase alone. The use of PETase alone will only cause scratches on
+            the surface of the plastic sheet. However, our enzyme complex has exceeded PETase activity, causing more
+            significant scratches and on top of that, producing many deep holes. The results of scanning electron
+            microscopy also indirectly accounted for the role of hydrophobin 4 in the enzyme complex. With the presence
+            of hydrophobin 4, the enzyme complex can bind to the surface of the PET plastic sheet. Therefore, instead of
+            dispersing in water and induce reaction through random collisions, the enzyme is more likely to dig deeper
+            into the surface.</p>
+        <p>Through the quantitative test of TPA production detection, we found that the degradation effect of our enzyme
+            complex is better than PETase used alone, and the degradation efficiency has been increased by two
+            times.</p>
+        <p>Overall, we successfully constructed a three-enzyme complex, and confirmed its activity by analysis of
+            degradation effect and product yield . It will be promising for the subsequent enzyme complex to efficiently
+            degrade PET plastic and the industrialization of PET plastic bio recycling.</p>
+
+    </article>
+    <article class="article">
+        <h1>Reference</h1>
+        <p>[1] Arshad A. Analytical methods for the investigation of polymer degradation. 2014.</p>
+    </article>
+</section>
+<div id="footer-point"></div>
+<script>
+    //About the top-scroll--linked to general.js
+    window.onload = init;
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
+</script>
+</body>
+</html>

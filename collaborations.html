@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collaborations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script src="js/sidebar.js" defer></script>
+</head>
+<body>
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/2/20/T--DUT_China--coll-14.png");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/2/20/T--DUT_China--coll-14.png");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/2/20/T--DUT_China--coll-14.png");
+    background-image: url("https://2021.igem.org/wiki/images/2/20/T--DUT_China--coll-14.png");'>
+    <div>Collaborations</div>
+</div>
+<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
+    <table>
+        <tr v-for="(value,key,index) in articles">
+            <td>
+                <canvas width="40" height="40" class="canvas"></canvas>
+            </td>
+            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
+                <a v-bind:href="'#article'+(key+1)">
+                    {{value.innerText}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<section id="main-text">
+    <p>During this season, we have developed friendly exchanges and cooperation with many teams and organizations.
+        Including OUC_China, Tianjin, CPU_China, TJUSLS_China, Tongji_China, SCAU_China and other teams, as well as
+        participating in plasticase, ICII, CCiC, New Pollutants Alliance and other organizations or conferences. During
+        this exchange and cooperation process, we have learned a lot in the academic and industrial fields, and the
+        ability to communicate and get along with other people has also been improved.</p>
+    <article class="article">
+        <h1>OUC_China<a href="https://2021.igem.org/Team:OUC-China/Collaborations" target="_blank">
+            <svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1714">
+                <path d="M607.934444 417.856853c-6.179746-6.1777-12.766768-11.746532-19.554358-16.910135l-0.01228 0.011256c-6.986111-6.719028-16.47216-10.857279-26.930349-10.857279-21.464871 0-38.864146 17.400299-38.864146 38.864146 0 9.497305 3.411703 18.196431 9.071609 24.947182l-0.001023 0c0.001023 0.001023 0.00307 0.00307 0.005117 0.004093 2.718925 3.242857 5.953595 6.03853 9.585309 8.251941 3.664459 3.021823 7.261381 5.997598 10.624988 9.361205l3.203972 3.204995c40.279379 40.229237 28.254507 109.539812-12.024871 149.820214L371.157763 796.383956c-40.278355 40.229237-105.761766 40.229237-146.042167 0l-3.229554-3.231601c-40.281425-40.278355-40.281425-105.809861 0-145.991002l75.93546-75.909877c9.742898-7.733125 15.997346-19.668968 15.997346-33.072233 0-23.312962-18.898419-42.211381-42.211381-42.211381-8.797363 0-16.963347 2.693342-23.725354 7.297197-0.021489-0.045025-0.044002-0.088004-0.066515-0.134053l-0.809435 0.757247c-2.989077 2.148943-5.691629 4.669346-8.025791 7.510044l-78.913281 73.841775c-74.178443 74.229608-74.178443 195.632609 0 269.758863l3.203972 3.202948c74.178443 74.127278 195.529255 74.127278 269.707698 0l171.829484-171.880649c74.076112-74.17435 80.357166-191.184297 6.282077-265.311575L607.934444 417.856853zM855.61957 165.804257l-3.203972-3.203972c-74.17742-74.178443-195.528232-74.178443-269.706675 0L410.87944 334.479911c-74.178443 74.178443-78.263481 181.296089-4.085038 255.522628l3.152806 3.104711c3.368724 3.367701 6.865361 6.54302 10.434653 9.588379 2.583848 2.885723 5.618974 5.355985 8.992815 7.309476 0.025583 0.020466 0.052189 0.041956 0.077771 0.062422l0.011256-0.010233c5.377474 3.092431 11.608386 4.870938 18.257829 4.870938 20.263509 0 36.68962-16.428158 36.68962-36.68962 0-5.719258-1.309832-11.132548-3.645017-15.95846l0 0c-4.850471-10.891048-13.930267-17.521049-20.210297-23.802102l-3.15383-3.102664c-40.278355-40.278355-24.982998-98.79612 15.295358-139.074476l171.930791-171.830507c40.179095-40.280402 105.685018-40.280402 145.965419 0l3.206018 3.152806c40.279379 40.281425 40.279379 105.838513 0 146.06775l-75.686796 75.737962c-10.296507 7.628748-16.97358 19.865443-16.97358 33.662681 0 23.12365 18.745946 41.87062 41.87062 41.87062 8.048303 0 15.563464-2.275833 21.944801-6.211469 0.048095 0.081864 0.093121 0.157589 0.141216 0.240477l1.173732-1.083681c3.616364-2.421142 6.828522-5.393847 9.529027-8.792247l79.766718-73.603345C929.798013 361.334535 929.798013 239.981676 855.61957 165.804257z"
+                      p-id="1715"></path>
+            </svg>
+        </a></h1>
+        <p>Throughout the season, we collaborated with OUC_China on several issues. We responded to the theme of World
+            Environment Day 2021: Ecosystem Restoration. With the opportunity of the competition, we co-authored a
+            popular
+            science article with the OUC_China team to popularize microplastics and antibiotics, to educate people about
+            the
+            concept and dangers of antibiotics and microplastics as new pollutants, and to call on the public to
+            contribute
+            to world environmental protection.</p>
+        <div class="row">
+            <img src="https://2021.igem.org/wiki/images/2/2c/T--DUT_China--coll-11.png" alt=""
+                 class="col-12 col-md-6 mx-auto">
+        </div>
+
+        <p>After the popular science article was sent out, we received widespread attention and discussion, and the
+            public's
+            understanding of new pollutants has just begun. Inspired by this, we also try to increase the science
+            education
+            of new pollutants, so that the society can have a more sustainable and extensive knowledge about new
+            pollutants.
+            Based on this, we have joined OUC-China, Nanjing_NFLS, HiZJU, and SJTU-BioX-Shanghai to form the New
+            Pollutants
+            Alliance and hold an online workshop on New Pollutants on September 25, 2021. Our team's project is on
+            plastic
+            degradation, which also includes the degradation of microplastics in new environmental pollutants. The
+            ultimate
+            goal of our team is to degrade environmental pollutants as well as OUC China and other teams. In addition,
+            we
+            learned about contaminants other than microplastics - persistent organic pollutants, antibiotics, and the
+            need
+            for pollution control. New contaminants may enter the environment and cause known or potential negative
+            ecological or health effects. These substances may become the subject of regulatory management in the
+            future.
+            These compounds have attracted a lot of attention from the community and are a hot spot for scientific
+            research.
+            In particular, we invited teachers in the field of synthetic biology and ecotoxicology, companies in the
+            field
+            of rapid testing and students with legal background to share and discuss. At the conference, we also learned
+            about the laws and testing standards related to the environment, which will help our project go to the
+            market
+            better.</p>
+        <p>We hope our team can collaborate with other iGEM teams to contribute to the improvement of pollutant
+            management
+            and environmental issues. We hope to gather our strengths and explore new pollutant solutions from multiple
+            dimensions to make a better world together!</p>
+        <div class="row">
+            <img src="https://2021.igem.org/wiki/images/3/3f/T--DUT_China--coll-12.png" alt=""
+                 class="col-12 col-md-6 mx-auto">
+        </div>
+        <div class="row">
+            <img src="https://2021.igem.org/wiki/images/f/f8/T--DUT_China--coll-13.png" alt=""
+                 class="col-12 col-md-8 mx-auto">
+        </div>
+        <p>Click <a href="http://2021.igem.org/Team:OUC-China/Collaborations" target="_blank">here</a> to visit their
+            wiki.</p>
+    </article>
+    <article class="article">
+        <h1>Tianjin<a href="https://2021.igem.org/Team:Tianjin/Collaborations" target="_blank">
+            <svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1714">
+                <path d="M607.934444 417.856853c-6.179746-6.1777-12.766768-11.746532-19.554358-16.910135l-0.01228 0.011256c-6.986111-6.719028-16.47216-10.857279-26.930349-10.857279-21.464871 0-38.864146 17.400299-38.864146 38.864146 0 9.497305 3.411703 18.196431 9.071609 24.947182l-0.001023 0c0.001023 0.001023 0.00307 0.00307 0.005117 0.004093 2.718925 3.242857 5.953595 6.03853 9.585309 8.251941 3.664459 3.021823 7.261381 5.997598 10.624988 9.361205l3.203972 3.204995c40.279379 40.229237 28.254507 109.539812-12.024871 149.820214L371.157763 796.383956c-40.278355 40.229237-105.761766 40.229237-146.042167 0l-3.229554-3.231601c-40.281425-40.278355-40.281425-105.809861 0-145.991002l75.93546-75.909877c9.742898-7.733125 15.997346-19.668968 15.997346-33.072233 0-23.312962-18.898419-42.211381-42.211381-42.211381-8.797363 0-16.963347 2.693342-23.725354 7.297197-0.021489-0.045025-0.044002-0.088004-0.066515-0.134053l-0.809435 0.757247c-2.989077 2.148943-5.691629 4.669346-8.025791 7.510044l-78.913281 73.841775c-74.178443 74.229608-74.178443 195.632609 0 269.758863l3.203972 3.202948c74.178443 74.127278 195.529255 74.127278 269.707698 0l171.829484-171.880649c74.076112-74.17435 80.357166-191.184297 6.282077-265.311575L607.934444 417.856853zM855.61957 165.804257l-3.203972-3.203972c-74.17742-74.178443-195.528232-74.178443-269.706675 0L410.87944 334.479911c-74.178443 74.178443-78.263481 181.296089-4.085038 255.522628l3.152806 3.104711c3.368724 3.367701 6.865361 6.54302 10.434653 9.588379 2.583848 2.885723 5.618974 5.355985 8.992815 7.309476 0.025583 0.020466 0.052189 0.041956 0.077771 0.062422l0.011256-0.010233c5.377474 3.092431 11.608386 4.870938 18.257829 4.870938 20.263509 0 36.68962-16.428158 36.68962-36.68962 0-5.719258-1.309832-11.132548-3.645017-15.95846l0 0c-4.850471-10.891048-13.930267-17.521049-20.210297-23.802102l-3.15383-3.102664c-40.278355-40.278355-24.982998-98.79612 15.295358-139.074476l171.930791-171.830507c40.179095-40.280402 105.685018-40.280402 145.965419 0l3.206018 3.152806c40.279379 40.281425 40.279379 105.838513 0 146.06775l-75.686796 75.737962c-10.296507 7.628748-16.97358 19.865443-16.97358 33.662681 0 23.12365 18.745946 41.87062 41.87062 41.87062 8.048303 0 15.563464-2.275833 21.944801-6.211469 0.048095 0.081864 0.093121 0.157589 0.141216 0.240477l1.173732-1.083681c3.616364-2.421142 6.828522-5.393847 9.529027-8.792247l79.766718-73.603345C929.798013 361.334535 929.798013 239.981676 855.61957 165.804257z"
+                      p-id="1715"></path>
+            </svg>
+        </a></h1>
+        <p>We began to contact with Tianjin at the Conference of China iGEMer Community(CCIC) conference, and our two
+            teams
+            had friendly exchanges, which also laid the foundation for the long-term cooperation. With the enhance of
+            communication, we found that both teams have highlights in the experimental design. It is undeniable that
+            they
+            are more experienced in this regard. However, we can help them in modeling and wiki construction. Therefore,
+            the
+            cooperation between the two teams has helped promote the work of their respective teams.</p>
+        <div class="row">
+            <img src="https://2021.igem.org/wiki/images/2/20/T--DUT_China--coll-14.png" alt=""
+                 class="col-12 col-md-8 mx-auto">
+        </div>
+        <p>During the experiment, We encountered a challenge in using SE seamlessly to connect three DNA fragments.
+            Faced
+            with this result, we thought it over and over again and finally decided to seek help from the Tianjin which
+            have
+            a good command of the two methods: DNA assembler and CPEC assembly. After practical communication, we have a
+            broader understanding of plasmid assembly. Finally, they used the method of CPEC assembly to help us clone
+            and
+            sequence the plasmid successfully.</p>
+        <p>Some members in team Tianjin encountered some problems when uploading their source code to the iGEM server.
+            After
+            submitting the code, the layout of some pages was different from what they expected. A member who is
+            responsible
+            for wiki construction in our team provided them some guidelines and hepled them fixed out with his
+            skills.</p>
+        <div class="row">
+            <img src="https://2021.igem.org/wiki/images/c/ce/T--DUT_China--coll-15.png" alt=""
+                 class="col-12 ">
+        </div>
+        <p>Click <a href="http://2021.igem.org/Team:Tianjin/Collaborations" target="_blank">here</a> to visit their
+            wiki.</p>
+    </article>
+    <article class="article">
+        <h1>NEU-China<a href="http://2021.igem.org/Team:NEU_CHINA/Collaborations" target="_blank">
+            <svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1714">
+                <path d="M607.934444 417.856853c-6.179746-6.1777-12.766768-11.746532-19.554358-16.910135l-0.01228 0.011256c-6.986111-6.719028-16.47216-10.857279-26.930349-10.857279-21.464871 0-38.864146 17.400299-38.864146 38.864146 0 9.497305 3.411703 18.196431 9.071609 24.947182l-0.001023 0c0.001023 0.001023 0.00307 0.00307 0.005117 0.004093 2.718925 3.242857 5.953595 6.03853 9.585309 8.251941 3.664459 3.021823 7.261381 5.997598 10.624988 9.361205l3.203972 3.204995c40.279379 40.229237 28.254507 109.539812-12.024871 149.820214L371.157763 796.383956c-40.278355 40.229237-105.761766 40.229237-146.042167 0l-3.229554-3.231601c-40.281425-40.278355-40.281425-105.809861 0-145.991002l75.93546-75.909877c9.742898-7.733125 15.997346-19.668968 15.997346-33.072233 0-23.312962-18.898419-42.211381-42.211381-42.211381-8.797363 0-16.963347 2.693342-23.725354 7.297197-0.021489-0.045025-0.044002-0.088004-0.066515-0.134053l-0.809435 0.757247c-2.989077 2.148943-5.691629 4.669346-8.025791 7.510044l-78.913281 73.841775c-74.178443 74.229608-74.178443 195.632609 0 269.758863l3.203972 3.202948c74.178443 74.127278 195.529255 74.127278 269.707698 0l171.829484-171.880649c74.076112-74.17435 80.357166-191.184297 6.282077-265.311575L607.934444 417.856853zM855.61957 165.804257l-3.203972-3.203972c-74.17742-74.178443-195.528232-74.178443-269.706675 0L410.87944 334.479911c-74.178443 74.178443-78.263481 181.296089-4.085038 255.522628l3.152806 3.104711c3.368724 3.367701 6.865361 6.54302 10.434653 9.588379 2.583848 2.885723 5.618974 5.355985 8.992815 7.309476 0.025583 0.020466 0.052189 0.041956 0.077771 0.062422l0.011256-0.010233c5.377474 3.092431 11.608386 4.870938 18.257829 4.870938 20.263509 0 36.68962-16.428158 36.68962-36.68962 0-5.719258-1.309832-11.132548-3.645017-15.95846l0 0c-4.850471-10.891048-13.930267-17.521049-20.210297-23.802102l-3.15383-3.102664c-40.278355-40.278355-24.982998-98.79612 15.295358-139.074476l171.930791-171.830507c40.179095-40.280402 105.685018-40.280402 145.965419 0l3.206018 3.152806c40.279379 40.281425 40.279379 105.838513 0 146.06775l-75.686796 75.737962c-10.296507 7.628748-16.97358 19.865443-16.97358 33.662681 0 23.12365 18.745946 41.87062 41.87062 41.87062 8.048303 0 15.563464-2.275833 21.944801-6.211469 0.048095 0.081864 0.093121 0.157589 0.141216 0.240477l1.173732-1.083681c3.616364-2.421142 6.828522-5.393847 9.529027-8.792247l79.766718-73.603345C929.798013 361.334535 929.798013 239.981676 855.61957 165.804257z"
+                      p-id="1715"></path>
+            </svg>
+        </a></h1>
+        <p>This year, we cooperated with NEU-China in the model section. One of our members explained to NEU-China the
+            problem of matlab modeling with an example, and exchanged previous iGEM modeling experience. In addition, we
+            also discussed the considerations of related genes in bacterial quorum sensing. After communicating with
+            each other, we have all gained a lot.
+        </p>
+        <div class="row">
+            <img src="https://2021.igem.org/wiki/images/c/c3/T--DUT_China--neu01.png" alt=""
+                 class="col-12  col-md-8 mx-auto"></div>
+        <div class="row">
+            <img src="https://2021.igem.org/wiki/images/c/ce/T--DUT_China--neu02.png" alt=""
+                 class="col-12  col-md-8 mx-auto"></div>
+        <p>Click <a href="http://2021.igem.org/Team:NEU_CHINA/Collaborations" target="_blank">here</a> to visit their
+            wiki.</p>
+
+
+    </article>
+
+
+    <article class="article">
+        <h1>Tongji_China<a href="http://2021.igem.org/Team:Tongji_China/Collaborations" target="_blank">
+            <svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1714">
+                <path d="M607.934444 417.856853c-6.179746-6.1777-12.766768-11.746532-19.554358-16.910135l-0.01228 0.011256c-6.986111-6.719028-16.47216-10.857279-26.930349-10.857279-21.464871 0-38.864146 17.400299-38.864146 38.864146 0 9.497305 3.411703 18.196431 9.071609 24.947182l-0.001023 0c0.001023 0.001023 0.00307 0.00307 0.005117 0.004093 2.718925 3.242857 5.953595 6.03853 9.585309 8.251941 3.664459 3.021823 7.261381 5.997598 10.624988 9.361205l3.203972 3.204995c40.279379 40.229237 28.254507 109.539812-12.024871 149.820214L371.157763 796.383956c-40.278355 40.229237-105.761766 40.229237-146.042167 0l-3.229554-3.231601c-40.281425-40.278355-40.281425-105.809861 0-145.991002l75.93546-75.909877c9.742898-7.733125 15.997346-19.668968 15.997346-33.072233 0-23.312962-18.898419-42.211381-42.211381-42.211381-8.797363 0-16.963347 2.693342-23.725354 7.297197-0.021489-0.045025-0.044002-0.088004-0.066515-0.134053l-0.809435 0.757247c-2.989077 2.148943-5.691629 4.669346-8.025791 7.510044l-78.913281 73.841775c-74.178443 74.229608-74.178443 195.632609 0 269.758863l3.203972 3.202948c74.178443 74.127278 195.529255 74.127278 269.707698 0l171.829484-171.880649c74.076112-74.17435 80.357166-191.184297 6.282077-265.311575L607.934444 417.856853zM855.61957 165.804257l-3.203972-3.203972c-74.17742-74.178443-195.528232-74.178443-269.706675 0L410.87944 334.479911c-74.178443 74.178443-78.263481 181.296089-4.085038 255.522628l3.152806 3.104711c3.368724 3.367701 6.865361 6.54302 10.434653 9.588379 2.583848 2.885723 5.618974 5.355985 8.992815 7.309476 0.025583 0.020466 0.052189 0.041956 0.077771 0.062422l0.011256-0.010233c5.377474 3.092431 11.608386 4.870938 18.257829 4.870938 20.263509 0 36.68962-16.428158 36.68962-36.68962 0-5.719258-1.309832-11.132548-3.645017-15.95846l0 0c-4.850471-10.891048-13.930267-17.521049-20.210297-23.802102l-3.15383-3.102664c-40.278355-40.278355-24.982998-98.79612 15.295358-139.074476l171.930791-171.830507c40.179095-40.280402 105.685018-40.280402 145.965419 0l3.206018 3.152806c40.279379 40.281425 40.279379 105.838513 0 146.06775l-75.686796 75.737962c-10.296507 7.628748-16.97358 19.865443-16.97358 33.662681 0 23.12365 18.745946 41.87062 41.87062 41.87062 8.048303 0 15.563464-2.275833 21.944801-6.211469 0.048095 0.081864 0.093121 0.157589 0.141216 0.240477l1.173732-1.083681c3.616364-2.421142 6.828522-5.393847 9.529027-8.792247l79.766718-73.603345C929.798013 361.334535 929.798013 239.981676 855.61957 165.804257z"
+                      p-id="1715"></path>
+            </svg>
+        </a></h1>
+        <p>In order to contain the possible contamination of genes in the environment, we’ve decided to adopted a
+            kill-switch system inspired by 2021 Tongji_China iGEM team (More details in <a
+                    href="https://2021.igem.org/Team:DUT_China/Proof_Of_Concept" target="_blank">Proof of Concept</a> ).
+        </p>
+        <p>Click <a href="http://2021.igem.org/Team:Tongji_China/Collaborations" target="_blank">here</a> to visit their
+            wiki.</p>
+
+    </article>
+
+
+    <article class="article">
+        <h1>SCAU-China<a href="http://2021.igem.org/Team:SCAU-China/Collaborations" target="_blank">
+            <svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1714">
+                <path d="M607.934444 417.856853c-6.179746-6.1777-12.766768-11.746532-19.554358-16.910135l-0.01228 0.011256c-6.986111-6.719028-16.47216-10.857279-26.930349-10.857279-21.464871 0-38.864146 17.400299-38.864146 38.864146 0 9.497305 3.411703 18.196431 9.071609 24.947182l-0.001023 0c0.001023 0.001023 0.00307 0.00307 0.005117 0.004093 2.718925 3.242857 5.953595 6.03853 9.585309 8.251941 3.664459 3.021823 7.261381 5.997598 10.624988 9.361205l3.203972 3.204995c40.279379 40.229237 28.254507 109.539812-12.024871 149.820214L371.157763 796.383956c-40.278355 40.229237-105.761766 40.229237-146.042167 0l-3.229554-3.231601c-40.281425-40.278355-40.281425-105.809861 0-145.991002l75.93546-75.909877c9.742898-7.733125 15.997346-19.668968 15.997346-33.072233 0-23.312962-18.898419-42.211381-42.211381-42.211381-8.797363 0-16.963347 2.693342-23.725354 7.297197-0.021489-0.045025-0.044002-0.088004-0.066515-0.134053l-0.809435 0.757247c-2.989077 2.148943-5.691629 4.669346-8.025791 7.510044l-78.913281 73.841775c-74.178443 74.229608-74.178443 195.632609 0 269.758863l3.203972 3.202948c74.178443 74.127278 195.529255 74.127278 269.707698 0l171.829484-171.880649c74.076112-74.17435 80.357166-191.184297 6.282077-265.311575L607.934444 417.856853zM855.61957 165.804257l-3.203972-3.203972c-74.17742-74.178443-195.528232-74.178443-269.706675 0L410.87944 334.479911c-74.178443 74.178443-78.263481 181.296089-4.085038 255.522628l3.152806 3.104711c3.368724 3.367701 6.865361 6.54302 10.434653 9.588379 2.583848 2.885723 5.618974 5.355985 8.992815 7.309476 0.025583 0.020466 0.052189 0.041956 0.077771 0.062422l0.011256-0.010233c5.377474 3.092431 11.608386 4.870938 18.257829 4.870938 20.263509 0 36.68962-16.428158 36.68962-36.68962 0-5.719258-1.309832-11.132548-3.645017-15.95846l0 0c-4.850471-10.891048-13.930267-17.521049-20.210297-23.802102l-3.15383-3.102664c-40.278355-40.278355-24.982998-98.79612 15.295358-139.074476l171.930791-171.830507c40.179095-40.280402 105.685018-40.280402 145.965419 0l3.206018 3.152806c40.279379 40.281425 40.279379 105.838513 0 146.06775l-75.686796 75.737962c-10.296507 7.628748-16.97358 19.865443-16.97358 33.662681 0 23.12365 18.745946 41.87062 41.87062 41.87062 8.048303 0 15.563464-2.275833 21.944801-6.211469 0.048095 0.081864 0.093121 0.157589 0.141216 0.240477l1.173732-1.083681c3.616364-2.421142 6.828522-5.393847 9.529027-8.792247l79.766718-73.603345C929.798013 361.334535 929.798013 239.981676 855.61957 165.804257z"
+                      p-id="1715"></path>
+            </svg>
+        </a></h1>
+        <p>The general direction of our research this year is to use microorganisms to degrade microplastics in sewage.
+            After learning that SCAU-China’s research direction is to use microalgae to degrade heavy metals in sewage,
+            we
+            found that we are all closely related projects to environmental governance. In particular, their respective
+            biological products have the potential to undergo in-situ degradation in nature. Therefore, we have reached
+            a
+            cooperative relationship with SCAU-China. The two parties inspire each other's research ideas and exchange
+            information resources in periodic online communication, and each workgroup as a unit, through multi-angle
+            and
+            deep-level cooperation, has jointly harvested a series of results.</p>
+        <div class="row">
+            <img src="https://2021.igem.org/wiki/images/d/d9/T--DUT_China--coll-16.png" alt=""
+                 class="col-12 col-md-8 mx-auto">
+        </div>
+        <p>The specific cooperation matters are as follows:</p>
+        <p>1. Throughout the competition, both sides will take environmental governance as the point of integration and
+            provide services for each other's goals based on operating their systems. The two working paths of degrading
+            heavy metals and degrading microplastics complement each other and jointly solve the pollution problem in
+            the
+            water environment.</p>
+        <p>2. The wet experiment group members of the two teams jointly raised and discussed the following questions:
+            whether it is feasible to use the extracellular matrix EPS to adsorb heavy metals to help bind heavy metal
+            ions;
+            whether to use the AHL response to Chlamydomonas reinhardtii to stimulate the expression of Chlamydomonas
+            EPS
+            feasible. Though we didn’t choose Chlamydomonas reinhardtii as base cell in the end, our collaboration on
+            EPS
+            and angel was benefit as well.</p>
+        <p>3. The two experimental groups also made meaningful exchanges in molecular dynamics simulation.</p>
+        <p>4. The cooperation content of the two modeling teams is: the two parties jointly use the equipment provided
+            by
+            SCAU-China to build related models; SCAU-China provides certain help suggestions and resource support in the
+            outsourcing project of quantum chemical simulation by SCAU-China.</p>
+        <p>5. The cooperation mode of the two art teams is as follows: The two sides discussed and put forward the
+            design
+            concept of "Chlamydia Brothers," and added interactive elements such as "hand in hand," and planned to
+            conduct
+            joint publicity on the team uniform design and other art tasks of both parties.</p>
+        <p>6. The cooperation content of the two teams of HP is: the HP of both parties went to the local sewage
+            treatment
+            plant to conduct on-site investigations, consulted and inspected a series of issues jointly formulated by
+            the
+            two parties; SCAU-China collected water samples before and after treatment of the sewage plant, we detects
+            and
+            analyzes indicators such as the content of microplastics in water samples. We learned from the interview
+            that
+            there is a general lack of microplastics detection in manufacturing wastewater in southern China. However,
+            microplastics are gradually being valued in sewage.</p>
+
+        <div class="row">
+            <img src="https://2021.igem.org/wiki/images/d/df/T--DUT_China--coll-17.jpeg" alt=""
+                 class="col-12 col-md-8 mx-auto">
+        </div>
+        <div class="row">
+            <img src="https://2021.igem.org/wiki/images/0/09/T--DUT_China--coll-18.jpeg" alt=""
+                 class="col-12 col-md-6 mx-auto">
+        </div>
+        <p>7. The two parties jointly mobilized other iGEM teams engaged in algae treatment to join the cooperation and
+            plan
+            to establish a microalgae alliance to expand the influence of the project.</p>
+        <p>8. To achieve the above cooperation goals better, we have held several online conferences with SCAU-China and
+            participated in the CCiC held in Shanghai in August this year.</p>
+        <p>Click <a href="http://2021.igem.org/Team:SCAU-China/Collaborations" target="_blank">here</a> to visit their
+            wiki.</p>
+
+    </article>
+    <article class="article">
+        <h1>CPU_China<a href="http://2021.igem.org/Team:CPU_CHINA/Collaborations" target="_blank">
+            <svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1714">
+                <path d="M607.934444 417.856853c-6.179746-6.1777-12.766768-11.746532-19.554358-16.910135l-0.01228 0.011256c-6.986111-6.719028-16.47216-10.857279-26.930349-10.857279-21.464871 0-38.864146 17.400299-38.864146 38.864146 0 9.497305 3.411703 18.196431 9.071609 24.947182l-0.001023 0c0.001023 0.001023 0.00307 0.00307 0.005117 0.004093 2.718925 3.242857 5.953595 6.03853 9.585309 8.251941 3.664459 3.021823 7.261381 5.997598 10.624988 9.361205l3.203972 3.204995c40.279379 40.229237 28.254507 109.539812-12.024871 149.820214L371.157763 796.383956c-40.278355 40.229237-105.761766 40.229237-146.042167 0l-3.229554-3.231601c-40.281425-40.278355-40.281425-105.809861 0-145.991002l75.93546-75.909877c9.742898-7.733125 15.997346-19.668968 15.997346-33.072233 0-23.312962-18.898419-42.211381-42.211381-42.211381-8.797363 0-16.963347 2.693342-23.725354 7.297197-0.021489-0.045025-0.044002-0.088004-0.066515-0.134053l-0.809435 0.757247c-2.989077 2.148943-5.691629 4.669346-8.025791 7.510044l-78.913281 73.841775c-74.178443 74.229608-74.178443 195.632609 0 269.758863l3.203972 3.202948c74.178443 74.127278 195.529255 74.127278 269.707698 0l171.829484-171.880649c74.076112-74.17435 80.357166-191.184297 6.282077-265.311575L607.934444 417.856853zM855.61957 165.804257l-3.203972-3.203972c-74.17742-74.178443-195.528232-74.178443-269.706675 0L410.87944 334.479911c-74.178443 74.178443-78.263481 181.296089-4.085038 255.522628l3.152806 3.104711c3.368724 3.367701 6.865361 6.54302 10.434653 9.588379 2.583848 2.885723 5.618974 5.355985 8.992815 7.309476 0.025583 0.020466 0.052189 0.041956 0.077771 0.062422l0.011256-0.010233c5.377474 3.092431 11.608386 4.870938 18.257829 4.870938 20.263509 0 36.68962-16.428158 36.68962-36.68962 0-5.719258-1.309832-11.132548-3.645017-15.95846l0 0c-4.850471-10.891048-13.930267-17.521049-20.210297-23.802102l-3.15383-3.102664c-40.278355-40.278355-24.982998-98.79612 15.295358-139.074476l171.930791-171.830507c40.179095-40.280402 105.685018-40.280402 145.965419 0l3.206018 3.152806c40.279379 40.281425 40.279379 105.838513 0 146.06775l-75.686796 75.737962c-10.296507 7.628748-16.97358 19.865443-16.97358 33.662681 0 23.12365 18.745946 41.87062 41.87062 41.87062 8.048303 0 15.563464-2.275833 21.944801-6.211469 0.048095 0.081864 0.093121 0.157589 0.141216 0.240477l1.173732-1.083681c3.616364-2.421142 6.828522-5.393847 9.529027-8.792247l79.766718-73.603345C929.798013 361.334535 929.798013 239.981676 855.61957 165.804257z"
+                      p-id="1715"></path>
+            </svg>
+        </a></h1>
+        <p>Our cooperative relationship with China Pharmaceutical University is reflected in daily exchanges, meetings,
+            discussions, and learning. We are also multi-enzyme complexes formed by closer physical contact of multiple
+            enzyme active sites, which can significantly accelerate the chemical reaction through intermediate
+            transmission. Multi enzyme complexes can further accelerate the degradation of enzymes without interfering
+            with the structure of enzyme active sites or enzyme activity.</p>
+        <p>Through experiments in May this year, we deeply understood the interaction mechanism between each critical
+            component and calculated the reaction of intermediate products to enzymes, which helps us better explain our
+            system. To apply our complex system to other enzyme systems, we established a modular design and used our
+            module based on an in-depth understanding of the mechanism of action. We also exchanged views on the
+            construction of the complex online.</p>
+        <img src="https://2021.igem.org/wiki/images/1/13/T--DUT_China--partner51.png" alt="" class="col-12">
+        <p>In addition, in May this year, we were invited by the team of Kaiserslautern University in Germany who
+            studied laccases at the environmental track in 2020 to study the laccase project together, so we also
+            invited the team of China Pharmaceutical University who also did the laccase project to communicate, learn
+            appropriate methods and discuss experimental problems with each other.</p>
+        <img src="https://2021.igem.org/wiki/images/b/bd/T--DUT_China--partner61.png" alt="" class="col-12">
+        <p>In the questionnaire survey on the public's awareness of plastic pollution in July 2021, we shared the
+            results of the questionnaire survey to have a larger data sample to ensure the universality of the results.
+            Facts have proved that the results of the questionnaire are still related to the region.</p>
+        <p>We are not only academic and project exchanges but also formed friendships through this cooperation. In the
+            CCiC meeting in August 2021, we had an offline appointment. We not only exchanged information on project
+            experiments but also learned more about each other's schools.</p>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2">
+                <img src="https://2021.igem.org/wiki/images/2/2b/T--DUT_China--partner71.jpeg" alt="">
+                <img src="https://2021.igem.org/wiki/images/2/21/T--DUT_China--partner72.jpeg" alt="">
+            </div>
+        </div>
+        <img src="https://2021.igem.org/wiki/images/f/f7/T--DUT_China--partner81.jpeg" alt="" class="col-12">
+
+        <p>In September 2021, we jointly interviewed the gold land group with CPU_China. According to different
+            directions of the project, we discussed and exchanged with professionals of the group on the composition and
+            use of farmers' plastic sheds and films and the feasibility of project solutions. We have gained a lot and
+            further deepened our understanding of the significance and application prospect of the project.</p>
+        <div class="row">
+            <div class="col-12 ">
+                <img src="https://2021.igem.org/wiki/images/6/65/T--DUT_China--partner91.png" alt="">
+            </div>
+        </div>
+        <p>DUT_China and CPU_China are members of Plasticase, a community dedicated to solving the problem of plastic
+            pollution. At the virtual round table "Reshaping" the Future, both parties introduced their projects. The
+            other side congratulated us on our success. At the same time, We also send our blessings to DUT_China and
+            hope that they can get good experimental results.</p>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2">
+                <img src="https://2021.igem.org/wiki/images/e/e5/T--DUT_China--partner41.jpeg" alt="">
+                <img src="https://2021.igem.org/wiki/images/a/a5/T--DUT_China--partner42.png" alt="">
+            </div>
+        </div>
+
+        <p>In October this year, we also discussed issues related to hydrophobic proteins and shared relevant
+            hydrophobic protein structure libraries. At the same time, we communicate the modeling of a self-organizing
+            neural network, trying to reduce the difficulty of building a comprehensive project model. The university
+            where CPU_China is located does not have high-temperature gel retardation chromatography. However, our
+            school's instrument sharing platform has this equipment, so we preliminarily agreed that subsequent
+            degradation samples of CPU_China can be sent to our school, and we will help them detect PE degradation
+            products.</p>
+        <p>Click <a href="http://2021.igem.org/Team:CPU_CHINA/Collaborations" target="_blank">here</a> to visit their
+            wiki.</p>
+
+    </article>
+</section>
+<div id="footer-point"></div>
+<script>
+    //About the top-scroll--linked to general.js
+    window.onload = init;
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
+</script>
+</body>
+</html>

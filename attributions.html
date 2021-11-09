@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attributions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script src="js/sidebar.js" defer></script>
+</head>
+<body>
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/3/36/T--DUT_China--t_attributions.png");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/3/36/T--DUT_China--t_attributions.png");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/3/36/T--DUT_China--t_attributions.png");
+    background-image: url("https://2021.igem.org/wiki/images/3/36/T--DUT_China--t_attributions.png");'>
+    <div>Attributions</div>
+</div>
+<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
+    <table>
+        <tr v-for="(value,key,index) in articles">
+            <td>
+                <canvas width="40" height="40" class="canvas"></canvas>
+            </td>
+            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
+                <a v-bind:href="'#article'+(key+1)" style="font-size: 16px;">
+                    {{value.innerHTML}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<style>
+    #main-text img.portrait {
+        display: block;
+        width: 25%;
+        margin: 0.5rem auto;
+    }
+
+    @media only screen and (max-width: 575px) {
+        #main-text img.portrait {
+            width: 100%;
+        }
+    }
+
+    #main-text .group * {
+        max-width: 100%;
+        margin: 0.5rem;
+    }
+
+    #main-text .group1 * {
+        height: 80px;
+    }
+</style>
+<section id="main-text">
+    <article class="article">
+        <h1>1 Leaders</h1>
+        <h2>Sizhe Chen</h2>
+        <p>1. Designed the project and participated in most of wet experiments.</p>
+        <p>2. Established the procedures of dry experiments.</p>
+        <p>3. Led the whole team to finish every necessary target.</p>
+        <h2>Yuliang Huo</h2>
+        <p>1. Gathered team members and organized the team.</p>
+        <p>2. Organized weekly meetups.</p>
+        <p>3. Offered the imagine of our project.</p>
+        <p>4. Designed the process of the experiment.</p>
+        <p>5. Connected with other teams.</p>
+        <p>6. Wrote and proofread our experimental process.</p>
+        <p>7. Wrote and proofread the third part of HP.</p>
+        <p>8. Arranged works.</p>
+    </article>
+    <article class="article">
+        <h1>2 Experiments</h1>
+        <h2>Jing Chen</h2>
+        <p>1. Contacted with other teams to cooperate and communicate.</p>
+        <p>2. Participated in the wet experiments.</p>
+        <p>3. Participated in writing for some aspects.</p>
+        <h2>Yan Chen</h2>
+        <p>1. Participated in background research at the beginning of the project.</p>
+        <p>2. Participated in writing and rewriting for some aspects.</p>
+        <h2>Qi Cui</h2>
+        <p>1. Participated in the wet experiment group and the HP group.</p>
+        <p>2. Participated in the writing of wet experiment story and related design of parts.</p>
+        <p>3. Publicized the harm of microplastic to the community residents by visiting the community and interviewing
+            the masses.
+        </p>
+        <p>4. Participated in the writing of the HP group copywriting and related contents of project on the team
+            official account.</p>
+        <h2>Peihang Gu</h2>
+        <p>1. Participated in the writing of wet experiment story and related design of parts.</p>
+        <p>2. Participated in wet experiments and mainly completed part of gene-related work.</p>
+        <h2>Lingjie Hou</h2>
+        <p>1. Participated in wet experiments and mainly completed part of protein-related work:</p>
+        <p>(1) Activation, induced expression and fragmentation of recombinant bacteria;</p>
+        <p>(2) Collection, isolation and purification of proteins;</p>
+        <p>(3) Identification of successful expression of enzymes and determination of enzyme activity, etc.</p>
+        <p>2. Participated in the early HP, including the following:</p>
+        <p>(1) Preliminary background investigation;</p>
+        <p>(2) Safety Form writing;</p>
+        <p>(3) Schedule writing, etc.</p>
+        <h2>Yanming Jin</h2>
+        <p>1. Assisted and organized experiments.</p>
+        <p>2. Participated in background research at the beginning of the project.</p>
+        <p>3. In charge of the human practices group,provided ideas and attended meetings.</p>
+        <p>4. Communicated with other iGEM teams.</p>
+        <h2>Yi Li</h2>
+        <p>1. Wrote the Human Practice process.</p>
+        <p>2. Contacted with other teams to cooperate and communicate.</p>
+        <p>3. Conducted the early wet experiments.</p>
+        <p>4. Participated in group meetings and discussed opinions.</p>
+        <h2>Zongqi Li</h2>
+        <p>1. Participated in group meetings and discussed opinions.</p>
+        <p>2. Participated in the preliminary design experiment process.</p>
+        <p>3. Did the wet experiments.</p>
+        <p>4. Participated in HP Education part.</p>
+        <h2>Yuanyuan Liu</h2>
+        <p>1. Held virtual meetups.</p>
+        <p>2. Helped designing the project.</p>
+        <p>3. Took charge of the molecular biology part of wet lab experiments.</p>
+        <h2>Songlin Ma</h2>
+        <p>1. Found some literature, summed up the harm of plastics to people, as well as the current methods of
+            degradation of plastics.</p>
+        <p>2. Did some auxiliary experiments.</p>
+        <h2>Shupeng Piao</h2>
+        <p>1. Project preparation: Organized and assigned background research team work, provided ideas and organized
+            meetings.</p>
+        <p>2. Participated in connection, transformation and colony PCR.</p>
+        <p>3. Participated in protein extraction and activity detection.</p>
+        <p>4. Human practice: Interviewed experts and stakeholders, and recorded the interview content.</p>
+        <p>5. Safety part in wet experiments and flowchart part in integrated human practice writing.</p>
+        <p>6. Edited iGEM related push on WeChat platform and slides.</p>
+        <h2>Binghui Song</h2>
+        <p>1. Led a group to conduct extensive wet experiments, such as constructing engineered bacteria.</p>
+        <p>2. Discussed with the team leader how to conduct the experiment.</p>
+        <h2>Gerui Yin</h2>
+        <p>1. Participated in experiments.</p>
+        <p>2. Participated in weekly group meetings.</p>
+        <p>3. Helped to write articles about HP.</p>
+        <h2>Liting Yue</h2>
+        <p>1. Wet lab ideals construction.</p>
+        <p>2. Experimental protocol assistance.</p>
+        <p>3. Experimental schemes design.</p>
+        <h2>Xuanshuo Zhang</h2>
+        <p>1. Participated in the team management, improved the division of labor, plotted Gantt chart.</p>
+        <p>2. Participated in experimental operation.</p>
+        <p>3. Researched the background of plastic pollution.</p>
+        <p>4. Designed the questionnaire of HP.</p>
+        <p>5. Raised a bit funds.</p>
+        <p>6. Wrote a business plan.</p>
+        <h2>Yihan Zhang</h2>
+        <p>1. Wrote the Human Practice process.</p>
+        <p>2. Contacted with other teams to cooperate and communicate.</p>
+        <p>3. Conduct the early wet experiment.</p>
+        <h2>Haiyue Zhou</h2>
+        <p>Did the experiments of constructing plasmid vector.</p>
+        <h2>Wenjing Zhou</h2>
+        <p>1. Participated in wet experiments and completed part of protein-related work:</p>
+        <p>(1) Identification of successful expression of enzymes;</p>
+        <p>(2) Purification of expressed protein and multiple characterizations of proteins.</p>
+        <p>2. Participated in the early HP, including the following:</p>
+        <p>(1) Preliminary background investigation, including collecting data and consulting literature;</p>
+        <p>(2) attended team collaboration meetings to build stable partnership;</p>
+        <p>(3) Participated in team promotion (official accounts).</p>
+    </article>
+    <article class="article">
+        <h1>3 Human Practices</h1>
+        <h2>Jingxuan Qi</h2>
+        <p>1. Wrote the Human Practice process.</p>
+        <p>2. Contacted with other teams to cooperate and communicate.</p>
+        <p>3. Conducted the early wet experiments.</p>
+        <p>4. Participated in human practice and connected with the community.</p>
+        <h2>Jie Ren</h2>
+        <p>1. Participated in the HP group.</p>
+        <p>2. Publicized the harm of microplastic to the community residents by visiting the community and interviewing
+            the masses.
+        </p>
+        <p>3. Participated in the writing of the HP group copywriting and related contents of project on the team
+            official account.</p>
+        <h2>Wenbo Chen</h2>
+        <p>1. Took group photos and personal photos of members, as well as experimental photos.</p>
+        <p>2. Participated in the HP group.</p>
+        <p>3. Publicized the harm of microplastic to the community residents by visiting the community and interviewing
+            the masses.</p>
+        <p>4. Participated in the writing of the HP group copywriting and related contents of project on the team
+            official account.</p>
+    </article>
+    <article class="article">
+        <h1>4 Video and Art Design</h1>
+        <h2>Anqi Ren</h2>
+        <p>1. Designed the team logo.</p>
+        <p>2. Drew the elements for the science game which is a part of Human Practices.</p>
+        <p>3. Drew the background images of the deliverables throughout the competition.</p>
+        <p>4. Designed the team flag.</p>
+        <p>5. Drew the vector elements required for the project promotion video.</p>
+        <p>6. Drew the flow chart of Human Practices.</p>
+        <p>7. Drew the layout of the wiki pages.</p>
+        <h2>Limin Zhang</h2>
+        <p>1. Drew the background images of the deliverables throughout the competition.</p>
+        <p>2. Designed the team flag.</p>
+        <p>3. Drew the vector elements required for the project promotion video.</p>
+        <p>4. Drew the flow chart of Human Practices.</p>
+        <p>5. Drew the layout of the wiki pages.</p>
+        <h2>Yiheng Zhao</h2>
+        <p>1. Project promotion video subtitle, music, script and animation.</p>
+        <p>2. Edited the cooperation promotion video (with <a href="https://2021.igem.org/Team:NNU-China">NNU-China</a>)
+            .</p>
+        <p>3. Participated in background research of the project.</p>
+        <p>4. Participated primer design at the beginning of the project.</p>
+    </article>
+    <article class="article">
+        <h1>5 Wiki Construction</h1>
+        <h2>Taosong Fang</h2>
+        <p>1. Developed wiki pages and part pages.</p>
+        <p>2. Designed the animation on the home page.</p>
+        <p>3. Used machine learning to model and analyze the information of HP questionnaire.</p>
+        <h2>Enze Zhang</h2>
+        <p>1. Wrote the code of the wiki pages except the home page.</p>
+        <p>2. Collected most of the source materials from other groups.</p>
+        <p>3. Designed simple styles for our wiki.</p>
+        <p>4. Wrote the code of some part pages.</p>
+        <p>5. Provided suggestions about fixing the problems about wiki construction for team <a
+                href="https://2021.igem.org/Team:Tianjin">Tianjin</a>,
+            <a href="https://2021.igem.org/Team:CPU_CHINA">CPU_CHINA</a> and
+            <a href="https://2021.igem.org/Team:GreatBay_SZ">GreatBay_SZ</a>.</p>
+    </article>
+    <article class="article">
+        <h1>6 Instructors</h1>
+        <h2>Jun Yang</h2>
+        <p>1. Provided guidance to Human Practices.</p>
+        <p>2. Promoted the progresses of the project.</p>
+        <p>3. Pointed out the main contradictions at the critical stage of the experiment.</p>
+        <p>4. Suggestions on the practicality of the project.</p>
+        <p>5. Provided us with the latest research progress on related projects.</p>
+        <p>6. Provided financial support.</p>
+        <h2>Lihan Zi</h2>
+        <p>1. Organized competition training.</p>
+        <p>2. Promoted the progresses of the project.</p>
+        <p>3. Provided technical support and guidance.</p>
+        <p>4. Applied and organized team activity funds.</p>
+        <h2>Zhanyou Chi</h2>
+        <p>1. Provided facility and supplies for lab work.</p>
+        <p>2. Advices on research strategies.</p>
+        <p>3. Provided latest progress on microalgae related research.</p>
+        <h2>Fantao Kong</h2>
+        <p>1. Promoted the progresses of the project.</p>
+        <p>2. Pointed out the main contradictions at the critical stage of the experiment.</p>
+        <p>3. Provided us with the latest research progress on related projects.</p>
+        <h2>Li Xu</h2>
+        <p>1. Provided lab and equipments.</p>
+        <p>2. Organized the meetings between students and advisors.</p>
+        <p>3. Provided some advice on how to design experiments.</p>
+        <p>4. Provided suggestions on experiment methods.</p>
+    </article>
+    <article class="article">
+        <h1>7 Advisors</h1>
+        <h2>Wei Kang</h2>
+        <p>Provided professional knowledge of protein engineering method and inspired us to apply his discovered
+            RIDD-RIAD peptides into our project.</p>
+        <h2>Bolong Li</h2>
+        <p>1. Offered suggestions to the student leaders on daily affair.</p>
+        <p>2. Provided critical discussions on dry experiment.</p>
+        <h2>Shuchang Wang</h2>
+        <p>Provided us experimental equipments and helped the team finished the experiments.</p>
+        <h2>Guoxin Yang</h2>
+        <p>Provided professional guidance in protein based experiments.</p>
+    </article>
+    <article class="article">
+        <h1>8 Acknowledgements</h1>
+        <h2>Gratitude to the professor and teacher.</h2>
+        <p>We thank these people for their selfless help and guidance.</p>
+        <p>Professor Zhiwei Zhu provides corresponding ideas for plasmid designing.</p>
+        <img src="https://2021.igem.org/wiki/images/f/fc/T--DUT_China--Acknowledge-11.png" class="portrait" alt="">
+        <p>Associate Professor Wei Kang inspired us of the idea of RIAD-RIDD system.</p>
+        <img src="https://2021.igem.org/wiki/images/c/c5/T--DUT_China--a_wkang.jpg" class="portrait" alt="">
+        <p>Graduate Guoxing Yang leads us to do protein related experiments.</p>
+        <img src="https://2021.igem.org/wiki/images/a/a5/T--DUT_China--a_gxyang.jpg" class="portrait" alt="">
+        <p>Doctor Shuchang Wang helped us establish TPA characterization method and provided necessary samples and HPLC
+            for further experiments.</p>
+        <img src="https://2021.igem.org/wiki/images/8/87/T--DUT_China--a_scwang.jpg" class="portrait" alt="">
+        <p>Teacher Yanbin Feng helped us to make our complex more applicable and effective.</p>
+        <img src="https://2021.igem.org/wiki/images/5/51/T--DUT_China--Acknowledge-15.jpeg" class="portrait" alt="">
+        <p>Professor Yu Fan helped us understand the purpose and reality of the project more.</p>
+        <img src="https://2021.igem.org/wiki/images/0/07/T--DUT_China--Acknowledge-16.jpeg" class="portrait" alt="">
+        <h2>Acknowledgement to the support of school.</h2>
+        <p>Thanks to the International Office, Academic Affairs Office, School of Bioengineering, School of Innovation
+            and Entrepreneurship of Dalian University of Technology for their support.</p>
+        <div class="group group1 d-flex flex-wrap justify-content-center align-items-center">
+            <img src="https://2021.igem.org/wiki/images/3/34/T--DUT_China--ac21.png" alt="">
+            <img src="https://2021.igem.org/wiki/images/1/16/T--DUT_China--ac22.jpg" alt="">
+            <img src="https://2021.igem.org/wiki/images/e/e4/T--DUT_China--ac23.png" alt="">
+            <img src="https://2021.igem.org/wiki/images/6/67/T--DUT_China--ac24.jpg" alt="">
+        </div>
+        <h2>Thanks to the sponsors providing us economically.</h2>
+        <p>At the same time, thanks to the Foundation and GenSci for their economic support. Thanks to all people,
+            institutions and enterprises that once assisted us!</p>
+        <div class="group group2 d-flex flex-wrap justify-content-center align-items-center">
+            <img src="https://2021.igem.org/wiki/images/7/79/T--DUT_China--ac25.jpg" alt="">
+            <img src="https://2021.igem.org/wiki/images/9/9d/T--DUT_China--spon_gensci.png" alt="">
+        </div>
+        <p>Ailurus vec<sup>TM</sup> can provide the best expression vector for a specific protein in certain throughput.
+            With the sponsorship of Ailurus vec<sup>TM</sup>, we tried the throughput of <i>N</i> = 1,536 to optimize
+            the
+            output of MHETase in our project.</p>
+        <img src="https://2021.igem.org/wiki/images/d/df/T--DUT_China--spon_ailurus.png" alt="" class="d-block mx-auto"
+             style="height:150px;max-width: 100%;">
+    </article>
+</section>
+<div id="footer-point"></div>
+<script>
+    //About the top-scroll--linked to general.js
+    window.onload = init;
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
+</script>
+</body>
+</html>

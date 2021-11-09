@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Communication</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script src="js/sidebar.js" defer></script>
+</head>
+<body>
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/c/c0/T--DUT_China--t_communication.jpg");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/c/c0/T--DUT_China--t_communication.jpg");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/c/c0/T--DUT_China--t_communication.jpg");
+    background-image: url("https://2021.igem.org/wiki/images/c/c0/T--DUT_China--t_communication.jpg");'>
+    <div>Communication</div>
+</div>
+<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
+    <table>
+        <tr v-for="(value,key,index) in articles">
+            <td>
+                <canvas width="40" height="40" class="canvas"></canvas>
+            </td>
+            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
+                <a v-bind:href="'#article'+(key+1)">
+                    {{value.innerHTML}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<style>
+    #main-text .container img {
+        padding: 0.5rem;
+        margin: auto 0;
+    }
+</style>
+<section id="main-text">
+    <article class="article">
+        <h1>1 Online promotion with ICII (into China, into iGEM)</h1>
+        <p>In order to make more students learn the related content of iGEM, and stimulate students' interest in
+            synthetic biology, we actively participate in the activities of ICII. Due to the need of epidemic prevention
+            in schools, we held an online seminar using the Tencent Meeting. First, the team members carefully
+            collated the relevant information, including the iGEM profile, the main work and significance of DUT_China,
+            the work of other teams, etc. to make a push and PPT. Then, we through the Moments, QQ group, WeChat
+            public accounts in the relevant push, interested students reached out to us, we counted the relevant number
+            of people. Next, we held an online presentation at the prescribed time. The captain and some students gave
+            us a vivid explanation of what we had prepared. And, at the end of the online promotion, we randomly
+            selected a few students, asked their feelings, timely feedback received from the students. Finally, we put
+            together a group photo, video and other information to the relevant students for the production of
+            promotional video.</p>
+        <p>Map of ICII: <a href=" https://2021.igem.org/Team:CPU_CHINA/Map" target="_blank">https://2021.igem.org/Team:CPU_CHINA/Map</a></p>
+        <img src="https://2021.igem.org/wiki/images/c/cc/T--DUT_China--com_1a.jpg" class="col-12" alt="">
+        <img src="https://2021.igem.org/wiki/images/d/d2/T--DUT_China--com_1b.jpg" class="col-12" alt="">
+    </article>
+    <article class="article">
+        <h1>2. Summer synthetic biology education activities</h1>
+        <p>This summer, some members of our iGEM team went to Zongbao villagers and Hajia Village, Haidong City, Qinghai
+            Province, for synthetic biology education. After half a month of teaching, local children learned much
+            knowledge, and we also learned a lot.</p>
+        <p>When explaining synthetic biology to children, we mainly explained the contribution of synthetic biology to
+            life and production and what synthetic biology can do. Starting from the reality of their lives and from
+            their perspective, it is easier for them to understand what synthetic biology is and what synthetic biology
+            can achieve. As the first synthetic biology enlightenment education for these children in their lives, we
+            believe that we have made them aware of synthetic biology and have a strong interest in synthetic biology.
+            In the future, we may choose to Enter the field of synthetic biology and make outstanding contributions to
+            mankind.</p>
+        <p>The teaching team added synthetic biology courses to the curriculum because the children in the countryside
+            rarely came into contact with such courses in previous classrooms. After seeing an amazing imagination,
+            creativity, and ability to accept new knowledge in the children, the team members clearly realized the
+            importance of quality education and all-around development in education. They also realized that rural
+            education also We must always accept and practice good educational concepts. The teaching team found in the
+            group home visits that many children are also "left-behind children," and they have some problems in
+            self-confidence and future planning.</p>
+        <p>Sometimes the team members are not very good teachers, and they can't control their tempers, and they will
+            yell at the children who are not obedient or disciplined in class. After really starting to have a group of
+            students of their own, the team members really realized the difficulty of being a teacher. In their works,
+            the players can experience the innocence and happiness that belong to the children, as if they have walked
+            into a fairy tale paradise. Their childish words make the players laugh and think. In the constant contact
+            with children, we can feel their hope for more knowledge, and we are also infected by their simple thoughts
+            and innocent smiles. The team members have gradually become more and more familiar with each other, and
+            their daily life matters have also become better and better. From the very beginning, the daily dinner and
+            lunch are often late and taste bad, and then they are ready on time and delicious. The daily fetching of
+            water, cooking, washing dishes, and hand-washing clothes made the team members experience the breath of life
+            so close for the first time, and the team members also learned a lot in this simple rural life.</p>
+        <p>Classes are taught during the day, cooking, cleaning, and home visits. At night, class preparation and
+            housekeeping are organized, and daily meetings are carried out in an orderly manner. On the first day in
+            Qinghai, we may feel that time flies very slowly. We have 14 days of teaching life, and we always feel that
+            we still have a long time to get along with the children. But the graduation ceremony came really suddenly,
+            and we were about to say goodbye to the children, but we were not ready yet; the team members knew that the
+            team members would miss every lesson they had, and they would miss everyone that could hear them. In the
+            morning of the morning reading, we will miss those smiling faces that are still smiling after being
+            mischievous. They are so cute and so likable. On the last day of class, some children complained, "Why is
+            the last day so harsh?" What they don't know, it's not that the team members want to treat them harshly;
+            they want to teach them as much knowledge as possible. , Reluctant to leave them. We think in this era,
+            vision and knowledge can be obtained on the Internet, and in this short half-month, the team members may be
+            able to give a few goals, let them have the desire to go out, let them realize their wishes confidently,
+            they are children with dreams, and their world should be very broad. That's it. The players here bring them
+            a green window, leaving them with a short memory. It may be a year or two that these bits and pieces will
+            become lighter and lighter, but the players will always have A window opened for them. The team members are
+            very happy and unforgettable this summer.</p>
+        <p>On the first day in Qinghai, we may feel that time flies very slowly. We have 14 days of teaching life, and
+            we always feel that we still have a long time to get along with the children. But the graduation ceremony
+            came really suddenly, and we were about to say goodbye to the children, but we were not ready yet; the team
+            members knew that the team members would miss every lesson they had, and they would miss everyone that could
+            hear them. In the morning of the morning reading, we will miss those smiling faces that are still smiling
+            after being mischievous. They are so cute and so likable. On the last day of class, some children
+            complained, "Why is the last day of class so harsh?" What they don't know, it's not that the team members
+            want to treat them harshly; they want to teach them as much knowledge as possible. , Reluctant to leave
+            them. We think in this era, vision and knowledge can be obtained on the Internet, and in this short
+            half-month, the team members may be able to give a few goals, let them have the desire to go out, let them
+            realize their wishes confidently, they are children with dreams, and their world should be very broad.
+            That's it. The players here bring them a green window, leaving them with a short memory. It may be a year or
+            two that these bits and pieces will become lighter and lighter, but the players will always have A window
+            opened for them. The team members are pleased and unforgettable this summer.</p>
+        <p>The summer teaching support of the teaching support team ended successfully. The teaching support team not
+            only contributed their love and strength during this teaching trip but also practiced the concept of
+            "serving rural education and practicing green support teaching." At the same time, the teaching support team
+            members have also gained the belief that we must be down-to-earth, diligent, and conscientious, go all-out
+            for a better future and realize self-worth. The summer school support is concise, but the impact on all the
+            members and children of the support team is far-reaching. This spirit of courage to assume social
+            responsibility will also be passed on from generation to generation.</p>
+        <p>During the trip to support education, the support team members and the children are all achieving a better
+            future together. This trip to support education conveys the knowledge is not only synthetic biology but also
+            the faith to be down-to-earth, diligent, and conscientious, to go all out for a better future, and realize
+            one's own value.</p>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2">
+                <img src="https://2021.igem.org/wiki/images/9/97/T--DUT_China--com_2a.jpg" class="col" alt="">
+                <img src="https://2021.igem.org/wiki/images/6/61/T--DUT_China--com_2b.jpg" class="col" alt="">
+                <img src="https://2021.igem.org/wiki/images/b/b2/T--DUT_China--com_2c.jpg" class="col" alt="">
+                <img src="https://2021.igem.org/wiki/images/2/27/T--DUT_China--com_2d.jpg" class="col" alt="">
+            </div>
+        </div>
+    </article>
+    <article class="article">
+        <h1>3. The Hundred-club jamboree of DUT</h1>
+        <p>The Hundred-club jamboree appearance show organized by the Youth League Committee Management Department of
+            the school and presented to the school's freshmen. As an excellent society, the iGEM society participated in
+            promoting and introducing the Hundred Regiment Battle of Dalian University of Technology. While introducing
+            the concept, development, and application scenarios of synthetic biology to the teachers and students of the
+            school, let more people experience the charm of synthetic biology firsthand, let them walk into the
+            promotion booth of our iGEM community, and be guided by our professionals Under the acceptance, much
+            knowledge of synthetic biology has been popularized.</p>
+        <p>Combining with traditional Chinese calligraphy art has added a cultural atmosphere unique to synthetic
+            biology in China. At the same time, we have also attracted many students interested in synthetic biology to
+            join our iGEM community as an infusion of freshness. Blood, we believe they will also popularize and promote
+            synthetic biology for more people in the future and contribute to the development of synthetic biology.</p>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2">
+                <img src="https://2021.igem.org/wiki/images/7/7c/T--DUT_China--com_3a.jpg" alt="" class="cols">
+                <img src="https://2021.igem.org/wiki/images/d/da/T--DUT_China--com_3b.jpg" alt="" class="cols">
+                <img src="https://2021.igem.org/wiki/images/e/e4/T--DUT_China--com_3c.jpg" alt="" class="cols">
+                <img src="https://2021.igem.org/wiki/images/5/5e/T--DUT_China--com_3d.jpg" alt="" class="cols">
+                <img src="https://2021.igem.org/wiki/images/4/48/T--DUT_China--com_3e.jpg" alt="" class="cols">
+                <img src="https://2021.igem.org/wiki/images/b/bd/T--DUT_China--com_3f.jpg" alt="" class="cols">
+            </div>
+        </div>
+    </article>
+</section>
+<div id="footer-point"></div>
+<script>
+    //About the top-scroll--linked to general.js
+    window.onload = init;
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script src="js/sidebar.js" defer></script>
+</head>
+<body>
+
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/8/88/T--DUT_China--t_model.png");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/8/88/T--DUT_China--t_model.png");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/8/88/T--DUT_China--t_model.png");
+    background-image: url("https://2021.igem.org/wiki/images/8/88/T--DUT_China--t_model.png");'>
+    <div>Model</div>
+</div>
+<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
+    <table>
+        <tr v-for="(value,key,index) in articles">
+            <td>
+                <canvas width="40" height="40" class="canvas"></canvas>
+            </td>
+            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
+                <a v-bind:href="'#article'+(key+1)">
+                    {{value.innerHTML}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<section id="main-text">
+    <article class="article">
+        <h1>Abstract</h1>
+        <p>
+            Wide spreading and utilization of plastic polyethylene terephthalate (PET) in the world has caused a large
+            quantity of environmental challenges and gained much attention. Plastics pollution represents a global
+            environmental crisis. In response, microbe <i>Ideonella sakaiensis</i> was reported to be capable of
+            secreting two
+            efficient enzymes to deconstruct PET polymers in mild temperature. However, this two-enzyme system
+            degradation capacity is highly limited by inhibition effects, diffusion of intermediates and PET surface
+            physicochemical properties. Therefore, we design a delicate multicomplex enzyme system, in which short
+            peptide tags (RIAD and RIDD) are applied to create scaffold-free modular enzymes assemblies. Here, in order
+            to effectively degrade microplastic PET particles, we construct enzymes of <i>Is</i>PETase and MHETase and
+            protein
+            hydrophobin in our complex system via scaffold modular part, which reveal higher catalytic efficiency in
+            mild temperature. This work presents an innovative strategy to improve PET degradation via biosynthetic
+            factories and artificially designed proteins system that do not exist in the nature.
+        </p>
+    </article>
+    <article class="article">
+        <h1>1 Introduction</h1>
+        <p>
+            Synthetic polymers pervade all aspects of modern life, due to their low cost, high durability, and
+            impressive range of tunability. Originally developed to avoid the use of animal-based products, plastics
+            have now become so widespread that their leakage into the biosphere and accumulation in landfills is
+            creating a global-scale environmental crisis. Among them, synthetic plastic polymers Polyethylene
+            terephthalate (PET) is one of the most widely used forms of synthetic plastics in several industrial fields,
+            which has been reported spreading as particles less than 5 mm in environments [1] and being captured from
+            environments with low efficiencies. Thus, plastic waste may have a negative effect on human health and
+            reveal a serious threatening to environments [2]. In comparison to the other solving methods, enzymatic
+            treatment utilizing PET hydrolyzing enzymes is environmental-friendly because it avoids the use of hazardous
+            chemicals. However, the attempt to solve this problem via bio-enzymes is faced with multiple challenges. For
+            a long time, biodegradation of plastic PET with its degradation enzymes are highly limited by their low
+            degradation ability in mild temperature [3].
+        </p>
+        <p>
+            Fortunately, in 2016, Yoshida et al. [4] reported the discovery of the bacterium, <i>Ideonella
+            sakaiensis</i>
+            201-F6, which develops a two-enzyme system to deconstruct PET plastic to TPA and EG molecules, which could
+            be effectively catabolized as a carbon and energy sources for cells. Further research of this two enzymes
+            system reveals that enzyme <i>Is</i>PETase is a cutinase-like serine hydrolase that attacks the PET plastic
+            polymer
+            with the highest efficiency in mild temperature among all previously discovered PET degradation enzymes. The
+            metagenome-derived leaf-branch compost cutinase (LCC) shows higher activity on low crystallinity PET film
+            degradation [5]. However, LCC is still not generally applicable due to the cost and high applied optimum
+            temperature around 72 °C [5], which highly limit its further application in engineered bacteria
+            bio-degradation system. Furthermore, the percentage of PET degradation intermediates MHET generated via LCC
+            were near to 60% [6], which could not be removed by MHETase effectively due to the possible loss of its
+            enzymatic activity at LCC applied temperature. Compared to LCC, the MHET removing efficiency in <i>Is</i>PETase
+            and
+            MHETase coexisting system was near to 100% [7]. LCC reveals near 5.5 times and 4 times lower enzymatic
+            activity to PET film and high crystallinity PET substrate at 30 °C compared to <i>Is</i>PETase [4] [8]. <i>Is</i>PETase
+            was
+            considerably more active against PET film at low temperatures than other PET degradation enzymes including
+            TfH, LCC, and FsC [4]. And more efforts of <i>Is</i>PETase protein rational evolution are made and these
+            works
+            largely improved enzyme <i>Is</i>PETase thermostability with a Tm value that was increased by 8.81 °C and
+            reacting
+            activity by around 14-fold at 40 °C [8], whose activity is even higher than LCC and BhrPETase isolated from
+            bacterium HR29 [6][8]. Furthermore, in a latter research, highly synergistic relationship between <i>Is</i>PETase
+            and MHETase was discovered in the conversion of amorphous PET film to monomers [7], which effectively
+            accelerate PET degradation. However, this two enzymes system may be still limited due to enzymatic loss
+            caused by protein fusion, inhibition effects and diffusion of intermediates. And methods of rational
+            evolution of protein may not be applicable to further improve the overall turnover rate [9]. In detail, the
+            MHET molecules produced via PET degradation may be competitive to <i>Is</i>PETase active sites, which was
+            revealed
+            via calculation results shown in this work. Despite of this, MHET molecules diffusion in space may also be a
+            problem for MHETase remove MHET in time. Therefore, in this work, we designed an intricate multidomain
+            protein scaffold composed of short peptide tags of RIAD [11] and RIDD [12], enzymes of <i>Is</i>PETase and
+            MHETase
+            and protein hydrophobin [11], in which the enzymes constructed in near positions to each other may work with
+            highly synergistic relationship. All proteins involved have unique functions in this system. <i>Is</i>PETase
+            and
+            MHETase are two enzymes involved deconstructing polymer PET plastic to MHET and MHET to TPA molecules,
+            respectively. And hydrophobin protein, a small fungal protein, possess positive effects on altering the
+            physicochemical properties of PET surfaces and enzyme aggregation enhancement when it was fused with PET
+            degradation enzyme cutinase [13]. Here, hydrophobin protein are involved in our designed system with
+            possible functions of adhering to PET polymers and altering the physicochemical properties of PET for
+            degradation improvement [14]. The peptides of RIDD and RIAD originated from cAMP-dependent protein kinase
+            (PKA) and the A kinase-anchoring proteins (AKAPs), respectively. The RIAD peptide is capable of specifically
+            binds to the RIDD dimer with strong affinity [15]. The following two features make them ideal protein
+            binding modular for our system assembly: (1) the tiny size (44 and 18 amino acids, respectively), which
+            minimizes the disturbances to the structure and activity of the enzymes when fused with these peptides, (2)
+            the strong binding affinity (with a KD of 1.2 nM between RIDD dimer and RIAD peptide demonstrated in our
+            colleagues’ previous work [15]) to ensure the stability of the whole enzyme complexes in the environment.
+        </p>
+        <p>
+            In our designing, RIAD or RIDD was fused to the N termini of hydrophobin and <i>Is</i>PETase linked by a
+            flexible
+            linker (GGGGS)<sub>3</sub> respectively and another RIDD was fused to the C termini of MHETase by a flexible
+            linker
+            (GGGGS)<sub>3</sub>. MHETase and <i>Is</i>PETase are delicately constructed in near positions (as shown in
+            structure
+            calculations) via RIDD peptides strong affinity to accelerate MHET removement and reduce competitive
+            inhibition to <i>Is</i>PETase. Meanwhile, short peptides RIDD fused to enzymes effectively avoid
+            disturbances to
+            enzymes active sites. And for prudential and rational designing, the multicomplex enzymes system designed in
+            our work are evaluated via Molecular Dynamic simulations (MD) to ensure the structure designing
+            feasibilities. The components binding stability were measured and the whole system was revealed to maintain
+            its components binding stably with enzymes fixed in relative near positions to each other in liquid
+            environment. Furthermore, the key residues distances to Ca<sup>2+</sup> ion in Ca<sup>2+</sup> binding site
+            reveal maintenance of
+            structure stability. Then, we construct one plasmid that encoding the multicomplex enzyme system with liking
+            methods mentioned above and expressed it in the bacterium <i>Escherichia coli</i> with 1:1:1 theoretical
+            ratio for
+            each designed component. This ratio may delicately enhance our designed components assembling and avoid
+            possible mis-assembly. The assembled protein complex systems in the extracellular spaces were demonstrated
+            to effectively alter the physicochemical properties of PET and enhance the overall turnover rate of PET
+            degradation.
+        </p>
+    </article>
+    <article class="article">
+        <h1>2 Results And Discussions</h1>
+        <h2>
+            2.1 MHET may possess tendency limiting the efficiency of whole PET degradation process and a delicate
+            multidomain modular system is designed
+        </h2>
+        <p>
+            In previous research, inhibition effect by MHET accumulating in the reaction medium has been demonstrated as
+            a key factor limiting the efficiency of the polyester hydrolases from <i>Thermobifida fusca</i>, whose
+            structure is
+            highly similar to <i>Is</i>PETase discovered in 2016. [4]. As the alignment shown in Figure 1 (a), the
+            structure of
+            the <i>Is</i>PETase is highly similar to polyester hydrolases from <i>Thermobifida fusca</i> [16] with same
+            key
+            residues
+            possessing similar enzymatic mechanisms in active site and may be inhibited by MHET as well. Results
+            calculated from Autodock Vina software [17] also reveal this probability, in which MHET, compared to PET
+            substrate, is shown to have the same binding affinity level to <i>Is</i>PETase enzyme active site and may be
+            competitive to <i>Is</i>PETase. Our later experiment results also reveal this probability. Based on these,
+            <i>Is</i>PETase
+            efficiency is considered to be limited and inhibited by MHET molecule and MHET need to be eliminated from
+            the reaction medium to expose occupied <i>Is</i>PETase active site to PET substrates. Despite of this, MHET
+            molecules diffusion in space may also be a limiting factor to PET degradation rate because MHETase may not
+            be able to effectively remove MHET from reaction medium in time. Meanwhile, as shown in Figure 1 (b), MHET
+            molecule reveals a stronger binding tendency to MHETase active site than to <i>Is</i>PETase active site and
+            this
+            stronger tendency reveals that MHET may be more likely to enter into MHETase active site rather than
+            occupying <i>Is</i>PETase active site when MHETase is near to <i>Is</i>PETase in liquid environment. Based
+            on these, for
+            the purposes of reducing MHET inhibition effect to <i>Is</i>PETase, eliminating MHET accumulation in the
+            reaction
+            medium and degrading PET film with higher speed, we designed a delicate multidomain proteins system as
+            mentioned above, in which the enzymes <i>Is</i>PETase and MHETase constructed in near positions to each
+            other work
+            with high synergistic relationship [7] to improve the whole PET plastic turnover rate. The hydrophobin
+            protein involved is expected to enhance enzymes aggregation, alter the physicochemical properties of PET
+            surfaces and improve PET decomposing rate.
+        </p>
+        <div class="figures">
+            <div class="row">
+                <div class="col-12">
+                    <img src="https://2021.igem.org/wiki/images/f/f5/T--DUT_China--m_1a.png" alt="">
+                    <p>(a)</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <img src="https://2021.igem.org/wiki/images/f/f6/T--DUT_China--m_1b.png" alt="">
+                    <p>(b)</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <img src="https://2021.igem.org/wiki/images/9/94/T--DUT_China--m_1c.png" alt="">
+                    <p>(c)</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <img src="https://2021.igem.org/wiki/images/b/b7/T--DUT_China--m_1d.png" alt="">
+                    <p>(d)</p>
+                </div>
+            </div>
+        </div>
+        <p class="caption">
+            Figure 1: (a) (a) Alignment of the polyester hydrolases from <i>Thermobifida fusca</i> and PETase from
+            Ideonella
+            sakaiensis and same key residues involved in enzymatic reaction. (b) Binding affinity energy of MHET to
+            PETase and MHET enzyme active sites calculated via Autodock Vina. The results reveal a strong entering
+            tendency of MHET to <i>Is</i>PETase active site and higher binding affinity to MHETase active site. These
+            reulsts
+            provide helpful references and insights of strong binding tendency of MHET to <i>Is</i>PETase and MHETase
+            active
+            sites. (c) Entrance of MHET molecule to <i>Is</i>PETase active site with strong binding affinity. (d) The
+            synergestic relationships of <i>Is</i>PETase and MHETase in PET degradation.
+        </p>
+        <h2>
+            2.2 Rational designing strategy calculations and evaluation for artificially designed system
+        </h2>
+        <p>
+            In our designing, RIAD or RIDD was fused to the N termini of hydrophobin and <i>Is</i>PETase by a flexible
+            linker
+            (GGGGS)<sub>3</sub> respectively and another RIDD was fused to the C termini of MHETase by a flexible linker
+            (GGGGS)<sub>3</sub>.
+            Flexible linker designing may drive three protein components to central RIDD-dimer-RIAD scaffolds to lower
+            the solvent surface area and physically fix <i>Is</i>PETase and MHETase in a near position to each other.
+            Such
+            designing may ensure that the reaction products of <i>Is</i>PETase effectively enter the near MHETase
+            enzymatic
+            site as new substrates, by which improves the whole reaction rate. Therefore, for the purposes of prudential
+            designing mentioned above, the binding stability of the whole system and enzymes active sites are calculated
+            to ensure that the modular enzymes components are fixed stably in near position and the whole structure is
+            well maintained as a complex in liquid environment.
+        </p>
+        <p>
+            For each component structure, <i>Is</i>PETase and MHETase are derived from previous X-ray diffraction
+            structures
+            and then RIDD is fused to enzymes termini as methods mentioned above. The structure of
+            hydrophobin-RIAD is not available in PDB dataset and is predicted by Phyre2 [20]. Then, with these raw
+            components structures, our team constructs the raw model of the multidomain proteins system (as shown in
+            supplementary Figure 2 (b)). The multidomain proteins components in our research are constructed via VMD
+            [19] and Z-dock [21] software.
+        </p>
+        <div class="figures">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/6/6c/T--DUT_China--m_2a.png" alt="">
+                    <p>(a)</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="https://2021.igem.org/wiki/images/b/b3/T--DUT_China--m_2b.png" alt="">
+                            <p>(b)</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="https://2021.igem.org/wiki/images/f/f4/T--DUT_China--m_2c.png" alt="">
+                            <p>(c)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/9/9c/T--DUT_China--m_2d.png" alt="">
+                    <p>(d)</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/2/24/T--DUT_China--m_2e.png" alt="">
+                    <p>(e)</p>
+                </div>
+            </div>
+        </div>
+        <p class="caption">
+            Figure 2: The artificially designed complex system was applied with 150 ns explicit solvent MD simulation.
+            The last 60 ns MD simulation results revealed that the whole structure was well equilibrated and therefore
+            were considered to be sampled and analyzed. (a) Possible mature structure generated via MD calculations.
+            Compared to initial raw model of each component (shown in supplementary material Figure 1 (b)), each
+            component (<i>Is</i>PETase-RIDD, MHETase-RIDD, Hydrophobin-RIAD) are drawn toward to central RIAD and RIDD
+            dimer scaffolds to lower the solvent contact surface area. Components are bound to each other firmly and no
+            diffusion behaviors are observed in simulation. (b) RMSD values of simulated system. (c) Illustration of
+            components assembly process. (d) Last 60 ns simulation results of gyration radius of modular enzymes system
+            with total 150 ns simulation RMSD. Gyration radius values are fluctuated slightly, which reveal the
+            stability of the whole system density and structure in liquid environment. In the long time MD simulation,
+            component (<i>Is</i>PETase-RIDD, MHETase-RIDD and Hydrophobin-RIAD) is drawn to central scaffolds by (GGGGS)<sub>3</sub>
+            linker to lower the solvent contact surface area and maintained stably in near positions, whose results
+            meets our initial designing expectations.
+        </p>
+        <p>
+            Each component (PETase-RIDD, MHETase-RIDD and Hydrophobin-RIAD) is applied with 20 ns explicit solvent
+            simulation for structural optimization. Notably, for the purposes of obtaining an accurate structure of
+            predicted protein in aqueous environment, the structure of Hydrophobin predicted by Phyre2 is firstly
+            applied with 50 ns explicit solvent MD simulation before fusing to RIAD. Then, these components are
+            initially set in near positions to each other and spontaneously bound together as a complex via 20 ns
+            explicit solvent simulation to obtain a relative reasonable binding structure formed via affinity between
+            RIDD dimers and RIAD. This structure is highly consistent to the X-ray revealed binding complex formed by
+            free RIDD dimers and RIAD components [15]. With this result as initial structure, we applied it with 50 ns
+            explicit solvent MD simulation and then lengthen MD run with 100 ns for further optimization, equilibration
+            and sampling (All simulations totaling 1 μs). Atomistic MD simulations were performed using Amber 20 [22]
+            and the ff99SB force field [23] for proteins solvated by OPC water model with 310 K temperature setting. The
+            nonbonded interactions were truncated at a 10 Å cutoff. The simulation Truncated Octahedron box of about 18
+            nm × 18 nm × 18 nm size contained the system and 61888 water molecules. The size of the box was chosen to be
+            large enough so that no interactions through periodic boundary conditions can occur. By these, a new
+            delicate modular enzymes system model is established by processes mentioned above. The final calculated
+            artificially designed multidomain system structure is shown in Figure 2 (a). In the long scale simulation,
+            each component (PETase-RIDD, MHETase-RIDD and Hydrophobin-RIAD) is drawn toward to the central RIDD dimer
+            and RIAD scaffolds by (GGGGS)<sub>3</sub> linker to lower the solvent contact surface area. This structural
+            change may
+            improve the stability of the whole complex and meet our designing expectations that fixing each component in
+            near positions. As shown in Figure 2 (d), the gyration radius of the whole system is relatively stable in
+            the last 60 ns simulation, which demonstrates that the strong binding affinities between RIDD and RIAD parts
+            are sufficient to drive three protein components fixed in near positions and the whole structure is
+            relatively stable. In the long time MD simulation, the components are bound to each other firmly and no
+            diffusion behavior is observed, as shown in the simulation video provided in the supplementary material.
+            Therefore, the binding force between RIDD and RIAD is considered to be sufficient to maintain the stability
+            of artificially designed complex. By these, three different proteins are designed to be fixed stably in near
+            positions with high synergistic relationship (as shown in Figure 2 (a)) to alter the physicochemical
+            properties of the PET surface and accelerate reaction turnover rate. And later experiment reveals successful
+            assemblies of the system and the stability of components binding as a complex. (More detailed information of
+            the raw model construction procedures and simulation results analysis are available in supplementary
+            material). Specifically, MHETase-RIDD Ca<sup>2+</sup> binding site with its binding ions that may have
+            important
+            functions for structural stability is shown to be well maintained. Four key residues that form the
+            binding site and function important roles in maintaining Ca<sup>2+</sup> ion (Asp 588, Asp 591, Gly 592, Asp
+            599 and
+            Asn 600) are evaluated. These key residues geometric centers distances to Ca<sup>2+</sup> ion in binding
+            sites
+            fluctuate slightly around 0.5 Å, revealing the high maintenance of Ca<sup>2+</sup> binding site structure,
+            as shown in
+            Figure 2 (e).
+        </p>
+        <p>
+            These results successfully demonstrate the feasibility of our designing strategy as described above. Later
+            experiments further demonstrate our designed components enzymatic activity and functions in complex system.
+        </p>
+    </article>
+    <article class="article">
+        <h1>3 Calculation formulas applied in our model</h1>
+        <div class="formula">
+            <img src="https://2021.igem.org/wiki/images/a/a3/T--DUT_China--m_f1.svg" alt="">
+        </div>
+        <p>
+            Where <i>N</i> is the number of atoms, <i>m<sub>i</sub></i> is the mass of atom <i>i</i>,
+            <i>X<sub>i</sub></i> is the coordinate vector for
+            target atom <i>i</i>, <i>Y<sub>i</sub></i>
+            is the coordinate vector for reference atom <i>i</i>, and <i>M</i> is the total mass. If the RMSD is not
+            mass-weighted, all
+            <i>m<sub>i</sub></i>=1 and <i>M</i>=<i>N</i>.
+        </p>
+        <div class="formula">
+            <img src="https://2021.igem.org/wiki/images/8/80/T--DUT_China--m_f2.svg" alt="">
+        </div>
+        <p>
+            The physical meaning of <i>g</i>(<i>r</i>) can be interpreted as the ratio of the local density of a
+            molecule to the bulk
+            density at a distance <i>r</i> around a central molecule.
+        </p>
+        <div class="formula">
+            <img src="https://2021.igem.org/wiki/images/8/89/T--DUT_China--m_f3.svg" alt="">
+        </div>
+        <p>
+            The number of particles contained in d<i>R</i> was calculated by the formula shown above, and the
+            <i>g</i>(<i>r</i>) is then
+            obtained via the normalization by the average density of the system.
+        </p>
+        <div class="formula">
+            <img src="https://2021.igem.org/wiki/images/a/a5/T--DUT_China--m_f4.svg" alt="">
+        </div>
+        <p>
+            Distances calculating methods.
+        </p>
+        <div class="formula">
+            <img src="https://2021.igem.org/wiki/images/d/d9/T--DUT_China--m_f5.svg" alt="">
+        </div>
+        <p>
+            Where <i>M</i> is total mass of the system, <i>m<sub>i</sub></i> is the mass of atom <i>i</i>,
+            <i>r<sub>i</sub></i>-<i>r<sub>c</sub></i> means the distances of
+            atom <i>i</i> to the
+            center of all the simulated atom.
+        </p>
+    </article>
+    <article class="article ref">
+        <h1>References</h1>
+        <p>[1] Chunguang Liu, Jia Li, Yilei Zhang, Lei Wang, Jie Deng, Yuan Gao, Lu Yua, Junjie Zhang, Hongwen Sun,
+            Widespread distribution of PET and PC microplastics in dust in urban China and their estimated human
+            exposure, 2019.</p>
+        <p>[2] Fusako Kawai, Takeshi Kawabata, Masayuki Oda, Current knowledge on enzymatic PET degradation and its
+            possible application to waste stream management and other fields, 2019.</p>
+        <p>[3] Xingxiang Xi, Kefeng Ni, Helong Hao, Yuepeng Shang, Bo Zhao, Zhen Qian, Secretory expression in Bacillus
+            subtilis and biochemical characterization of a highly thermostable polyethylene terephthalate hydrolase from
+            bacterium HR29, 2021.</p>
+        <p>[4] Shosuke Yoshida, Kazumi Hiraga, Toshihiko Takehana, Ikuo Taniguchi, Hironao Yamaji, Yasuhito Maeda,
+            Kiyotsuna Toyohara, Kenji Miyamoto, Yoshiharu Kimura, Kohei Oda, A bacterium that degrades and assimilates
+            poly (ethylene terephthalate), 2016.</p>
+        <p>[5] V. Tournier, C. M. Topham, A. Gilles, B. David, C. Folgoas, E. Moya-Leclair, E. Kamionka, M.-L.
+            Desrousseaux, H. Texier, S. Gavalda, M. Cot, E. Guémard, M. Dalibey, J. Nomme, G. Cioci, S. Barbe, M.
+            Chateau, I. André1, S. Duquesne, A. Marty, An engineered PET depolymerase to break down and recycle plastic
+            bottles, 2020.</p>
+        <p>[6] Xingxiang Xi, Kefeng Ni, Helong Hao, Yuepeng Shang, Bo Zhao, Zhen Qian, Secretory expression in Bacillus
+            subtilis and biochemical characterization of a highly thermostable polyethylene terephthalate hydrolase from
+            bacterium HR29, 2021.</p>
+        <p>[7] Brandon C. Knotta, Erika Ericksona, Mark D. Allenb, Japheth E. Gado, Rosie Graham, Fiona L. Kearns,
+            Isabel Pardo, Ece Topuzlu, Jared J. Anderson, Harry P. Austin, Graham Dominick, Christopher W. Johnson,
+            Nicholas A. Rorrer, Caralyn J. Szostkiewicz, Valérie Copié, Christina M. Paynec, H. Lee Woodcock, Bryon S.
+            Donohoef, Gregg T. Beckham, and John E. McGeehan, Characterization and engineering of a two-enzyme system
+            for plastics depolymerization, 2019.</p>
+        <p>[8] Hyeoncheol Francis Son, In Jin Cho, Seongjoon Joo, Hogyun Seo, Hye-Young Sagong, So Young Choi, Sang Yup
+            Lee, Kyung-Jin Kim, Rational Protein Engineering of Thermo-Stable PETase from <i>Ideonella sakaiensis</i>
+            for Highly Efficient PET Degradation, 2019.</p>
+        <p>[9] Erickson E, Shakespeare TJ, Bratti F, Buss BL, Graham R, Hawkins MA, König G, Michener WE, Miscall J,
+            Ramirez KJ, Rorrer NA, Zahn M, Pickford AR, McGeehan JE, Beckham G, Comparative performance of PETase as a
+            function of reaction conditions, substrate properties, and product accumulation, 2021.</p>
+        <p>[10] Boneta S, Arafet K, Moliner V, QM/MM Study of the Enzymatic Biodegradation Mechanism of Polyethylene
+            Terephthalate, 2021.</p>
+        <p>[11] Carlson, C. R. et al. Delineation of type I protein kinase A-selective signaling events using an RI
+            anchoring disruptor. J. Biol. Chem. 281, 21535–21545, 2006. 24.</p>
+        <p>[12] Gold, M. G. et al. Molecular basis of AKAP specificity for PKA regulatory subunits. Mol. Cell 24,
+            383–395, 2006.</p>
+        <p>[13] Doris Ribitsch, Enrique Herrero Acero, Agnieszka Przylucka, Sabine Zitzenbacher, Annemarie Marold,
+            Caroline Gamerith, Rupert Tscheließnig, Alois Jungbauer, Harald Rennhofer, Helga Lichtenegger, Heinz
+            Amenitsch, Klaus Bonazz, Christian P. Kubicek, Irina S. Druzhinina, Georg M. Guebitz, Enhanced
+            Cutinase-Catalyzed Hydrolysis of Polyethylene Terephthalate by Covalent Fusion to Hydrophobins, 2015.</p>
+        <p>[14] Yuanzheng Wu, Jishun Li, Hetong Yang, Hyun-Jae Shin, Fungal and mushroom hydrophobins: A review,
+            2017.</p>
+        <p>[15] Wei Kang, Tian Ma, Min Liu, Jiale Qu, Zhenjun Liu, Huawei Zhang, Bin Shi, Shuai Fu, Juncai Ma, Louis
+            Tung Faat Lai, Sicong He, Jianan Qu, Shannon Wing-Ngor Au, Byung Ho Kang, Wilson Chun Yu Lau, Zixin Deng,
+            Jiang Xia, Tiangang Liu, Modular enzyme assembly for enhanced cascade biocatalysis and metabolic flux,
+            2019.</p>
+        <p>[16] Then, J. et al. Ca<sup>2+</sup> and Mg<sup>2+</sup> binding site engineering increases the degradation of polyethylene
+            terephthalate films by polyester hydrolases from Thermobifida fusca, 2015.</p>
+        <p>[17] O. Trott, A. J. Olson, AutoDock Vina: improving the speed and accuracy of docking with a new scoring
+            function, efficient optimization and multithreading, 2010.</p>
+        <p>[19] Humphrey, W., Dalke, A. and Schulten, K., J. Molec. Graphics, VMD – Visual Molecular Dynamics, 1996.</p>
+        <p>[20] Kelley LA, The Phyre2 web portal for protein modeling, prediction and analysis, 2015.</p>
+        <p>[21] P Brian, W Tong, Z Weng, M-ZDOCK: a grid-based approach for Cn symmetric multimer docking, 2005.</p>
+        <p>[22] Case, D. A., Darden, T. A., T.E. Cheatham, I., Simmerling, C. L., Wang, J., Duke, R. E., Luo, R.,
+            Walker, R. C., Zhang, W., Merz, K. M.; Roberts, B., Hayik, S., Roitberg, A., Seabra, G., Swails, J. Goetz,
+            A.W., Kolossvary, I., Wong, K. F., Paesani, F., Vanicek, J., Wolf, R. M., Liu, J., Wu, X.; Brozell, S. R.,
+            Steinbrecher, T., Gohlke, H., Cai, Q., Ye, X., Wang, J., Hsieh, M.-J., Cui, G., Roe, D. R., Mathews, D. H.,
+            Seetin, M. G., Salomon-Ferrer, R., Sagui, C., Babin, V., Luchko, T., Gusarov, S., Kovalenko, A., Kollman, P.
+            A. AMBER 20, 2020.</p>
+        <p>[23] Chen-Yang Zhou, Fan Jiang, Yun-Dong Wu, Residue-Specific Force Field Based on Protein Coil Library.
+            RSFF2: Modification of AMBER ff99SB, 2015.</p>
+    </article>
+</section>
+<div id="footer-point"></div>
+<script>
+    //About the top-scroll--linked to general.js
+    window.onload = init;
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
+</script>
+</body>
+</html>

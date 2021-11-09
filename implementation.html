@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Business Proposals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script src="js/sidebar.js" defer></script>
+</head>
+<body>
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/8/8a/T--DUT_China--t_implementation.jpeg");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/8/8a/T--DUT_China--t_implementation.jpeg");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/8/8a/T--DUT_China--t_implementation.jpeg");
+    background-image: url("https://2021.igem.org/wiki/images/8/8a/T--DUT_China--t_implementation.jpeg");'>
+    <div>Business Proposals</div>
+</div>
+<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
+    <table>
+        <tr v-for="(value,key,index) in articles">
+            <td>
+                <canvas width="40" height="40" class="canvas"></canvas>
+            </td>
+            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
+                <a v-bind:href="'#article'+(key+1)">
+                    {{value.innerHTML}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<section id="main-text">
+    <article class="article">
+        <h1>1 Overview</h1>
+        <p>Human production activities and daily life are producing a large quantity of plastics debris accumulated in the
+            environment and the plastic pollution possessing negative impacts on human life. Plastics can adsorb pollutants
+            from the surrounding environment (which means higher specific surface area) and release pollutants into natural
+            world. Among all these plastics forms, PET is one of the major plastics, in addition to polyethylene,
+            polypropylene, polystyrene, polyvinyl chloride, and polyurethane, and its worldwide production amounted to more
+            than 106 million tons in 2020. Synthetic plastic polymers Polyethylene terephthalate (PET) is one of the most
+            widely used forms of synthetic plastics in several industrial fields, which has been reported spreading as
+            particles less than 5 mm in environments and being captured from environments with low efficiencies.
+            Furthermore, in addition to the microplastics found in the environment, PET is frequently used in household
+            products, which is severely accumulated in the landfill and even worse, natural environments.</p>
+
+        <p>In China, as one of the world's top 10 plastic producers and consumers of plastic products, Chinese natural
+            environment and city are faced with severe plastic pollution and high recycling pressure. In 2020, China
+            produced 70.302 million tons of plastics and imported nearly 450 thousand tons. The total consumption of
+            plastics in China in 2019 was about 90.877 million tons, of which millions of tons were used for packaging. In
+            2020, the total consumption of PET bottles in China reached 9.49 million tons. In terms of consumption level,
+            the consumption of bottle-grade PET in China continues to grow from 6.33 million tons in 2016 to 9.49 million
+            tons in 2020. In 2020, the total consumption of PET bottles in China reached 9.49 million tons. At the same
+            time, a large number of plastics float on the surface of the ocean and suspend in various layers of seawater,
+            which hinders the transmission of light in the seawater, affects the use of light by various organisms in the
+            water, and interferes with their normal life activities. The wandering plastic is easily eaten by low-end food
+            chain organisms such as mussels and zooplankton. Plastic can not be digested, but can only exist in the stomach
+            all the time, occupying space, causing animals to get sick or even die. If microplastics with organic pollutants
+            are eaten, the damage to these plankton will be even worse. The pollutants are released by enzymes in the
+            organism, which undoubtedly aggravates the disease. Mussels, zooplankton and other organisms at the bottom of
+            the food chain will be eaten by the upper foodchain species, and thus, the plastics debris particles and
+            pollutants like PET material will enter the upper foodchain. Only 1% of the accumulated harmful substances of
+            plastics from the bottom foodchain will become 20% in the upper layer, which will make a large number of
+            organisms that eat plastics sick or die. And the current treatment of plastic pollution mainly adopts the method
+            of salvage, centralization and incineration, which requires more manpower and may produce secondary pollutants
+            like PM2.5.</p>
+
+        <p>Fortunately, in 2016, Japense scientists reported the discovery of the bacterium, <i>Ideonella sakaiensis 201-F6</i>,
+            which develops a two-enzyme system to deconstruct PET plastic to TPA and EG molecules, which could be
+            effectively catabolized as a carbon and energy sources for cells. Simultaneously, a specific protein, the
+            hydrophobin protein is discovered to be capable of attaching to plastic surface via its hydrophobic part and
+            expose its hydrophilic part to aqueous environment. This unique feature may effectively make enzymes more
+            accessible to hydrophobic surface of PET. Therefore, inspired by nature, we designed a delicate multicomplex
+            enzyme system, in which short peptide tags (Redesigned RIAD and RIDD derived from natural proteins) are applied
+            to create scaffold-free modular enzymes assemblies. Here, in order to effectively degrade microplastic PET
+            particles, we construct enzymes of IsPETase and MHETase and protein hydrophobin together in our complex system
+            via scaffold modular part, which may reveal higher catalytic efficiency in mild temperature and avoid high
+            possible loss of enzymes activity. Therefore, we created an innovative strategy to improve PET degradation at
+            mild temperature via biosynthetic factories and artificially designed proteins system that do not exist in the
+            nature.</p>
+        <p>As a substitute for degradable plastic, due to the current requirements of governments around the world for the
+            prevention and control of plastic pollution, major enterprises need to be responsible for the plastic they may
+            discharge into the environment. As a method to effectively reduce the environmental cost of enterprises, the
+            market size is expected to reach 10 billion yuan.</p>
+    </article>
+    <article class="article">
+        <h1>2 Product and Customer</h1>
+        <p>We browsed large quantities of literatures and investigated a lot of speialists and stakeholders to ensure our
+            products possessing the characteristics of good safety, stability, high efficiency, which may significantly
+            degrade the PET plastics at mild temperatures and avoid the needing of high temperature values arund 72 °C, and
+            significantly improves the degradation efficiency by adopting PETase and MHETase enzymes and protein
+            hydrophobin.</p>
+
+        <p>After careful, and comprehensive analysis by all departments of the project team, the following SWOT (Strength,
+            Weakness, Opportunity and Threat) analysis table is summarized here:</p>
+        <div class="figures">
+            <div class="col-12">
+                <img src="https://2021.igem.org/wiki/images/4/4a/T--DUT_China--swot01.png" alt="">
+                <img src="https://2021.igem.org/wiki/images/4/48/T--DUT_China--swot02.png" alt="">
+            </div>
+        </div>
+        <p class="caption text-center">Figure 1 SO, SW, WO, WT Chart</p>
+        <p>We can launch two types of products for two types of target customers:</p>
+        <p>1.Aim at Enterprises, government agencies and national organizations, we will provide them with complex enzyme
+            systems suitable for their specific production environment and requirements.</p>
+        <p>(1) The food packaging, plastic tableware, shopping bags and other daily plastic products are one of the largest
+            growth momentums of biodegradable plastics. As a substitute for biodegradable plastic, as a new way of a rapid
+            degradation of PET plastic, our compound enzyme system can be immobilized to the garbage bins after
+            classification of plastic, acting as a cooperation project with the local government. The scale can reach more
+            than 10 billion yuan, and the profit margin can reach more than 80%</p>
+        <p>(2) According to the emission reduction policies of the Chinese government, plastic processing manufacturers
+            should strictly control the content of PET particles in discharged sewage and solid waste. Therefore, we can
+            provide them with sewage filter screen of immobilized compound enzyme system and enzyme preparation that can be
+            used for plastic degradation in solid waste. At the same time, for plastic recycling enterprises, we can provide
+            enzyme preparation to maintain high content of economic products such as TPA and full degradation of other
+            intermediates with no economic value.</p>
+        <p>(3) Mulching films materials are widely used in the modern agricultural technology. However, its low recycling
+            efficiency and high leaking rate into agricultural land are severly threatening the safety of national food
+            safety because the accumulation of plastics including PET in the agricultural land are decreasing the yielding
+            rate of these valuable lands and making the lands more and more barren. The agricultural lands area is highly
+            limited in China and the protection of these lands via our safe and responsaible products is significantly
+            important.</p>
+
+        <p>2. For public customers, namely family application scenarios, the project team will develop some basic compound
+            enzyme systems that can be added to household scenarios, and this "basic model" of clothing will be sold to the
+            public.</p>
+        <p>(1) Such as the compound enzyme filter element in the household drinking machine: Users can buy our enzyme
+            containing filter element and put it into the drinking machine by themselves.</p>
+        <p>(2) Such as household water quality testing device: As a rapid degradation of PET enzyme preparation, we can
+            cooperate with faucet manufacturers, the color module will be installed on the faucet, to achieve real-time
+            water quality testing. We will also ensure that the detection device installed on the faucet will not affect the
+            water quality through mechanical design,</p>
+        <p>For the complex enzyme system developed by the general public, we will emphasize safety and reliability.</p>
+    </article>
+    <article class="article">
+        <h1>3 Entrepreneurial Team</h1>
+        <h2>3.1 Company Profile</h2>
+        <p>The business scope of the enterprise includes enzyme production, technology research and development, technology
+            transfer, technical consultation and technical services. In terms of organizational structure, the company
+            adopts a flat model to avoid many drawbacks of hierarchical management, such as overlapping organizational
+            levels, staff redundancy, inefficient organizational operation, and accelerate the flow of information, which is
+            conducive to the refinement of management levels. The company has six departments: R & D Department, Marketing
+            Department, Human Resources Department, Finance Department, Operation Department and Biosafety Department.</p>
+
+        <h2>3.2 Company leaders and responsibilities</h2>
+        <h3>Executive Director</h3>
+        <p>Name: Sizhe Chen</p>
+        <p>Duties: The executive director shall be responsible to the general meeting of shareholders and shall be
+            responsible for convening and organizing the meetings of the board of directors, examining and approving the
+            work plan and work summary of the general manager, formulating the reward and punishment system for the general
+            manager. The chairman of the board of directors has the right to decide the important matters of the company,
+            such as investment, capital increase, capital reduction, etc.</p>
+
+        <h3>Head of R & D Department</h3>
+        <p>Name: Yuliang Huo</p>
+        <p>Duties: Be responsible for the development of new products and the maintenance of related platforms, and do a
+            good job in intellectual property and technology protection. Be responsible for design management, process
+            management and scientific research and development planning. And also need to prepare the company's medium and
+            long-term scientific and technological development plan and scientific research plan.</p>
+
+        <h3>Head of Marketing Department</h3>
+        <p>Name: Xuanshuo Zhang</p>
+        <p>Duties: Understand the industry situation and the basic situation of customers, conduct market research and
+            analysis, formulate marketing plans according to market conditions and national policies, and promote sales.</p>
+
+        <h2>3.3 R & D management</h2>
+        <p>Based on the design of R & D system structure and various management theories, this paper comprehensively
+            measures three key indicators of R & D management: quality, time and cost, with the help of information
+            platform, team building, process design and specific coordination of performance management, cost management,
+            project management, risk management and other activities. After the company's new products successfully entered
+            the market, the second-generation R & D will be carried out according to the product effect and market demand,
+            and the key R & D will be carried out in stages according to the long-term development strategy and market
+            changes.</p>
+
+        <h2>3.4 Performance evaluation of department personnel</h2>
+        <p>1. The assessment factors for management personnel are divided into: mutual evaluation within the department,
+            scoring by the project manager, and self-evaluation.</p>
+        <p>2. Proportion and calculation method of assessment factors:</p>
+        <table>
+            <tr>
+                <td>Intra-departmental mutual evaluation</td>
+                <td>50%</td>
+            </tr>
+            <tr>
+                <td>Scoring of project leader</td>
+                <td>30%</td>
+            </tr>
+            <tr>
+                <td>Self-evaluation</td>
+                <td>20%</td>
+            </tr>
+        </table>
+        <p>3. Reward and punishment</p>
+        <p>① If the score is greater than 90, the salary will be paid at 120%.</p>
+        <p>② If the score is lower than 60 for two consecutive months, the salary will be paid at 80%.</p>
+    </article>
+    <article class="article">
+        <h1>4 Market and Competition</h1>
+        <h2>4.1 Market Policy</h2>
+        <p>The "Opinions on Further Strengthening the Control of Plastic Pollution" was issued, and some plastic products
+            will be banned, but as an effective way to prevent and control plastic pollution, the development of domestic
+            related industries-recycled plastics industry may usher in opportunities.</p>
+        <p>By the end of 2020, China will take the lead in banning and restricting the production, sale and use of some
+            plastic products in some areas and fields. By the end of 2022, the consumption of disposable plastic products
+            will be significantly reduced and alternative products will be promoted.</p>
+        <h2>4.2 Market size and market structure</h2>
+        <p>As a major producer of plastic products, with the basic clearance of small, scattered and polluted enterprises,
+            the growth of downstream demand has accelerated, resulting in a rapid increase in the output of plastic
+            products. It is estimated that in 2019, the output of plastic products enterprises above designated size in
+            China will be 79.915 million tons, up 32.26% year on year. At the same time, plastic pollution is increasing.
+            Today, nearly 300 million tons of plastics are produced every year. About a third are thrown away immediately
+            after use. Most waste plastics are incinerated in landfills and are likely to have residues. And most of the
+            rest ends up in the sea. "With all the plastic produced so far, there is enough to wrap the entire planet
+            around," said Jan Zalasvich, a scientist at the University of Leicester in the UK.</p>
+        <p>In order to strengthen the control of plastic pollution, besides restricting the use of plastic products, it is
+            also an effective way to strengthen the recycling of waste plastics. At present, both at home and abroad are
+            taking action. At a meeting held in Geneva, Switzerland, in early May 2019, an amendment to the Basel Convention
+            was formulated to add dirty plastic waste to the import and export restrictions. This is the first international
+            legal restriction on plastic waste. The Amendment Agreement shall become effective on January 1, 2021.
+            Domestically, China has completely banned the import of waste plastics. Establish and improve the recycling
+            system of waste agricultural film; Standardize the recycling and disposal of waste fishing nets and fishing
+            gear. To promote the standardization, centralization and industrialization of plastic waste recycling, related
+            projects should be gathered in parks such as resource recycling bases. And that utilization level of plastic
+            waste resource is improved. As a fast and effective means of plastic treatment, the current market has not been
+            completely stable. As a parallel market with degradable plastics, we believe that our enzyme preparation will
+            also have a future market scale of nearly 10 billion yuan.</p>
+        <p>At the same time, as a special industry, the market structure of plastic treatment in China is: local government
+            + large enterprises + scientific research institutes. Local governments put forward emission reduction
+            requirements for large and medium-sized enterprises, focusing on prevention, and scientific research institutes
+            provide technology for large enterprises to reduce emissions.</p>
+        <h2>4.3 Competitor analysis and substitute analysis</h2>
+        <p>At present, researchers in related professional fields are actively developing biodegradable technologies. In
+            recent years, there have been a large number of related patents, but these methods have slow degradation rate or
+            high environmental requirements. There is no large-scale promotion abroad. At present, few companies are engaged
+            in the production of plastic-degrading enzymes. However, we are convinced that the complex enzymatic degradation
+            system is the latest trend in the plastics treatment and recycling market and a valuable opportunity for key
+            players.</p>
+        <p>At present, some manufacturers have produced microbial agents for degrading plastics, but these microorganisms
+            may cause certain biosafety problems, and at the same time, microbial agents are not suitable for some special
+            environments.</p>
+    </article>
+    <article class="article">
+        <h1>5 Marketing and Sales</h1>
+        <h2>5.1 Product Strategy</h2>
+        <p>The products will first be piloted in some sewage treatment plants, water sources and other units. After the
+            success of the pilot units, the reputation of the pilot units will be expanded through the Internet, and the
+            civil basic functions will be gradually added in the process of expansion. We will further consolidate and
+            improve the system, and build the platform into a complete ecological closed loop. We will also increase user
+            stickiness and loyalty, and steadily improve the market position and occupy the market share.</p>
+        <h2>5.2 Price strategy</h2>
+        <p>According to the market investigation of the project team in the early stage, and taking into account the
+            consumption ability and willingness of the target customer groups of the project, the project decided to give
+            full play to the long-term use advantage of the product, with a high price but durable and efficient, and to
+            launch a highly competitive product price.</p>
+        <p>During the trial period, the products will be launched at a preferential price of 85%.</p>
+        <h2>5.3 Channel strategy</h2>
+        <p>Promotion strategies are mainly divided into online and offline promotion, as well as some other small but
+            extensive promotion methods.</p>
+        <h3>1. Online channel</h3>
+        <h4>(1) WeChat official account</h4>
+        <p>The public number will popularize the safety, stability and efficiency of the complex enzyme system and why the
+            system should be designed. At the same time, according to our research, ordinary people generally do not
+            understand the widespread and long-standing problems of plastic pollution, such as the possible existence of
+            plastic particles in human placenta.The public number can also export ideas such as the universality of plastic
+            pollution and the latency of harm to the public, thus paving the way for the promotion of civil products in the
+            future.</p>
+        <h4>(2) Long-term advertising</h4>
+        <p>As a new product entering the market, the project takes "market promotion" as the primary task, invests part of
+            the proceeds in the cost of publicity in a planned way, and disseminates product publicity information through
+            online means such as official Q, official micro, QQ group, WeChat circle of friends, and cooperative marketing
+            with third-party stores APP or related well-known websites, so as to expand potential customers and improve
+            brand awareness in a short time.Advance the layout of the more common civilian product market.</p>
+        <h3>2. Offline channel</h3>
+        <h4>(1) Activity promotion</h4>
+        <p>By holding some offline publicity activities, such as small charitable donation activities, or sponsoring
+            scholarships for certain schools or other college-level competitions.</p>
+        <h4>(2) Internal promotion of professional units</h4>
+        <p>At the current stage, the project is mainly piloted in sewage treatment plants, water sources and other units,
+            and the service objects are mainly professional institutions, so the platform will give full play to the
+            publicity effectiveness of these professional units at the social level, such as popularity, credibility and
+            human relations, and jointly promote marketing with them, so as to better integrate into the general public.So
+            as to rapidly expand the influence of products in society, expand customer base in a short period of time, and
+            improve brand awareness.</p>
+        <h2>5.4 Brand Image Promotion Strategy</h2>
+        <p>1. Enhance the credibility and popularity of products and establish a good brand image through official
+            cooperation with the government and enterprises.</p>
+        <p>2. Conduct customer satisfaction evaluation regularly, give effective feedback to user opinions in time, improve
+            user satisfaction, increase user stickiness and loyalty, steadily improve market position and enhance brand
+            image.</p>
+        <p>3. Hold thematic education days regularly, organize or sponsor various competitions or charitable activities
+            independently.</p>
+        <p>4. Increase the financing of public welfare projects on the platform, and declare that 5% of the proceeds will be
+            used to fund public welfare projects.</p>
+        <p>5. Hold regular training sessions and performance evaluation for members to improve the ideological and moral
+            quality and labor enthusiasm of marketing promotion members, and at the same time give reasonable returns to
+            members to meet their needs, get their ownership and recognition of the project and brand, enhance team
+            awareness, and help to create a good brand image.</p>
+    </article>
+    <article class="article">
+        <h1>6 Business Model</h1>
+        <h2>6.1 Main activities</h2>
+        <p>The business model of the complex enzyme system is mainly composed of two parts, one is to design and develop
+            high-efficiency PET-degrading complex enzymes suitable for specific scenarios, and provide customized services
+            for enterprises, such as sewage treatment plants, water sources, food processing plants, environmental
+            protection research institutes, recycled plastic factories, etc.</p>
+        <p>The other is to provide basic optional products for mass customers.</p>
+        <p>The overall development model is designed to take full advantage of the team's development capabilities and the
+            relatively easy preservation of the product.</p>
+        <p>As a highly mobile synthetic biology project, we can meet the needs of different scenarios. Therefore, for
+            enterprise users, we can provide products such as enzyme preparations at different temperatures and with
+            different purities according to their personalized needs and even for their needs.</p>
+        <p>For mass customers, the project team itself will develop some basic complex enzyme systems, which will be sold to
+            the public, similar to the "basic style" of clothing, so as to achieve household scenarios, such as household
+            water dispensers, air purifiers and other devices.</p>
+        <h2>6.2 Profitability</h2>
+        <p>For enterprise users, we contract with them and then develop enzymes that meet their needs in the laboratory.
+            According to the technical difficulty, charge RMB 200,000-1,000,000/order</p>
+        <p>For the general public users, we provide them with a safe and directly added immobilized enzyme filter element
+            layer in their water purifier, which is sold at the price of 100-500 yuan per unit.</p>
+        <h2>6.3 Cost Structure</h2>
+        <p>Our main costs are laboratory rent, labor costs, and material costs. According to the researchers who have been
+            engaged in the research of complex enzymes for more than eight years, from the market price point of view, the
+            cost of raw materials for complex enzymes is high, there are many manufacturers, and the bargaining power of the
+            industry is low. Therefore, the market price of raw materials is relatively high, accounting for 20% of the
+            total cost of products. The equipment functions required for the preparation of complex enzyme products are
+            relatively basic. The cost of equipment in midstream laboratories and research institutes is relatively low,
+            with an average price of less than 500000 per machine, accounting for less than 20% of the total cost of
+            products.</p>
+        <p>In addition, advertising is also an important expense for us. We will publicize our project on the Internet,
+            television and various biological journals, and organize or participate in relevant conferences and
+            exhibitions.</p>
+    </article>
+    <article class="article">
+        <h1>7 Risk control</h1>
+        <h2>7.1 Risk management measures</h2>
+        <h3>1. Prevention</h3>
+        <p>A risk management team shall be set up to discuss the risks in all aspects regularly.</p>
+        <h3>2. Emergency</h3>
+        <p>Select members who are good at emergency decision-making and set up emergency response teams to reduce the
+            severity of emergencies or inhibit further fermentation of emergencies.</p>
+        <h3>3. After the event</h3>
+        <p>After dealing with the emergency, analyze the causes of the emergency, and punish or reward the relevant
+            personnel according to the performance of the whole process of risk time.</p>
+        <h2>7.2 Key defense against major risks</h2>
+        <h3>1. Industry risk</h3>
+        <p>(1) Establish commercial barriers to improve the anti-piracy capability of the entire business model.</p>
+        <p>(2) Focus on defense in the face of vicious competition and DNA sequence theft.</p>
+        <p>(3) In the initial stage of development, we should adopt active and powerful propaganda means, faithful and
+            sincere service concept, thoughtful and mature product mechanism and cutting-edge scientific development
+            strategy, and effectively improve the professionalism and feasibility of the development platform by constantly
+            improving the regulatory mechanism and expanding the number of user groups.</p>
+        <h3>2. Personnel management risk</h3>
+        <p>(1) Implement the contribution points system and formulate reasonable and clear assessment indicators to ensure
+            fairness.</p>
+        <p>(2) Adopt the mode of the old leading the new, and provide assistants in advance for the students of postgraduate
+            recommendation and direct doctoral.</p>
+        <h2>7.3 Financial risk</h2>
+        <p>1. Control the amount of accounts receivable and various accounts, withdraw a certain amount of bad debt
+            reserves, and regularly check the financial affairs. Strict estimation and control of financial expenditure,
+            avoid excessive risk of investment and cost consumption, and ensure the normal turnover of funds.</p>
+        <p>2. Opening a special account for the company, which shall be verified by the supervisor and the accountant
+            respectively.</p>
+        <h2>7.4 Main biosafety issues</h2>
+        <p>1. As a synthetic biology system, the following problems may arise:</p>
+        <p>(1) <i>E. coli</i>, which produces complex enzymes, needs to be strictly controlled, otherwise problems such as gene
+            drift may occur.</p>
+        <p>(2) For mass customers, it may cause allergic and other immune reactions due to eating complex enzymes by
+            mistake.</p>
+        <h2>7.5 Biosafety prevention and control strategies</h2>
+        <p>1. For mass customers, inform them of the safety and use specifications of compound enzymes to avoid eating by
+            mistake, and strengthen the research of downstream industries, such as water purifier manufacturers.</p>
+        <p>2. The immunogenicity of the complex enzyme can be studied, and the possibility of allergy can be reduced
+            through structural optimization.</p>
+    </article>
+</section>
+<div id="footer-point"></div>
+<script>
+    //About the top-scroll--linked to general.js
+    window.onload = init;
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
+</script>
+</body>
+</html>

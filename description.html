@@ -7,129 +7,59 @@
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/vue.min.js"></script>
     <link rel="stylesheet" href="css/general.css">
     <script src="js/general.js"></script>
-    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/article.css">
-    <script src="js/sidebar.js" defer></script>
 </head>
 <body>
-
 <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
-<div id="title" class="col-12" style='-o-background-image: url("https://img1.baidu.com/it/u=1600852025,3161565393&fm=26&fmt=auto&gp=0.jpg");
-    -moz-background-image: url("https://img1.baidu.com/it/u=1600852025,3161565393&fm=26&fmt=auto&gp=0.jpg");
-    -webkit-background-image: url("https://img1.baidu.com/it/u=1600852025,3161565393&fm=26&fmt=auto&gp=0.jpg");
-    background-image: url("https://img1.baidu.com/it/u=1600852025,3161565393&fm=26&fmt=auto&gp=0.jpg");'>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/7/72/T--DUT_China--t_description.png");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/7/72/T--DUT_China--t_description.png");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/7/72/T--DUT_China--t_description.png");
+    background-image: url("https://2021.igem.org/wiki/images/7/72/T--DUT_China--t_description.png");'>
     <div>Description</div>
-</div>
-<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
-    <table>
-        <tr v-for="(value,key,index) in articles">
-            <td>
-                <canvas width="40" height="40" class="canvas"></canvas>
-            </td>
-            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
-                <a v-bind:href="'#article'+(key+1)">
-                    {{value.innerHTML}}
-                </a>
-            </td>
-        </tr>
-    </table>
 </div>
 <section id="main-text">
     <article class="article">
-        <h1>1 Bronze Medal Criterion #3</h1>
-        <p>
-            Describe how and why you chose your iGEM project.
-        </p>
-        <p>
-            Please see the 2021 Medals Page for more information.
-        </p>
+        <h1>Description</h1>
+        <p>Wide spreading and utilization of plastic polyethylene terephthalate (PET) in the world has caused a large
+            quantity of environmental challenges and gained much attention. Because of its nonbiodegradability, a large
+            amount of plastic waste accumulation forms a global environmental crisis[1]. Notably, in 2016, Yoshida et
+            al. reported the discovery of the bacterium, <i>Ideonella sakaiensis</i>.[2] Microbe <i>Ideonella
+                sakaiensis</i> was reported to be capable of secreting two efficient enzymes to deconstruct PET polymers
+            in mild temperature. First, <i>Ideonella sakaiensis</i> PETase, a structurally well-characterized consensus
+            α/β-hydrolase fold enzyme, converts PET to mono-(2-hydroxyethyl) terephthalate (MHET). MHETase, the second
+            key enzyme, hydrolyzes MHET to the PET educts terephthalate and ethylene glycol[3].</p>
+        <p>However, this two-enzyme system degradation capacity is highly limited by inhibition effects, diffusion of
+            intermediates and PET surface physicochemical properties[4]. Here, we design a delicate multicomplex enzyme
+            system, in which short peptide tags (RIAD and RIDD) are applied to create scaffold-free modular enzymes
+            assemblies[5]. In order to effectively degrade microplastic PET particles, we construct enzymes of <i>Is</i>PETase
+            and MHETase and protein hydrophobin in our complex system via scaffold modular part, which reveal higher
+            catalytic efficiency in mild temperature. All proteins involved have unique functions in our system.
+            <i>Is</i>PETase and MHETase are two enzymes involved deconstructing polymer PET plastic to MHET and MHET to TPA
+            molecules, respectively. And hydrophobin protein, a small fungal protein, possess positive effects on
+            altering the physicochemical properties of PET surfaces and enzyme aggregation enhancement when it was fused
+            with PET degradation enzyme cutinase[6]. In conclusion, our work presents an innovative strategy to improve
+            PET degradation via biosynthetic factories and artificially designed proteins system that do not exist in
+            the nature.</p>
+
     </article>
-    <article class="article">
-        <h1>2 What should this page contain?</h1>
-        <p>A clear and concise description of your project.</p>
-        <p>A detailed explanation of why your team chose to work on this particular project.</p>
-        <p>References and sources to document your research.</p>
-        <p>Use illustrations and other visual resources to explain your project.</p>
-    </article>
-    <article class="article">
-        <h1>3 Inspiration</h1>
-        <p>See how other teams have described and presented their projects:</p>
-        <p><a href="https://2019.igem.org/Team:Leiden/Description">2019 Leiden</a></p>
-        <p><a href="https://2019.igem.org/Team:ITESO_Guadalajara/Description">2019 ITESO Guadalajara</a></p>
-        <p><a href="https://2020.igem.org/Team:Technion-Israel/Description">2020 Technion Israel</a></p>
-        <p><a href="https://2020.igem.org/Team:Botchan_Lab_Tokyo/Description">2020 Botchan Lab Tokyo</a></p>
-        <p><a href="https://2020.igem.org/Team:St_Andrews/Description">2020 St Andrews</a></p>
-        <p><a href="https://2020.igem.org/Team:MIT/Description">2020 MIT</a></p>
-    </article>
-    <article class="article">
-        <h1>4 Advice on writing your Project Description</h1>
-        <p>
-            We encourage you to put up a lot of information and content on your wiki, but we also encourage you to
-            include summaries as much as possible. If you think of the sections in your project description as the
-            sections in a publication, you should try to be concise, accurate, and unambiguous in your achievements.
-            Your Project Description should include more information than your project abstract.
-        </p>
-    </article>
-    <article class="article">
-        <h1>5 References</h1>
-        <p>
-            iGEM teams are encouraged to record references you use during the course of your research. They should be
-            posted somewhere on your wiki so that judges and other visitors can see how you thought about your project
-            and what works inspired you.
-        </p>
-    </article>
-    <article class="article">
-        <h1>6 Lorem ipsum</h1>
-        <h2>6.1 Lorem ipsum</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis nisl at pretium dictum. Vivamus eget
-            neque in urna bibendum maximus. Mauris luctus sodales mauris, et consectetur diam lobortis a. Pellentesque
-            facilisis lorem elit, nec vestibulum odio euismod ac. Nunc quis libero luctus, porta neque ac, faucibus
-            magna. Proin sollicitudin sit amet eros a malesuada. Pellentesque vehicula leo risus, a pharetra metus
-            finibus eu. Cras ac lectus in metus porttitor faucibus. Praesent sed dictum orci. Donec mattis metus
-            consequat metus semper, vel pharetra nisl congue. Maecenas porta mauris quis quam aliquet hendrerit. Vivamus
-            semper sit amet enim sed interdum. Nulla pellentesque turpis sem, id consequat massa ultrices eu.
-        </p>
-        <p>
-            Aliquam eleifend dapibus metus. Sed quis justo dictum, sollicitudin sem porta, euismod erat. Fusce elit
-            velit, ullamcorper quis porta at, suscipit vitae odio. Nulla id arcu pretium, iaculis tortor ac, pretium
-            odio. Nunc pretium fermentum urna non accumsan. Pellentesque nunc ligula, maximus id sapien eget, tristique
-            vestibulum nisi. Duis facilisis risus sit amet velit interdum, quis tincidunt dui feugiat. Phasellus quis
-            pharetra diam. Suspendisse tincidunt, justo eget hendrerit consectetur, quam massa lacinia quam, et tempus
-            velit ex ut lorem.
-        </p>
-        <h2>6.2 Lorem ipsum</h2>
-        <p>
-            In tincidunt, elit aliquet laoreet congue, diam ante tempor ex, non porta lectus quam sed felis. Quisque et
-            ligula eu quam egestas malesuada. In dictum diam at orci venenatis, vitae molestie sem ultrices. Maecenas
-            nec laoreet neque. Cras non sollicitudin est, at mattis quam. Vestibulum in elementum dolor, quis molestie
-            tellus. Nulla scelerisque sem id feugiat mollis. Praesent vitae suscipit nisi. Nulla commodo dui aliquam
-            tellus venenatis aliquet. Nullam interdum, lacus non tincidunt maximus, ligula mi vehicula lectus, vel
-            ullamcorper nulla ante sed enim. Nam gravida dui sit amet nisi sagittis pretium. Nam in sem id quam feugiat
-            tincidunt nec vitae turpis. Suspendisse sollicitudin semper mi ut rhoncus. Nam mi sem, porta a mattis ut,
-            condimentum non mauris. Quisque cursus risus vitae lorem laoreet laoreet.
-        </p>
-        <p>
-            Donec id ornare arcu. Mauris in felis nunc. Nunc magna sapien, accumsan sit amet sagittis id, dictum non
-            elit. Aenean sollicitudin ac nibh id malesuada. Fusce orci urna, pharetra eu euismod quis, varius in purus.
-            Maecenas nec nibh elit. Sed ultricies vel mauris at suscipit. Praesent in leo a felis dignissim varius eu a
-            magna. Duis hendrerit lectus ut orci suscipit, vel dictum lacus lobortis. Morbi id sem ornare, faucibus
-            turpis vel, sodales ex. Cras id ligula nec mauris condimentum elementum. Morbi dui metus, malesuada ut
-            mattis eget, cursus ut ligula. Sed porttitor tellus sed neque consectetur, sit amet posuere nunc tincidunt.
-        </p>
-        <p>
-            Vivamus consectetur quis neque a fermentum. Fusce cursus dictum velit, id hendrerit libero suscipit a. Etiam
-            quis lacinia mi. Curabitur sit amet massa magna. Nam blandit condimentum pharetra. Morbi elementum luctus
-            neque nec maximus. Integer quis neque ac nisl dictum gravida non et purus. Proin ligula velit, molestie et
-            odio vel, fermentum ultricies odio. Aliquam at sapien eu neque volutpat tempus ac sit amet nulla. In eget
-            quam vestibulum odio suscipit viverra. Suspendisse non dolor dignissim, varius sem nec, porta velit. Donec
-            non est et dolor scelerisque fringilla sed sodales justo. Morbi nibh nisi, ultrices eu erat sit amet,
-            fermentum porttitor elit. Ut porttitor sit amet mi vitae scelerisque. Vivamus nibh felis, tincidunt eu felis
-            vel, auctor eleifend ipsum.
-        </p>
+    <article class="article ref">
+        <h1>References</h1>
+        <p>[1] Hachisuka Shin-ichi, Nishii Tarou, Yoshida Shosuke, & Cann Isaac. Development of a Targeted Gene
+            Disruption System in the Poly(Ethylene Terephthalate)-Degrading Bacterium Ideonella sakaiensis and Its
+            Applications to PETase and MHETase Genes. <i>Applied and Environmental Microbiology</i> 87, e00020-21.</p>
+        <p>[2] Yoshida S, Hiraga K, Takehana T, et al. A bacterium that degrades and assimilates poly(ethylene
+            terephthalate).[J]. <i>Science</i> 351, 1196-1199. (2016).</p>
+        <p>[3] Palm, G. J., Reisky, L., Böttcher, D. et al. Structure of the plastic-degrading Ideonella sakaiensis
+            MHETase bound to a substrate. <i>Nature Communications</i> 10, 1717 (2019).</p>
+        <p>[4] Knott, B. C. et al. Characterization and engineering of a two-enzyme system for plastics
+            depolymerization. <i>Proc Natl Acad Sci USA</i> 117, 25476–25485 (2020).</p>
+        <p>[5] Kang, W. et al. Modular enzyme assembly for enhanced cascade biocatalysis and metabolic flux. <i>Nature
+            Communications</i> 10, 4248 (2019).</p>
+        <p>[6] Ribitsch Doris et al. Enhanced Cutinase-Catalyzed Hydrolysis of Polyethylene Terephthalate by Covalent
+            Fusion to Hydrophobins. <i>Applied and Environmental Microbiology</i> 81, 3586–3592 (2015).</p>
+
     </article>
 </section>
 <div id="footer-point"></div>

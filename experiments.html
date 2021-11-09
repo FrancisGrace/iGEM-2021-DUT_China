@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script src="js/sidebar.js" defer></script>
+</head>
+<body>
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/4/48/T--DUT_China--t_experiments.jpg");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/4/48/T--DUT_China--t_experiments.jpg");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/4/48/T--DUT_China--t_experiments.jpg");
+    background-image: url("https://2021.igem.org/wiki/images/4/48/T--DUT_China--t_experiments.jpg");'>
+    <div>Experiments</div>
+</div>
+<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
+    <table>
+        <tr v-for="(value,key,index) in articles">
+            <td>
+                <canvas width="40" height="40" class="canvas"></canvas>
+            </td>
+            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
+                <a v-bind:href="'#article'+(key+1)" style="font-size: 12px;">
+                    {{value.innerHTML}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<section id="main-text">
+    <article class="article">
+        <h1>Polymerase Chain Reaction</h1>
+        <table>
+            <tr><th colspan="2">
+                20 μl system</th>
+            </tr>
+            <tr>
+                <td><b>10Xbuffer</b></td>
+                <td>2 μl</td>
+            </tr>
+            <tr>
+                <td><b>dNTP</b></td>
+                <td>1.6 μl</td>
+            </tr>
+            <tr>
+                <td><b>Primer1</b></td>
+                <td>0.6 μl</td>
+            </tr>
+            <tr>
+                <td><b>Primer2</b></td>
+                <td>0.6 μl</td>
+            </tr>
+            <tr>
+                <td><b>PCR polymerase enzyme</b></td>
+                <td>1 μl</td>
+            </tr>
+            <tr>
+                <td><b>ddH<sub>2</sub>O</b></td>
+                <td>12.2 μl</td>
+            </tr>
+            <tr>
+                <td><b>Template DNA</b></td>
+                <td>2 μl</td>
+            </tr>
+        </table>
+    </article>
+    <article class="article">
+        <h1>Gel electrophoresis</h1>
+        <p>We chose 6Xloading buffer, add 1 μl loading buffer to 5 μl sample. The agarose gel system is as follows.</p>
+        <table>
+
+            <tr>
+                <th colspan="2">40 ml</th>
+            </tr>
+            <tr>
+                <td><b>TAE</b></td>
+                <td>40 ml</td>
+            </tr>
+            <tr>
+                <td><b>agarose</b></td>
+                <td>0.4 g</td>
+            </tr>
+        </table>
+
+        <p>Heat to dissolve, add a small amount of dye after cooling, cool and solidify.</p>
+
+    </article>
+    <article class="article">
+        <h1>Seamless cloning</h1>
+        <p>The target DNA fragment and linearized vector were added to the test tube at a molar ratio of 2:1 for
+            recombination reaction.</p>
+        <table>
+            <tr>
+                <td><b>buffer-enzyme(mix)</b></td>
+                <td>15 μl</td>
+            </tr>
+            <tr>
+                <td><b>Linearization carrier</b></td>
+                <td>X μl</td>
+            </tr>
+            <tr>
+                <td><b>PCR fragment</b></td>
+                <td>Y μl</td>
+            </tr>
+            <tr>
+                <td><b>ddH<sub>2</sub>O</b></td>
+                <td>W μl</td>
+            </tr>
+            <tr>
+                <td><b>total</b></td>
+                <td>20 μl</td>
+            </tr>
+        </table>
+        
+        <p>Incubation and transformation.</p>
+
+    </article>
+    <article class="article">
+        <h1>Preparation of competent state of Escherichia coli</h1>
+        <p>The second generation of <i>Escherichia coli</i> was cultured to logarithmic growth stage, placed on ice for 10 min and
+            centrifuged at 4000 rpm for 10 min.</p>
+        <p>Discard the supernatant, resuspend it with precooled CaCl<sub>2</sub>, place it on ice for 30 min and centrifuge for
+            10 min.</p>
+        <p>The supernatant was discarded and the SOC was resuspended to make competent cells.</p>
+
+    </article>
+    <article class="article">
+        <h1>Heat shock conversion</h1>
+        <p>The connecting products were added to the competent cells, ice bath for 30 min, water bath at 42 °C for 90 s, ice
+            bath for 5 min, LB medium was added, vibrated for 1 h, and coated on a solid plate for culture.</p>
+
+    </article>
+    <article class="article">
+        <h1>Colony PCR</h1>
+        <p>The colonies were cultured in centrifuge tube and PCR system was configured.</p>
+        <table>
+            <tr >
+                <th colspan="2">20 μl system</th>
+            </tr>
+            <tr>
+                <td><b>10Xbuffer</b></td>
+                <td>2 μl</td>
+            </tr>
+            <tr>
+                <td><b>dNTP</b></td>
+                <td>1.6 μl</td>
+            </tr>
+            <tr>
+                <td><b>Primer1</b></td>
+                <td>0.6 μl</td>
+            </tr>
+            <tr>
+                <td><b>Primer2</b></td>
+                <td>0.6 μl</td>
+            </tr>
+            <tr>
+                <td><b>Colony solution</b></td>
+                <td>1 μl</td>
+            </tr>
+            <tr>
+                <td><b>ddH<sub>2</sub>O</b></td>
+                <td>12.2 μl</td>
+            </tr>
+            <tr>
+                <td><b>Template DNA</b></td>
+                <td>2 μl</td>
+            </tr>
+        </table>
+    </article>
+    <article class="article">
+
+    </article>
+    <article class="article">
+        <h1>LB-Media</h1>
+        <p>For one litre of media use</p>
+        <table>
+            <tr>
+                <td ><b>Peptone</b></td>
+                <td>5 g</td>
+            </tr>
+            <tr>
+                <td><b>Yeast extract powder</b></td>
+                <td>2.5 g</td>
+            </tr>
+            <tr>
+                <td><b>NaCl</b></td>
+                <td>5 g</td>
+            </tr>
+        </table>
+
+        <p>Adjust pH to 7.0 and sterilize at high temperature and high pressure.</p>
+
+    </article>
+    <article class="article">
+        <h1>DNA purification</h1>
+        <p>DiaSpin Kit</p>
+
+    </article>
+    <article class="article">
+        <h1>Plasmid Extraction</h1>
+        <p>DiaSpin Kit</p>
+
+    </article>
+    <article class="article">
+        <h1>Gel extraction</h1>
+        <p>DiaSpin Kit</p>
+
+    </article>
+    <article class="article">
+        <object data="https://2021.igem.org/wiki/images/d/d4/T--DUT_China--PCRPDF.pdf" type="application/pdf" width="100%" height="800">
+        <p><b>error</b>
+            : this browser does not support PDFs. Please click to view:
+            <a href="https://2021.igem.org/wiki/images/d/d4/T--DUT_China--PCRPDF.pdf">Download PDF</a>.</p>
+        </object>
+    </article>
+    <article class="article">
+        <h1>p-nitrophenyl butyrate (pNPB) Assay</h1>
+        <p>Prepare 10mM pNPB in acetonitrile, 1:4:95 ratio of acetonitrile pNPB solution, 100% ethanol and 50mM Tris-HCL (pH
+            8), Plate reader, 24 well plate, Cell lysate. Set up 24 well plate by adding cell lysate and controls. Add the pNPB
+            buffer immediately before running the plate reader. Run the plate at 37 °C for 10 min inside the plate reader,
+            taking measurements of 405 nm absorbance every 15 seconds. 405 nm is the absorbance of pNPB substrate that has
+            been broken by an esterase enzyme, so a significant read at 405 nm absorbance indicates enzyme is breaking ester
+            bonds in the substrate.</p>
+
+    </article>
+    <article class="article">
+        <h1>Protein re-naturation</h1>
+        <p>The bacterial culture was centrifuged at 5,000 rpm, 4 °C for 15 min before the supernatant was removed, and then
+            the pellets were resuspended in PBS, and sonicated on ice 10 min at 50% duty cycle. Inclusion bodies and
+            cellular debris were collected by centrifugation at 12,000 rpm for 15 min at 4 °C. Then the pellets were
+            resuspended in 50 mL washing buffer (20 mM Tris-HCl, 0.5 M NaCl, 2 M urea, 2% Triton, pH 8.0) for 30 min on
+            ice. The solution was centrifuged at 12,000 rpm for 15 min at 4 °C and then the pellet was resuspended in 50 mL
+            denaturation lysis buffer (20 mM Tris-HCl, 0.5 M NaCl, 8 M urea, 0.2 mM DTT, pH 8.0) and incubated in ice bath
+            for 5 h to completely dissolve the proteins. The insoluble cellular components were removed after centrifugation
+            at 12,000 rpm at 4 °C for 20 min, and the supernatant was filtered using 0.45 μm membrane filters to obtain the
+            protein. Then, the supernantant containing the target protein solution was successively placed into beakers
+            either containing 500 mL dialysis buffer I (20 mM Tris-HCl, 0.5 M NaCl, 8 M urea, pH 8.0), dialysis buffer II
+            (20 mM Tris-HCl, 0.5 M NaCl, 6 M urea, pH 8.0), dialysis buffer III (20 mM Tris-HCl, 0.5 M NaCl, 4 M urea, 0.1 mM
+            Oxidized Glutathione[GSSG], 0.9 mM glutathione[GSH], pH 8.0), dialysis buffer IV (20 mM Tris-HCl, 0.5 M NaCl, 3
+            M urea, 0.1 mM GSSG, 0.9 mM GSH, pH 8.0), dialysis buffer V (20 mM Tris-HCl, 0.2 M NaCl, 2 M urea, 0.1 mM GSSG,
+            0.9 mM GSH, pH 8.0), dialysis buffer VI (20 mM Tris-HCl, 0.1 M NaCl, 0 M urea, 0.1 mM GSSG, 0.9 mM GSH, pH 8.0),
+            dialysis buffer VII (20 mM Tris-HCl, 0.1 M NaCl, pH 8.0), dialysis bufferVII(20 mM Tris-HCl, 0.9% NaCl, pH
+            8.0), and stirred at 4 °C for 4 h.</p>
+
+    </article>
+    <article class="article">
+        <h1>Western blot</h1>
+        <p>Take the supernatant for SDS-PAGE electrophoresis (70 V 30 min, 110 V 2 h);</p>
+        <p>After the electrophoresis, cut off the protein gel block, place it in a protein semi-dry transfer instrument, and
+            transfer the target protein to the PVDF membrane under the condition of 15 V 13 min; Put the PVDF membrane into
+            50 g/L skimmed milk powder and leave it at room temperature for 2 hours (slowly shake); Use 20 g/L skimmed milk
+            powder to dilute the anti-His mouse antibody at a ratio of 1:2000, and add an appropriate amount of the diluted
+            antibody. Submerge the PVDF membrane in a self-made closed bag containing PVDF membrane, and incubate overnight
+            at 4 °C (slowly shaking); Take out the PVDF membrane from the primary antibody solution and place it in a
+            petri dish, wash with TBST 5 times, each time 15 min; Use 20 g/L skimmed milk powder to dilute goat anti-mouse
+            IgG (called secondary antibody) at a ratio of 1:3000, and add an appropriate amount of diluted secondary
+            antibody to a self-made closed bag with PVDF membrane to submerge the PVDF membrane and incubated at room
+            temperature for 2 hours (slowly shake); Then, take out the PVDF membrane from the secondary antibody solution
+            and place it in a plate, wash five times with TBST, 15 minutes each time; After washing, dry the PVDF membrane
+            and drop it on the front. Add the prepared color developer until it is completely covered, place it at room
+            temperature for 2 minutes, place it in an ECL luminescence imager for exposure and photographing, and record the
+            result.</p>
+
+    </article>
+</section>
+<div id="footer-point"></div>
+<script>
+    //About the top-scroll--linked to general.js
+    window.onload = init;
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
+</script>
+</body>
+</html>

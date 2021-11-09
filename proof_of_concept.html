@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proof of Concept</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script src="js/sidebar.js" defer></script>
+</head>
+<body>
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/c/c4/T--DUT_China--t_proof_of_concept.jpg");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/c/c4/T--DUT_China--t_proof_of_concept.jpg");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/c/c4/T--DUT_China--t_proof_of_concept.jpg");
+    background-image: url("https://2021.igem.org/wiki/images/c/c4/T--DUT_China--t_proof_of_concept.jpg");'>
+    <div>Proof of Concept</div>
+</div>
+<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
+    <table>
+        <tr v-for="(value,key,index) in articles">
+            <td>
+                <canvas width="40" height="40" class="canvas"></canvas>
+            </td>
+            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
+                <a v-bind:href="'#article'+(key+1)">
+                    Section {{key + 1}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<style>
+    #main-text h1 {
+        text-transform: initial;
+    }
+</style>
+<section id="main-text">
+    <p>In order to develop a proof of concept for our project as a whole, we come up with the following ideas. These
+        experiments and prototypes may increase the credibility of our concept, making it more in line with realistic
+        scenarios.</p>
+    <article class="article">
+        <h1>1. The three-enzyme complex can effectively degrade PET plastic sheets, with improved degradation efficiency
+            compared with single enzyme reaction.</h1>
+        <p>The enzyme complex we constructed can effectively degrade PET plastic, and the efficiency is higher than that
+            of single enzyme (RIDD-PETase) treatment, which introduced in our engineering success. The increase in
+            degradation efficiency can prove the feasibility of our concept. After 7 days of incubation with the crude
+            enzyme solution and PET plastic sheet (crystallinity 12%), the TPA yield reached 0.9016mM, instead of using
+            enzyme complex, only one part (RIDD-PETase) was used to process the TPA yield Only 0.4815mM (Figure 1).</p>
+        <div class="figures">
+            <div class="row">
+                <div class="col-12 col-md-8 mx-auto">
+                    <img src="https://2021.igem.org/wiki/images/d/db/T--DUT_China--poc_1.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 1: The concentration of TPA product in each experiment group</p>
+        <p>At the same time, the results of our scanning electron microscope also proved the feasibility and
+            effectiveness of our concept of constructing enzyme complexes. For details, please refer to the <a
+                    href="https://2021.igem.org/Team:DUT_China/Engineering" target="_blank">engineering
+                success</a>. The PET plastic sheet treated by medium was examined by scanning electron microscopy, and
+            the
+            results were in line with expectations. The plastic sheet treated with <i>E. coli BL21</i> medium or MD
+            medium has
+            almost no scratches or holes. The plastic sheet after PD treatment has some obvious scratches, while the
+            plastic sheet after PD-MD-hA treatment. The surface is covered with scratches, and at the same time, densely
+            packed with holes of various shapes. This scanning electron microscopy test more intuitively proved that the
+            three-enzyme complex we constructed has a better PET plastic degradation function than single-enzyme
+            degradation.</p>
+        <div class="figures">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/a/a4/T--DUT_China--poc_2a.jpg" alt="">
+                    <p>(a)</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/3/30/T--DUT_China--poc_2b.jpg" alt="">
+                    <p>(b)</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/b/b6/T--DUT_China--poc_2c.jpg" alt="">
+                    <p>(c)</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/2/2d/T--DUT_China--poc_2d.jpg" alt="">
+                    <p>(d)</p>
+                </div>
+            </div>
+        </div>
+        <p class="caption">Figure 2: Scanning electron microscopy (a) PET plastic sheets treated in <i>E. coli BL21</i>.
+            (b) PET
+            plastic sheets
+            treated in <i>E. coli BL21/pET28a-PD</i>. (c) PET plastic sheets treated in <i>E. coli BL21/pET28a-M</i>.
+            (d) PET plastic
+            sheets treated in <i>E. coli BL21/pET28a-PD-MD-hA</i> medium.</p>
+
+    </article>
+    <article class="article">
+        <h1>2. Growth curve method proved that the engineered bacteria <i>E. coli BL21/pET28a-PD-MD-hA</i> has the
+            feasibility
+            of large-scale cultivation in industrial production.</h1>
+        <p>In order to obtain a large amount of protein, it is necessary to cultivate engineered bacteria at a
+            relatively high density. However, introducing <i>pET28a-PD-MD-hA</i> into engineered bacteria may slow down
+            the
+            growth and replication speed due to the load of plasmids, which increases the cost of the bacterial culture
+            process for the industrialized mass production of enzymes. Therefore, we decided to use 1L of LB medium to
+            cultivate different types of bacteria at 37 °C, and compare the growth curves of <i>E. coli
+                BL21/pET28a-PD-MD-hA</i>
+            and <i>E. coli BL21</i> (wild type) , <i>E. coli BL21/pET28a</i> to examine the growth of the engineered
+            bacteria we
+            constructed.</p>
+        <div class="figures">
+            <div class="row">
+                <div class="col-12 col-md-8 mx-auto">
+                    <img src="https://2021.igem.org/wiki/images/f/f5/T--DUT_China--poc_3.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <p class="caption">Figure 3: The growth curve of <i>E. coli BL21,</i> <i>E. coli BL21/pET28a</i> and E. coli
+            BL21/pET28a-PD-MD-hA(Using a microplate reader, it enters a plateau when OD600≈0.4)</p>
+        <p>Firstly, we cultured <i>E. coli BL21,</i> <i>E. coli BL21/pET28a</i> and <i>E. coli BL21/pET28a-PD-MD-hA</i>
+            in kana free medium
+            respectively and developed their growth curve to see whether the introduction of <i>pET28a-PD-MD-hA</i>
+            plasmid has
+            an impact on bacterial growth. As shown in Figure 3, the growth curve of <i>E. coli BL21/pET28a-PD-MD-hA</i>
+            exhibited virtually the same growth trend as <i>E. coli BL21</i> and <i>E. coli BL21/pET28a,</i> suggesting
+            that the plasmid
+            of <i>pET28a-PD-MD-hA</i> had no effect on the growth of <i>E. coli BL21</i>.</p>
+
+    </article>
+    <article class="article">
+        <h1>3. In order to facilitate enzyme separation and purification, or even in situ PET plastic degraddation in
+            the
+            environment, we studied the signal peptides for bacterial secretion lay the foundation for subsequent
+            protein secretion work.</h1>
+        <p>PelB is a signal peptide using SecB-dependent pathway and has been commercially used in PET expression
+            systems (Figure 4). We initially planned to use pelB as signal peptide to achieve effective secretion of the
+            target protein, but the expected goal was not achieved in the experiment. The normal functioning of pelB is
+            closely related to the hydrophobicity of the subsequent 20 amino acids, and the RIDD and RIAD used in our
+            system do not meet its hydrophobicity requirements, which results in the failure of enzyme secretion.</p>
+        <div class="figures">
+            <div class="row">
+                <div class="col-12">
+                    <img src="https://2021.igem.org/wiki/images/3/34/T--DUT_China--poc_4.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 4: Principle of signal peptide of SecB-dependent pathway</p>
+        <p>In PETase expression system, SecB-dependent pathway is well-established, with a variety of signal peptides,
+            within which we can screen out those that can adapt to the hydrophobicity of RIDD and RIAD, such as PhoA,
+            OmpC, OmpF, OmpA, Endoxylanase, and MalE.</p>
+        <div class="figures">
+            <div class="row">
+                <div class="col-12">
+                    <img src="https://2021.igem.org/wiki/images/f/ff/T--DUT_China--poc_5.png" alt="">
+                </div>
+            </div>
+        </div>
+        <p class="caption text-md-center">Figure 5: Some different types of signal peptides later teams can try</p>
+
+    </article>
+    <article class="article">
+        <h1>4. We have studied the compatibility of future PD-MD-hA secreting bacteria <i>E. coli
+            BL21/pET28a-PD-MD-hA (Secretory)</i>, with PET plastic degradation products in the fermenter, proving
+            suitable for industrial applications.</h1>
+
+        <p>If an engineered bacteria that can secrete PD-MD-hA is constructed, a possible application will be
+            co-culturing <i>E. coli BL21/pET28a-PD-MD-hA (Secretory)</i> with PET plastic in fermenters to achieve
+            biodegradation of plastic. However, in this way, we have to solve a problem: the final product of PET
+            plastic degradation, TPA and EG may have a negative impact on bacterial growth, so we have studied growth
+            curve of engineered bacteria under different concentrations of TPA and EG.</p>
+        <div class="figures">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/1/12/T--DUT_China--poc_6a.svg" alt="">
+                    <p>(a)</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="https://2021.igem.org/wiki/images/0/0d/T--DUT_China--poc_6b.svg" alt="">
+                    <p>(b)</p>
+                </div>
+            </div>
+        </div>
+        <p class="caption">Figure 6: (a)EG with concentration of 0, 0.1%, 1.0%, 5.0% was added into the culture medium
+            of <i>E. coli BL21/pET28a-PD-MD-hA</i>; (b)TPA with content of 0, 0.1mM, 1.0mM, 10,0mM was added into the
+            culture medium
+            of <i>E. coli BL21/pET28a-PD-MD-hA</i>.</p>
+
+        <p>We need to verify whether the products of PET degradation ——TPA and EG inhibit or promote bacterial growth.
+            As shown in left part of Figure 6, EG with concentrations of 0%, 0.1%, 1% and 5% were added to the culture
+            medium respectively. After 19 hours of observation, the four growth curves were basically consistent, which
+            proved that EG had no significant effect on the growth of bacteria; On the other hand, in Figure 6 right, it
+            can be seen that <i>E. coli BL21</i> grew normally in the medium with low TPA content of 0, 0.1mM and 1mM.
+            However,
+            when the TPA content was too high(10mM), <i>E. coli BL21</i> did not grow. Obviously, high concentration of
+            TPA
+            will inhibit bacterial growth, so it is necessary to remove or further degrade TPA to avoid its high
+            concentration in the process of PET degradation in bacterial culture or in industrial production.</p>
+
+    </article>
+    <article class="article">
+        <h1>5. Kill switch for <i>E. coli BL21/pET28a-PD-MD-hA</i> and <i>E. coli BL21/pET28a-PD-MD-hA (Secretory)</i>
+        </h1>
+        <h2>①Kill switch for <i>E. coli BL21/pET28a-PD-MD-hA</i> and <i>E. coli BL21/pET28a-</i></h2>
+        <p>The internal killing switch was designed to rapidly eliminate Hetoul remained in the gastrointestinal tract
+            after the detection. This bacteria-lysing protein can destabilize bacterial cell membrane resulting in cell
+            death. Arabinose could be taken in through the digestive tract without being absorbed, which made it an
+            ideal inducer of internal killing switch.</p>
+        <p>Encoded by Phage Phi X 17,the internal killing switch is a combination of arabinose-induced promoter pBAD
+            (<a href="http://parts.igem.org/Part:BBa_K206000" target="_blank">BBa_K206000</a>), pBAD repressor AraC(<a
+                    href="http://parts.igem.org/Part:BBa_I13458" target="_blank">BBa_I13458</a>) and toxic Protein E (<a
+                    href="http://parts.igem.org/Part:BBa_K2500006" target="_blank">BBa_K2500006</a>).</p>
+
+
+        <div class="figures">
+            <div class="row">
+                <div class="col-12 col-md-8 mx-auto">
+                    <img src="https://2021.igem.org/wiki/images/a/aa/T--DUT_China--poc_7.png" alt="">
+                </div>
+            </div>
+        </div>
+        <h2>②Kill switch for <i>E. coli BL21/pET28a-PD-MD-hA (Secretory)</i> in the environment</h2>
+        <p>In order to contain the possible contamination of genes in the environment, we’ve decided to adopted a
+            kill-switch system inspired by 2021 Tongji_China iGEM team.</p>
+        <div class="figures">
+            <div class="row">
+                <div class="col-12">
+                    <img src="https://2021.igem.org/wiki/images/3/31/T--DUT_China--poc_8.png" alt="">
+                </div>
+            </div>
+        </div>
+        <p class="caption text-sm-center">Figure 8: Kill switch schematic diagram</p>
+
+        <p>The workflow of this kill-switch system involves three modes. During the propagation stage, the kill-switch
+            system is silenced, where only the TpiAB transporter is synthesized. Because of the presence of terminator
+            B0015, no toxin is produced.</p>
+        <p>When TPA is detected by the sensor system provided by a previous iGEM Team UMaryland, suggesting the
+            degradation process has begun, the TphC transcriptional activator will be activated, thus initiating the
+            production of both the antitoxin and DRE recombinase. The recombinase will in turn cut the terminator B0015,
+            which leads to the permanent activation of the expression circuit of the toxin. However, under this
+            situation, both antitoxin and toxin are present in the system, so the cell itself will continue to thrive
+            and the degradation ensues.</p>
+        <p>After the detection of TPA, as long as the concentration of TPA reduces to a certain level, which means that
+            the degradation has finished or the cell is dispersed in the environment, the TphC activator will be turned
+            off, terminating the synthesis of antitoxin. Whereas the production of toxin is not regulated by TphC
+            activator and continues, the cell will be killed.</p>
+        <h2>Acknowledgements:</h2>
+        <p>We would like to thank Team Tongji_China for the inspiration of the system design. We also appreciate the
+            previous work of Team UMaryland on the TPA sensor system.</p>
+
+    </article>
+</section>
+<div id="footer-point"></div>
+<script>
+    //About the top-scroll--linked to general.js
+    window.onload = init;
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
+</script>
+</body>
+</html>

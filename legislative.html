@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Legislative Proposals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script src="js/sidebar.js" defer></script>
+</head>
+<body>
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/b/b3/T--DUT_China--t_legislative.jpeg");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/b/b3/T--DUT_China--t_legislative.jpeg");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/b/b3/T--DUT_China--t_legislative.jpeg");
+    background-image: url("https://2021.igem.org/wiki/images/b/b3/T--DUT_China--t_legislative.jpeg");'>
+    <div>Legislative Proposals</div>
+</div>
+<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
+    <table>
+        <tr v-for="(value,key,index) in articles">
+            <td>
+                <canvas width="40" height="40" class="canvas"></canvas>
+            </td>
+            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
+                <a v-bind:href="'#article'+(key+1)" style="font-size: 14px;">
+                    {{value.innerHTML}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<section id="main-text">
+    <article class="article">
+
+        <p>
+            We are a student team from Dalian University of technology.
+            During the process of studying plastic degradation, we found
+            that the domestic plastic pollution has not been well solved
+            yet while it has formed an mature governance system at abroad.
+            Through research and interviews among specialists, we believe
+            that the problem of plastics has become a global problem and is
+            becoming more and more serious due to it is small and difficult to
+            degrade. Thus, we suggest that the relevant laws of controlling plastic
+            pollution should be improved as soon as possible in order to pave
+            the way for the development and industrialization of plastics garbage
+            disposal in China.
+        </p>
+
+    </article>
+    <article class="article">
+        <h1>1 The urgent need to develop and improve the related laws and regulations</h1>
+        <h2>1.1 The status of plastics pollution</h2>
+        <p>Plastics are widely used in production and life
+            and are important basic materials. Nonstandard production
+            and use of plastic products and recycling and disposal of
+            plastic waste will cause waste of energy and resources
+            and environmental pollution, and increase the pressure
+            on resources and environment. Currently, large amounts
+            of plastic debris are entering landfills or are left
+            as waste accumulated in natural world, and it’s a public
+            emergency to prevent its release and accumulation in the
+            environment via appropriate biological, chemical, and physical treatments .
+
+        </p>
+        <p>In August 2021, the United Nations Biodiversity Organization released the document “The global plastic crisis is
+            imminent”. More than 180 countries and regions passed the plastic waste amendment of the Basel Convention,
+            calling on human beings to minimize the generation of plastic waste and carry out environmentally sound
+            management.</p>
+        <h2>1.2 The domestic control of plastic pollution in China</h2>
+        <p>In China, as one of the world's top 10 producers and consumers of plastic products, Chinese natural environment
+            and city are faced with severe plastic pollution and high recycling pressure. In 2020, China produced 70.302
+            million tons of plastics and imported nearly 450 thousand tons. The total consumption of plastics in China in
+            2019 was about 90.877 million tons, of which millions of tons were used for packaging. Most of the plastic used
+            for packaging is discarded in the environment in the form of waste film, plastic bags and cutlery. In terms of
+            consumption level, the consumption of bottle-grade PET in China continues to grow from 6.33 million tons in 2016
+            to 9.49 million tons in 2020. In 2020, the total consumption of PET bottles in China reached 9.49 million tons.
+            Although the export volume decreased to 2.34 million tons due to the epidemic in 2020, accounting for 24.7% of
+            the total consumption, the domestic demand continued to expand, reaching 7.15 million tons. All these demands
+            and consumptions have caused severe challenges in environment, especially for over accumulation of frequently
+            used plastic form, PET, in biosphere.
+        </p>
+    </article>
+    <article class="article">
+        <h1>2 The urgent need for NPC Standing Committee to issue relevant laws and regulations on plastic pollution</h1>
+        <h2>2.1 The introduction of plastic pollution related laws is in line with the short-term goal of the NPC Standing
+            Committee.</h2>
+        <p>According to the opinions of the Ministry of ecological environment of the national development and Reform
+            Commission on Further Strengthening the treatment of plastic pollution, more attention will be paid to the field
+            of ecological and environmental protection this year. In particular, we should attach great importance to
+            strengthening legislation and revising ecological and environmental protection laws. For example, it is
+            prohibited to produce and sell ultra-thin plastic shopping bags and ultra-thin polyethylene agricultural film.
+            It is prohibited to manufacture plastic products with medical waste as raw materials. The import of waste
+            plastics is completely prohibited.</p>
+        <h2>2.2 The introduction of relevant laws on plastic pollution is conducive to the standardization of the
+            application
+            of evidence rules in the arbitration and litigation stages of plastic pollution related cases.</h2>
+        <p>We think, the laws promulgated by the NPC Standing Committee can be applied to the whole country and can be used
+            as the basis for the court to decide directly. We suggests that a special law for plastic pollution should be
+            established in China to avoid the loss of credibility of arbitration award or court award due to the
+            inconsistency of arbitration and litigation award standards. Also, if laws and regulations are promulgated by
+            other relevant departments, the order of application in law is lower than that promulgated by the NPC Standing
+            Committee.</p>
+        <h2>2.3 The law on plastic pollution issued by the NPC Standing Committee can be more authoritative.</h2>
+        <p>The NPC Standing Committee, as a permanent organ of the highest legislature in China, enjoys the highest
+            legislative power. So the revised bill on plastic pollution made by NPC Standing Committee can be applied
+            nationwide, which will supply a gap of the law related to plastics.</p>
+
+    </article>
+    <article class="article">
+        <h1>3 Conception of the draft related to plastic pollution</h1>
+        <h2>3.1 Sorting out he existing laws</h2>
+        <p>At present, there is a gap in laws related to plastic pollution in China. We have collected the domestic and
+            foreign laws and obtained some inspiration from the determination of aerobic biodegradability of single-layer
+            and multi-layer coatings issued by the D20 plastics Committee. We have consulted experts at home and abroad who
+            study in plastic pollution, and their suggestions will serve as a supplement. Good Manufacturing Practice.</p>
+        <h2>3.2 Draft concept</h2>
+        <h3>Chapter I General Principles</h3>
+        <h4>Article 1</h4>
+        <p>This law is formulated to protect and improve the living environment and ecological environment, prevent
+            pollution and other public hazards, and protect human health.</p>
+
+        <h4>Article 2</h4>
+        <p>The term “environment” in this law refers to the totality of various natural and artificially modified natural
+            factors that affect the survival and development of human beings, including the atmosphere, water, ocean, land,
+            mineral deposits, forests, grasslands, wildlife, and nature. Relics, cultural relics, nature reserves, scenic
+            spots, cities and villages, etc.</p>
+
+        <h4>Article 3</h4>
+        <p>This law applies to the territory of the People's Republic of China and other sea areas under the jurisdiction of
+            the People's Republic of China.</p>
+
+        <h4>Article 4</h4>
+        <p>The plastic pollution control plan formulated by the state must be incorporated into the national economic and
+            social development plan. The state adopts economic and technical policies and measures that are conducive to
+            plastic pollution control to coordinate the plastic pollution control work with economic construction and social
+            development.</p>
+
+        <h4>Article 5</h4>
+        <p>The State encourages the development of scientific education for plastic pollution control, strengthens the
+            research and development of plastic pollution control science and technology, improves the scientific and
+            technological level of plastic pollution control, and popularizes scientific knowledge of plastic pollution
+            control.</p>
+
+        <h4>Article 6</h4>
+        <p>All units and individuals have the obligation to protect the environment and have the right to report and sue
+            those units and individuals that pollute and damage the environment.</p>
+
+        <h4>Article 7</h4>
+        <p>The environmental protection administrative department of the State Council shall implement unified supervision
+            and management of the national plastic pollution control work. The environmental protection administrative
+            department of the local people's government at or above the county level shall implement unified supervision and
+            management of the plastic pollution control work in the area under its jurisdiction. The national maritime
+            administrative department, port supervision, fishery and fishing port supervision, military environmental
+            protection departments, and various levels of public security, transportation, railway, and civil aviation
+            management departments shall supervise and manage the prevention and control of plastic pollution in accordance
+            with relevant laws. The land, mineral, forestry, agriculture, and water conservancy administrative departments
+            of the people's government at or above the county level shall supervise and manage the protection of resources
+            in accordance with the provisions of relevant laws.</p>
+        <h4>Article 8</h4>
+        <p>Units and individuals that have made remarkable achievements in the treatment of plastic pollution shall be
+            rewarded by the people's government.</p>
+
+
+    </article>
+</section>
+<div id="footer-point"></div>
+<script>
+    //About the top-scroll--linked to general.js
+    window.onload = init;
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
+</script>
+</body>
+</html>

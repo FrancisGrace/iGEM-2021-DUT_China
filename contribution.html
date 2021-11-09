@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contribution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/article.css">
+</head>
+<body>
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/9/91/T--DUT_China--t_contribution.jpg");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/9/91/T--DUT_China--t_contribution.jpg");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/9/91/T--DUT_China--t_contribution.jpg");
+    background-image: url("https://2021.igem.org/wiki/images/9/91/T--DUT_China--t_contribution.jpg");'>
+    <div>Contribution</div>
+</div>
+<section id="main-text">
+    <p>
+        Our contribution to iGEM will mainly show two aspects on this webpage. On the one hand, it is a supplement to
+        the existing parts content. The supplementary parts content is as follows; on the other hand, the peptides that
+        can be used to construct enzyme complexes, RIDD and RIAD introduce the iGEM community to provide a new idea for
+        other teams to construct enzyme complexes in the future and combines our literature research and practical
+        experience to give some suggestions.
+    </p>
+    <table>
+        <tr>
+            <th>Parts number</th>
+            <th>Supplementary summary</th>
+        </tr>
+        <tr>
+            <td>
+                <a href="http://parts.igem.org/Part:BBa_K2010000" target="_blank">BBa_K2010000</a>
+            </td>
+            <td>
+                The registry part page has been supplemented with a directed evolution of an enzyme that efficiently
+                degrades PET plastic, and we used this enzyme to construct an enzyme complex.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="http://parts.igem.org/Part:BBa_K2013003" target="_blank">BBa_K2013003</a>
+            </td>
+            <td>
+                The registry part page has supplemented new data collected from laboratory experiments by Ailurus
+                vec<sup>TM</sup> and the literature content of the fusion expression of MHETase and PETase.
+            </td>
+        </tr>
+    </table>
+    <p>
+        Studies have shown discoveries in the interaction of RIAD-RIDD dimer or trimer (two RIDD with one RIAD)
+        peptides. These two types of peptides have a strong binding affinity to each other. Inspired by this discovery,
+        we proposed the idea that <i>Is</i>PETase and MHETase can be fused with RIDD and RIAD, respectively so that
+        closer
+        physical contact with the active sites of these two enzymes can significantly accelerate PET degradation through
+        intermediate transmission. We further accelerate the rate of enzyme degradation without interfering with the
+        structure of the enzyme active site or enzyme activity. The final result of the experiment confirmed our initial
+        idea.
+    </p>
+    <p>
+        Through experiments, we understand the in-depth mechanism of action between each of the critical components and
+        calculate the response of the intermediate product to the enzyme, which can help us better interpret our system.
+    </p>
+    <div class="figures">
+        <div class="col-12 col-md-8 mx-auto">
+            <img src="https://2021.igem.org/wiki/images/c/ce/T--DUT_China--con_1.png" alt="">
+        </div>
+    </div>
+    <p class="caption">
+        Figure 1: Schematic diagram of this system [1] (The assembly of tri-enzyme units. E1, E2: enzymes;
+        green and blue
+        structure: RIDD dimer; black line: linker; pink structure: RIAD; one orange circle: cysteine; two orange
+        circles: disulfide bond)
+    </p>
+    <p>
+        To apply our hybrid system to other enzyme systems, we have established a modular design that uses our modules
+        based on an in-depth understanding of the mechanism of action. We will give several points for those who want to
+        use this RIDD-RIAD dimer or trimer peptides system for enzyme complexes. There are several necessary conditions
+        for using this molecular system:
+    </p>
+    <p>
+        1. The enzyme upstream of the production chain must be a rate-limiting enzyme.
+    </p>
+    <p>
+        2. Characterize and calculate the combination result of the product and the enzyme. If the product has an
+        inhibitory effect on the enzyme in the previous step, the enzyme system can play a more significant role.
+    </p>
+    <p>
+        3. Consider the influence of the sequence of enzymes on the activity, even though the impact of our backbone on
+        the movement of the enzyme has been minimized.
+    </p>
+    <p>
+        We hope our experience and tips can help them who are interested in modular enzyme assembly or complexes.
+    </p>
+    <article class="article">
+        <h1>Reference</h1>
+        <p>[1] Kang W, Ma T, Liu M, et al. Modular enzyme assembly for enhanced cascade biocatalysis and metabolic
+            flux[J]. <i>Nature Communications</i>, 2019, 10(1).
+        </p>
+    </article>
+</section>
+<div id="footer-point"></div>
+<script>
+    //About the top-scroll--linked to general.js
+    window.onload = init;
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
+</script>
+</body>
+</html>

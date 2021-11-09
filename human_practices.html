@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Human Practices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script src="js/sidebar.js" defer></script>
+</head>
+<body>
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+<div id="title" class="col-12" style='-o-background-image: url("https://2021.igem.org/wiki/images/a/a6/T--DUT_China--t_hp.jpg");
+    -moz-background-image: url("https://2021.igem.org/wiki/images/a/a6/T--DUT_China--t_hp.jpg");
+    -webkit-background-image: url("https://2021.igem.org/wiki/images/a/a6/T--DUT_China--t_hp.jpg");
+    background-image: url("https://2021.igem.org/wiki/images/a/a6/T--DUT_China--t_hp.jpg");'>
+    <div>Integrated<br>Human Practices</div>
+</div>
+<div id="sidebar" v-bind:class="{'sidebar-active':isActive}">
+    <table>
+        <tr v-for="(value,key,index) in articles">
+            <td>
+                <canvas width="40" height="40" class="canvas"></canvas>
+            </td>
+            <td class="side-item" v-bind:class="{'side-item-active':itemActive[key]}">
+                <a v-bind:href="'#article'+(key+1)" style="font-size: 16px;">
+                    {{value.innerHTML}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<style>
+    #main-text img {
+        display: block;
+    }
+
+    #main-text img.portrait {
+        display: block;
+        width: 25%;
+        float: left;
+    }
+
+    @media only screen and (max-width: 575px) {
+        #main-text img.portrait {
+            width: 100%;
+        }
+    }
+</style>
+<section id="main-text">
+    <article class="article">
+        <h1>Human Practices</h1>
+        <h2>Putting the larger questions into the context</h2>
+
+        <p>Solving a problem generally requires three steps: discover the problem, analyze the problem, and deal with
+            the problem in an appropriate way. In each step, problems arising from the connection between theory and
+            reality will be encountered. The road of scientific research is not smooth, but we can never forget our
+            source and the value of final application promotion in this journey. We answered the core questions of the
+            team project, including environmental friendliness and responsibility, social technological innovation,
+            social tolerance, and scientific feasibility. We must ensure that our projects can provide certain value to
+            the world and society and can be used for reference in human life and even the future.</p>
+
+        <h2>How can we gather a holistic perspective about the public responses and holding the social
+            investigation?</h2>
+
+        <p>Since we want to deal with the microplastics in the environment, the most accumulated microplastics are still
+            in the downstream sewage treatment and other links. We contacted the Chunliuhe Sewage Treatment Plant for
+            interviews and investigations. As a more professional sewage monitoring and treatment institutions. In the
+            view of the treatment characteristics of sewage treatment plants, we mainly investigate the microplastic
+            composition of water waste in sewage treatment plants. In order to obtain more professional knowledge
+            guidance, we consulted with teachers whose research direction is similar to that of plastic degradation.
+            However, it was important to realize that there was a target question we need to solve, namely the
+            application of our innovation in the real world.</p>
+
+        <h2>What kind of factors should be considered in the practice of project application?</h2>
+
+        <p>We have to consider the effects of a number of factors in the process of environment application. Because our
+            study subjects are not single in the environment but co-existing with toxic substances, we must consider the
+            possible effects of the presence of other substances on enzyme activity and effects. The nature of the
+            degradation products and the interaction with the unknown environment are in urgent need of research and
+            in-depth understanding. We also need to consider the cost in order to apply the extensiveness in the
+            practical application. Material recovery and disposal should also be taken into account and we must ensure
+            that it can be recovered timely so that it doesn't impose a burden on the environment in case of the event
+            of unforeseen circumstances.</p>
+
+        <h2>What other ethical considerations should we take into account in our project?</h2>
+        <p>Having the strict technical requirements and standards in the production process, the products used in the
+            land will not produce microplastics are significantly important, which effectively avoiding affecting soil
+            natural-bacterial consortium populations. Different production companies will choose to add different raw
+            materials according to the cost, such as plasticizers. We wonder whether the company considers the
+            degradation of plastics when processing, and whether they have taken measures to minimize the environmental
+            burden that it may bring. The Basel Convention adopted not long ago made us wonder whether the relevant
+            staff consciously started to improve the regulations after discovering problems. We set out to interview the
+            Golden Land Company to understand the impact of plastics on planting soil and crop growth. Our team took a
+            stakeholder-focused approach for our project at every stage. To gain a better sense of the overall space and
+            get advice from industry professionals, we talked to several individuals at some of the famous plastic
+            processing technology companies in China such as JIN TU DI Group and Chunliu River Sewage Treatment Ltd. We
+            also talked to individuals in academia to understand some of the crucial variables that we had to consider
+            when designing and optimizing our genetic circuits.</p>
+        <p>From talking to these stakeholders, we came to realize that there was a broader picture here, namely the
+            deployment of our innovation in the real world. In designing our degradable microplastics system, we were
+            able to meet the requirements of both companies and sewage treatment plant, including environmental
+            friendliness, high efficiency and thoroughly degradation. The one factor that we were still unable to meet
+            was specific delivery method as the vector we used is Escherichia coli. One of our goals going forward will
+            be to further promote our technology to more vectors and meet this requirement.</p>
+
+        <h2>How can we become better scientists? How to popularize and promote synthetic biology through education?</h2>
+
+        <p>We need to communicate more with other colleagues and learn from each other to make progress. We formed New
+            Pollutants Alliance with Ocean University of China, Shanghai Jiaotong University, Nanjing Foreign Languages
+            School, and Zhejiang University. We organized an online workshop with the theme of New Pollutants together.
+            We invited teachers in the field of synthetic biology and ecotoxicology, enterprises in the field of rapid
+            inspection and students with relevant legal backgrounds to share and discuss online solutions to decrease
+            pollutants. We also co-planned with OUC-IGEM to write popular science articles on "new pollutants", focusing
+            on the hazards of antibiotics and microplastics to today's environment. In addition, we also exchanged and
+            promoted projects with students from 18 schools including Tongji University, Beijing Institute of Technology
+            and Tianjin University who participated in the iGEM competition.</p>
+        <p>Our team knew that brilliant idea couldn't come up alone: it is only through communications and discussions
+            from co-teams that we are able to be inspired and move forward. As a result, we completed our core
+            design-Hydrophobin from the sharing meeting with China Pharmaceutical University in May. That's also one of
+            the main spirits of iGEM.</p>
+
+        <h2>What are the central values of our project to society and life?</h2>
+
+        <p>There are currently 4.9 billion tons of plastic waste. Only 9% of the world's plastics are recycled, and the
+            rest of the garbage ends up in landfills or scattered in our land and oceans. If we continue or the current
+            plastic consumption continues to grow, by 2050, there will be 12 billion tons of plastic waste. The shocking
+            thing is that 91% of all plastics are disposable. Since plastics became common use about 60 years ago, the
+            speed of mass production has resulted in 8.3 billion metric tons of plastic pollution. Although people are
+            becoming more aware of its adverse effects on the environment, it will still double in the next 20 years.
+            Putting all these facts together, it is clear that we are in the gloomy depths of the global plastic crisis.
+            This problem is so serious that the United Nations has identified single-use plastics as one of the biggest
+            environmental challenges in the modern world.</p>
+
+        <p>Vladimir Moshkalo, the head of the United Nations Environment Programme (UNEP) in the Russian Federation,
+            said:"We must fundamentally rethink the way we produce and consume. If these trends continue, by 2050,
+            there
+            will be more plastic in the ocean than fish. A sustainable future requires cooperation from all levels of
+            society", he said.</p>
+        <p>Based on what we investigated, we designed our program to solve this urgent and serious problem in the
+            world.</p>
+
+        <p>More important information is provided in the Integrated Human Practice part.</p>
+
+    </article>
+    <article class="article">
+        <h1>Integrated Human Practices</h1>
+        <article class="article">
+            <h2 class="marked">1 Background</h2>
+            <p>Synthetic polymers pervade all aspects of modern life, due to their low cost, high durability, and
+                impressive range of tunability. Originally developed to avoid the use of animal-based products, plastics
+                have now become so widespread that their leakage into the biosphere and accumulation in landfills is
+                creating a global-scale environmental crisis. Currently, large amounts of plastic debris are entering
+                landfills or are left as waste accumulated in natural world, and it's a public emergency to prevent its
+                release and accumulation in the environment via appropriate biological, chemical, and physical
+                treatments. Among them, wide spreading and utilization of plastic polyethylene terephthalate (PET) in
+                the world has caused a large quantity of environmental challenges and gained much attention. PET is one
+                of the major plastics, in addition to polyethylene, polypropylene, polystyrene, polyvinyl chloride, and
+                polyurethane, and its worldwide production amounted to more than 106 million tons in 2020. Synthetic
+                plastic polymers Polyethylene terephthalate (PET) is one of the most widely used forms of synthetic
+                plastics in several industrial fields, which has been reported spreading as particles less than 5 mm in
+                environments and being captured from environments with low efficiencies. Furthermore, in addition to the
+                microplastics found in the environment, PET is frequently used in household products, which is severely
+                accumulated in the landfill and even worse, natural environments. Thus, plastic waste may have a
+                negative effect on human health and reveal a serious threatening to environments.</p>
+
+            <p>In August 2021, the United Nations Biodiversity Organization released the document "The global plastic
+                crisis is imminent". More than 180 countries and regions passed the plastic waste amendment of the Basel
+                Convention, calling on human beings to minimize the generation of plastic waste and carry out
+                environmentally sound management.</p>
+
+            <p>In China, as one of the world's top 10 producers and consumers of plastic products, Chinese natural
+                environment and city are faced with severe plastic pollution and high recycling pressure. In 2020, China
+                produced 70.302 million tons of plastics and imported nearly 450 thousand tons. The total consumption of
+                plastics in China in 2019 was about 90.877 million tons, of which millions of tons were used for
+                packaging. Most of the plastic used for packaging is discarded in the environment in the form of waste
+                film, plastic bags and cutlery. In terms of consumption level, the consumption of bottle-grade PET in
+                China continues to grow from 6.33 million tons in 2016 to 9.49 million tons in 2020. In 2020, the total
+                consumption of PET bottles in China reached 9.49 million tons. Although the export volume decreased to
+                2.34 million tons due to the epidemic in 2020, accounting for 24.7% of the total consumption, the
+                domestic demand continued to expand, reaching 7.15 million tons. All these demands and consumptions have
+                caused severe challenges in environment, especially for over accumulation of frequently used plastic
+                form, PET, in biosphere.</p>
+        </article>
+        <article class="article">
+            <h2 class="marked">2 What can we do?</h2>
+            <p>Plastics pollution represents a global environmental crisis. In response, microbe <i>Ideonella
+                sakaiensis</i>
+                was evolved corresponding mechanism that is capable of secreting two efficient enzymes to deconstruct
+                PET polymers in mild temperature. However, this two-enzyme system degradation capacity is highly limited
+                by inhibition effects, diffusion of intermediates and PET surface physicochemical properties. According
+                to previously reported experimental results, the direct linking combination of these two different
+                enzymes effectively improved the reaction rate. However, this new strategy is still limited by enzymatic
+                activity loss caused by direct linking method and low expression ratio. Simultaneously, the hydrophobin
+                protein is discovered to be capable of attaching to plastic surface via its hydrophobic part and expose
+                its hydrophilic part to aqueous environment. This unique feature may effectively make enzymes more
+                accessible to hydrophobic surface of PET. Therefore, inspired by nature, we designed a delicate
+                multicomplex enzyme system, in which short peptide tags (Redesigned RIAD and RIDD derived from natural
+                proteins) are applied to create scaffold-free modular enzymes assemblies. Here, in order to effectively
+                degrade microplastic PET particles, we construct enzymes of <i>Is</i>PETase and MHETase and protein
+                hydrophobin
+                together in our complex system via scaffold modular part, which may reveal higher catalytic efficiency
+                in mild temperature and avoid high possible loss of enzymes activity. Therefore, we created an
+                innovative strategy to improve PET degradation at mild temperature via biosynthetic factories and
+                artificially designed proteins system that do not exist in the nature.</p>
+            <img src="https://2021.igem.org/wiki/images/1/10/T--DUT_China--hp_0.jpg" class="mx-auto col-12 col-md-8"
+                 alt="">
+        </article>
+        <article class="article">
+            <h2 class="marked">3 Overview</h2>
+            <p>While completing our project design and experimental parts, our ultimate goal is to put scientific
+                research results into real practice. We've been thinking, what is the significance of our project? What
+                problems can be solved? What kind of value can be created? Are there any risks? As a team, we always
+                believe that it is vital to have a lasting impact on others and society through our project. This is why
+                we try our best to understand the needs of stakeholders in the process of promoting the project, and we
+                will consult the implementation of bio-based enzymes degradation feedback from experts, doctors,
+                manufacturers and the public to promote our project, while ensuring that our project is biosafe,
+                responsible, feasible and sustainable. In the following content, you will learn about our progress,
+                thinking process and how we integrate expert opinions.</p>
+        </article>
+        <article class="article">
+            <h2 class="marked">4 Expert interviews</h2>
+            <h3>The first stage</h3>
+            <p>At this stage, we interviewed many relevant stakeholders regarding the plastic including PET pollution in
+                China, the problems and challenges faced at current stage. To better understand the situation of PET
+                accumulation with the corresponding impact on the economy, society and environment. In this way, we can
+                understand our problems from multiple angles and think about how our projects can better affect
+                society.</p>
+
+            <h4>Name: JIN TU DI Group</h4>
+            <img src="https://2021.igem.org/wiki/images/e/e8/T--DUT_China--hp_1.png" alt="">
+            <p>JIN TU DI Group is a famous company that dedicated to the products of agricultural film, plastic
+                products, plastic plates, tubes and waste plastic recycling processing. It is the largest agricultural
+                plastic industry company in the northwestern part of China. It is fortunate for us to communicate with
+                this company's chief manager Mrs. Sun and her student Qi Liu about the current industry situation
+                related to plastic and corresponding national manage laws. Company officials told us that the type of
+                plastic is mainly PE and PET material, in which the current PE material plastic degradation method
+                invented by JIN TU DI Group has become matured. However, PET recovery rate is only around 10%, and PET
+                common recycling technology involves high temperature and high pressure, strong acid and alkali and
+                other issues, is likely to cause further pollution. According to JIN TU DI Group market investigation,
+                PET degradation at mild temperature especially in agricultural land is still a great challenge. Plastics
+                caused by agricultural plastics cannot be effectively recycled and be buried in the agricultural land,
+                resulting severe soil fertility damage. Soil contamination makes it impossible to grow the ideal crops
+                and the cost is huge. Although government has made corresponding laws to limit plastic using and
+                spreading in relevant fields, the effects are still limited. The PET degradation at mild temperature
+                still needs to be improved.</p>
+
+            <p><b>Take away:</b> Making sure that PET degradation at mild temperature is a truly emergency and
+                meaningful
+                direction and our project focus point should be dedicated to solve this tough problem among other
+                plastic pollutions problems. The key points for solving current challenges in plastic pollution mainly
+                lies in mild temperature degradation, effective degradation rate and good performances in its endurances
+                for long period using and degradation, which would be our project designing core. Although China has
+                issued relevant strict policies on controlling plastic pollution, the current law on managing PET and
+                other material is still at early stage and not consummated. Thus, new method for accelerating PET
+                plastic at mild condition is needed and more comprehensive and mature Legislative Proposals are
+                necessary.</p>
+
+            <h4>Name: Kaiserslautern University 2019 iGEM team<a href="http://2019.igem.org/Team:TU_Kaiserslautern" target="_blank">
+                <svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1714">
+                    <path d="M607.934444 417.856853c-6.179746-6.1777-12.766768-11.746532-19.554358-16.910135l-0.01228 0.011256c-6.986111-6.719028-16.47216-10.857279-26.930349-10.857279-21.464871 0-38.864146 17.400299-38.864146 38.864146 0 9.497305 3.411703 18.196431 9.071609 24.947182l-0.001023 0c0.001023 0.001023 0.00307 0.00307 0.005117 0.004093 2.718925 3.242857 5.953595 6.03853 9.585309 8.251941 3.664459 3.021823 7.261381 5.997598 10.624988 9.361205l3.203972 3.204995c40.279379 40.229237 28.254507 109.539812-12.024871 149.820214L371.157763 796.383956c-40.278355 40.229237-105.761766 40.229237-146.042167 0l-3.229554-3.231601c-40.281425-40.278355-40.281425-105.809861 0-145.991002l75.93546-75.909877c9.742898-7.733125 15.997346-19.668968 15.997346-33.072233 0-23.312962-18.898419-42.211381-42.211381-42.211381-8.797363 0-16.963347 2.693342-23.725354 7.297197-0.021489-0.045025-0.044002-0.088004-0.066515-0.134053l-0.809435 0.757247c-2.989077 2.148943-5.691629 4.669346-8.025791 7.510044l-78.913281 73.841775c-74.178443 74.229608-74.178443 195.632609 0 269.758863l3.203972 3.202948c74.178443 74.127278 195.529255 74.127278 269.707698 0l171.829484-171.880649c74.076112-74.17435 80.357166-191.184297 6.282077-265.311575L607.934444 417.856853zM855.61957 165.804257l-3.203972-3.203972c-74.17742-74.178443-195.528232-74.178443-269.706675 0L410.87944 334.479911c-74.178443 74.178443-78.263481 181.296089-4.085038 255.522628l3.152806 3.104711c3.368724 3.367701 6.865361 6.54302 10.434653 9.588379 2.583848 2.885723 5.618974 5.355985 8.992815 7.309476 0.025583 0.020466 0.052189 0.041956 0.077771 0.062422l0.011256-0.010233c5.377474 3.092431 11.608386 4.870938 18.257829 4.870938 20.263509 0 36.68962-16.428158 36.68962-36.68962 0-5.719258-1.309832-11.132548-3.645017-15.95846l0 0c-4.850471-10.891048-13.930267-17.521049-20.210297-23.802102l-3.15383-3.102664c-40.278355-40.278355-24.982998-98.79612 15.295358-139.074476l171.930791-171.830507c40.179095-40.280402 105.685018-40.280402 145.965419 0l3.206018 3.152806c40.279379 40.281425 40.279379 105.838513 0 146.06775l-75.686796 75.737962c-10.296507 7.628748-16.97358 19.865443-16.97358 33.662681 0 23.12365 18.745946 41.87062 41.87062 41.87062 8.048303 0 15.563464-2.275833 21.944801-6.211469 0.048095 0.081864 0.093121 0.157589 0.141216 0.240477l1.173732-1.083681c3.616364-2.421142 6.828522-5.393847 9.529027-8.792247l79.766718-73.603345C929.798013 361.334535 929.798013 239.981676 855.61957 165.804257z"
+                          p-id="1715"></path>
+                </svg>
+            </a>
+            </h4>
+            <img src="https://2021.igem.org/wiki/images/2/2d/T--DUT_China--hp_2.png" alt="">
+            <p>We communicate with iGEM alumni from Kaiserslautern 2019, Germany, who is also dedicated to focus on the
+                PET pollution threatening. Through this online communication, we obtain an overview situation of plastic
+                degradation and current limitations, which significantly function in our final project formation. Their
+                work mainly related to revolutionizing plastic degradation by introducing <i>Chlamydomonas
+                    reinhardtii</i> as a
+                eukaryotic secretion platform, which effectively secret two degradation enzymes and adhere to
+                microplastic surface so that PET can be continuously exposed to enzymes degradation. Our online meeting
+                fully discussed all previous efforts in this field and possible future strategies for further
+                accelerated PET decomposing in environment. Through this discussion, we have also discovered the
+                limitation of current PET degradation: 1. High temperature that may not be applicable to current mild
+                enzymes like <i>Is</i>PETase. 2. Newly discovered enzymes with prefect performance at high temperature
+                may not
+                be able to convert accumulated MHET into final monomers TPA that possess economical values.
+                3.Hydrophobic surface of PET makes it hard for enzymes effectively adhere to it. Therefore, after this
+                communication, we recognized that one of the core challenges in this field would be to degrade
+                accumulated PET at mild temperature with higher rate. Most PET accumulated in environment can only be
+                degraded at room temperature and involvement of industrial method at high temperature may cause the
+                further pollution to natural environment. Although at this stage, our team was experiencing the
+                brainstorm section and the new possible ideal was still being formed.</p>
+
+            <p><b>Take away:</b> Recognizing one of the core challenges is degrade PET effectively at mild temperature
+                because
+                most plastic accumulated in environment can only be degraded at room temperature. With their shearing of
+                PET-related fields information, we further understand the current stage of PET degradation key
+                limitations and decide to apply <i>Is</i>PETase discovered in 2016 rather than LCC enzymes reported in
+                2020 to
+                our project because <i>Is</i>PETase is potentially applicable to degrade PET at mild temperature and
+                combined
+                with MHETase to accelerate reaction rate.</p>
+
+            <h4>Name: Chunliu River Sewage Treatment Ltd</h4>
+            <img src="https://2021.igem.org/wiki/images/a/ac/T--DUT_China--hp_3.png" alt="">
+            <p>Dalian Chunliu River Sewage Treatment Ltd was built in 1982 and put into use in 1986. It is the earliest
+                urban secondary sewage treatment plant built in the northeastern part of China. In 2017, the second
+                phase of the Dalian Chunliuhe River Sewage Treatment Ltd was upgraded with advanced sewage treatment
+                technology. The plant mainly uses corresponding physical, chemical and biological methods for sewage
+                treatment and purification. Our communications focus on sewage treatment processes and industry
+                standards related to wastewater waste, and in particular, we are more concerned about the industry
+                standards for plastics in wastewater treatment plants, but staff revealed that they have never known any
+                knowledge related to microplastic particles, and after our introduction, they said that existing
+                processes cannot remove plastics debris from water because relevant equipment was not initially
+                considered to remove accumulated plastic particles in water. Out of our expectations, even professional
+                workers didn't pay much attention to plastic processing in waste water. This means that plastics in
+                sewage are often overlooked, and whether they are effective in removing plastics from sewage is often
+                overlooked. Since many research teams around the world have detected the existence of plastics in many
+                types of water including the waste water processing system. However, the possible existence of plastic
+                in Chunliu River Sewage Treatment Ltd has been ignored, which may cause threatening to humankind health
+                and environment. Current technology on degrading plastics including PET material is still limited and
+                further processing at high temperature may not be applicable due to the further pollution and
+                inconvenience. Thus, the effective detection and degradation of accumulated PET at room temperature is
+                urgent.</p>
+
+            <p><b>Take away:</b> Conversations with sewage treatment plants have exposed the problem that terminal
+                treatment
+                plants do not pay much attention to PET accumulated in water. Through this conversation and follow-up
+                data verification, we knew that there is no uniform standard for PET processing in water purification,
+                in which the uniform Legislative Proposals are needed. Therefore, this report directly encouraged us to
+                propose corresponding Legislative Proposals calling for paying more attention to eco-friendly remove PET
+                and other plastics accumulated in environment and our community. Simultaneously, this communication with
+                relevant industry directly strengthened and supported that our project focused problem is a true
+                emergency, which further conformed with our previous investigations, and our approach is really
+                important and needed for further solving PET plastic pollution challenge.</p>
+
+            <h3>The second stage</h3>
+            <p>In order to solve the problem of effectively degradation of accumulated PET at mild temperature, we hope
+                to find a safe and efficient approach. At first, we summarized and compared the certain methods reported
+                by previous literature. Among them, we regard artificially designed scaffolds combined with PET
+                degradation enzymes as the most potential method due to its neglected disturbances to enzymes structure
+                stability and possible improved efficiency. We believe it is of great practical significance to develop
+                this new ideal for PET degradation. For further understanding of its characteristics, advantages,
+                disadvantages and other related questions, we visited experts and researchers at this stage for
+                designing our project.</p>
+
+            <h4>Name: Wei Kang</h4>
+            <img src="https://2021.igem.org/wiki/images/5/53/T--DUT_China--hp_4.png" class="portrait" alt="">
+
+            <p><b>Occupation: Associate professor, School of Bioengineering, Dalian University of Technology</b></p>
+
+            <p><b>Field: Protein chemistry, synthetic biology, chemical biology</b></p>
+            <p class="clearfix"></p>
+            <p>Associate professor, Mr. Kang expressed great interest in our project, which may be combined with his new
+                discovery of RIAD-RIDD dimer peptides interaction. These two types peptides possess strong binding
+                affinity to each other. Under his discovery inspiration, we proposed that <i>Is</i>PETase and MHETase
+                may can
+                be fused to RIDD and RIAD respectively so that the physical closer contact with these two enzymes active
+                site may significantly accelerate PET degradation via intermediate delivery. One previous research has
+                proved that the combination of <i>Is</i>PETase and MHETase has significantly accelerated PET
+                degradation.
+                Therefore, our new inspired designing may further accelerate enzymes degradation rate without disturbing
+                enzymes active site structure or enzymatic activity. Associate professor, Mr. Kang encourage us to make
+                use of his newly discovered system.</p>
+
+            <p><b>Take away:</b> Through this key communication, we obtained inspiration of making use of RIDD-RIAD
+                system to
+                construct our artificial PET degradation enzyme that may significantly contribute to higher PET
+                degradation via intermediate delivery and, simultaneously, we also invited the Assistant Prof. Wei Kang
+                as the team advisor to guide our project. Deciding to apply this intricate RIDD-RIAD system into our
+                project.</p>
+
+            <h4>Name: CHINA PHARMACEUTICAL UNIVERSITY<a href="http://2021.igem.org/Team:CPU_CHINA" target="_blank">
+                <svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1714">
+                    <path d="M607.934444 417.856853c-6.179746-6.1777-12.766768-11.746532-19.554358-16.910135l-0.01228 0.011256c-6.986111-6.719028-16.47216-10.857279-26.930349-10.857279-21.464871 0-38.864146 17.400299-38.864146 38.864146 0 9.497305 3.411703 18.196431 9.071609 24.947182l-0.001023 0c0.001023 0.001023 0.00307 0.00307 0.005117 0.004093 2.718925 3.242857 5.953595 6.03853 9.585309 8.251941 3.664459 3.021823 7.261381 5.997598 10.624988 9.361205l3.203972 3.204995c40.279379 40.229237 28.254507 109.539812-12.024871 149.820214L371.157763 796.383956c-40.278355 40.229237-105.761766 40.229237-146.042167 0l-3.229554-3.231601c-40.281425-40.278355-40.281425-105.809861 0-145.991002l75.93546-75.909877c9.742898-7.733125 15.997346-19.668968 15.997346-33.072233 0-23.312962-18.898419-42.211381-42.211381-42.211381-8.797363 0-16.963347 2.693342-23.725354 7.297197-0.021489-0.045025-0.044002-0.088004-0.066515-0.134053l-0.809435 0.757247c-2.989077 2.148943-5.691629 4.669346-8.025791 7.510044l-78.913281 73.841775c-74.178443 74.229608-74.178443 195.632609 0 269.758863l3.203972 3.202948c74.178443 74.127278 195.529255 74.127278 269.707698 0l171.829484-171.880649c74.076112-74.17435 80.357166-191.184297 6.282077-265.311575L607.934444 417.856853zM855.61957 165.804257l-3.203972-3.203972c-74.17742-74.178443-195.528232-74.178443-269.706675 0L410.87944 334.479911c-74.178443 74.178443-78.263481 181.296089-4.085038 255.522628l3.152806 3.104711c3.368724 3.367701 6.865361 6.54302 10.434653 9.588379 2.583848 2.885723 5.618974 5.355985 8.992815 7.309476 0.025583 0.020466 0.052189 0.041956 0.077771 0.062422l0.011256-0.010233c5.377474 3.092431 11.608386 4.870938 18.257829 4.870938 20.263509 0 36.68962-16.428158 36.68962-36.68962 0-5.719258-1.309832-11.132548-3.645017-15.95846l0 0c-4.850471-10.891048-13.930267-17.521049-20.210297-23.802102l-3.15383-3.102664c-40.278355-40.278355-24.982998-98.79612 15.295358-139.074476l171.930791-171.830507c40.179095-40.280402 105.685018-40.280402 145.965419 0l3.206018 3.152806c40.279379 40.281425 40.279379 105.838513 0 146.06775l-75.686796 75.737962c-10.296507 7.628748-16.97358 19.865443-16.97358 33.662681 0 23.12365 18.745946 41.87062 41.87062 41.87062 8.048303 0 15.563464-2.275833 21.944801-6.211469 0.048095 0.081864 0.093121 0.157589 0.141216 0.240477l1.173732-1.083681c3.616364-2.421142 6.828522-5.393847 9.529027-8.792247l79.766718-73.603345C929.798013 361.334535 929.798013 239.981676 855.61957 165.804257z"
+                          p-id="1715"></path>
+                </svg>
+            </a></h4>
+            <img src="https://2021.igem.org/wiki/images/8/82/T--DUT_China--hp_5.jpg" class="col-12 col-sm-4 float-start"
+                 alt="">
+            <p>We communicate with the 2021 iGEM team from CHINA PHARMACEUTICAL UNIVERSITY on plastic degradation. Their
+                team is dedicated to degrade PE materials, which is also one of the frequently used forms of plastics.
+                During the communication, their team has mentioned the hydrophobic surface of plastic including PET and
+                PE is one of the significant factors that limit the degradation rate. Is there exist possible methods to
+                retard this limitation? Inspired by their team, we get accessed to a new functional protein called
+                hydrophobin, whose structure is highly flexible and able to adhere to hydrophobic plastic surface with
+                its hydrophobic surface part with maintaining the hydrophilic surface exposed to water phase. With the
+                involvement of this new functional protein, PET surface may become accessible to our enzymes.</p>
+
+            <p><b>Take away:</b> Hydrophobin was once used for improving PET degradation rate, however, its efficiency
+                was
+                limited at that time due to the lack of highly efficient enzymes at mild temperature and therefore was
+                ignored by scientists for a long time. Through the discussion with the 2021 iGEM team from CHINA
+                PHARMACEUTICAL UNIVERSITY, we obtained the knowledge of hydrophobin protein and were inspired to
+                redesigned our project and apply this new protein via fusing it to RIAD and constructed via our
+                artificially designed scaffold system, in which this new involved protein may significantly improve the
+                designing our project. We also decided to further cooperate with the iGEM team from CHINA PHARMACEUTICAL
+                UNIVERSITY.</p>
+
+            <h4>Name: TIANJIN UNIVERSITY 2021 iGEM team<a href="http://2021.igem.org/Team:TJUSLS_China" target="_blank">
+                <svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1714">
+                    <path d="M607.934444 417.856853c-6.179746-6.1777-12.766768-11.746532-19.554358-16.910135l-0.01228 0.011256c-6.986111-6.719028-16.47216-10.857279-26.930349-10.857279-21.464871 0-38.864146 17.400299-38.864146 38.864146 0 9.497305 3.411703 18.196431 9.071609 24.947182l-0.001023 0c0.001023 0.001023 0.00307 0.00307 0.005117 0.004093 2.718925 3.242857 5.953595 6.03853 9.585309 8.251941 3.664459 3.021823 7.261381 5.997598 10.624988 9.361205l3.203972 3.204995c40.279379 40.229237 28.254507 109.539812-12.024871 149.820214L371.157763 796.383956c-40.278355 40.229237-105.761766 40.229237-146.042167 0l-3.229554-3.231601c-40.281425-40.278355-40.281425-105.809861 0-145.991002l75.93546-75.909877c9.742898-7.733125 15.997346-19.668968 15.997346-33.072233 0-23.312962-18.898419-42.211381-42.211381-42.211381-8.797363 0-16.963347 2.693342-23.725354 7.297197-0.021489-0.045025-0.044002-0.088004-0.066515-0.134053l-0.809435 0.757247c-2.989077 2.148943-5.691629 4.669346-8.025791 7.510044l-78.913281 73.841775c-74.178443 74.229608-74.178443 195.632609 0 269.758863l3.203972 3.202948c74.178443 74.127278 195.529255 74.127278 269.707698 0l171.829484-171.880649c74.076112-74.17435 80.357166-191.184297 6.282077-265.311575L607.934444 417.856853zM855.61957 165.804257l-3.203972-3.203972c-74.17742-74.178443-195.528232-74.178443-269.706675 0L410.87944 334.479911c-74.178443 74.178443-78.263481 181.296089-4.085038 255.522628l3.152806 3.104711c3.368724 3.367701 6.865361 6.54302 10.434653 9.588379 2.583848 2.885723 5.618974 5.355985 8.992815 7.309476 0.025583 0.020466 0.052189 0.041956 0.077771 0.062422l0.011256-0.010233c5.377474 3.092431 11.608386 4.870938 18.257829 4.870938 20.263509 0 36.68962-16.428158 36.68962-36.68962 0-5.719258-1.309832-11.132548-3.645017-15.95846l0 0c-4.850471-10.891048-13.930267-17.521049-20.210297-23.802102l-3.15383-3.102664c-40.278355-40.278355-24.982998-98.79612 15.295358-139.074476l171.930791-171.830507c40.179095-40.280402 105.685018-40.280402 145.965419 0l3.206018 3.152806c40.279379 40.281425 40.279379 105.838513 0 146.06775l-75.686796 75.737962c-10.296507 7.628748-16.97358 19.865443-16.97358 33.662681 0 23.12365 18.745946 41.87062 41.87062 41.87062 8.048303 0 15.563464-2.275833 21.944801-6.211469 0.048095 0.081864 0.093121 0.157589 0.141216 0.240477l1.173732-1.083681c3.616364-2.421142 6.828522-5.393847 9.529027-8.792247l79.766718-73.603345C929.798013 361.334535 929.798013 239.981676 855.61957 165.804257z"
+                          p-id="1715"></path>
+                </svg>
+            </a></h4>
+            <div class="col-12">
+                <img src="https://2021.igem.org/wiki/images/6/66/T--DUT_China--hp_6.jpg" alt="">
+            </div>
+            <p>Browsing through the previous iGEM wiki page, we noticed the 2020 iGEM team from TIANJIN UNIVERSITY was
+                dedicated to improve <i>Is</i>PETase enzymatic activity via protein evolution method and this team
+                continuously
+                participate in 2021 iGEM competition. We actively connect this team's student leader and student
+                responsible for dry experiment. From this connection, we obtained the information that <i>Is</i>PETase
+                possess
+                prefect ability at mild temperature, however, with limited thermal stability. Their work is to dedicated
+                to improve its thermal stability and enzymatic activity. They are willing to share us with their new
+                mutated protein sequence that possess more excellent features. We also simultaneously offered our
+                constructed engineering bacteria that express MHETase protein to their team. Their team is responsible
+                for providing the <i>Is</i>PETase sequence with good performances, and we are responsible for
+                constructing
+                improved <i>Is</i>PETase with MHETase via artificially designed scaffolds. Furthermore, our two team dry
+                experiment members communicate with each other since we both choose to apply molecular dynamics
+                simulation to explore and identify structure information that support project designation. We share the
+                valuable information about the correct force field choosing for different explicit simulation system and
+                the parameters setting. From our communication related to dry experiment, we both recognized that the C
+                termini of <i>Is</i>PETase is too near to enzymatic active center and the fusion of our artificially
+                designed
+                scaffolds to this location should be avoided. Lastly, their team invite us to visit their laboratory and
+                shared with information on human practice, in which we shed with them the information we obtained from
+                stakeholders. We decided to cooperate with TIANJIN UNIVERSITY 2021 iGEM team in different fields
+                including wet experiment, dry experiment, human practice and etc.</p>
+
+            <p><b>Take away:</b> We decided to further cooperate with 2021 iGEM team from TIANJIN UNIVERSITY, by which
+                we
+                successfully co-finished the business plan and legislative proposals in the next several months. We also
+                shared the dry experiment parameters verification of molecular dynamics simulations with their team.
+                Sharing with information about PET stakeholders and relevant industry. Offered us necessary protocols
+                for establishing PET degradation detection method. We obtained the improved <i>Is</i>PETase sequence and
+                more
+                valuable structure information that significantly contribute to our artificially designed scaffolds
+                fusion orders decision of our project.</p>
+
+            <h4>Name: Ziying Zhang</h4>
+            <img src="https://2021.igem.org/wiki/images/b/be/T--DUT_China--hp_7a.jpg" class="portrait" alt="">
+
+            <p><b>Occupation: Chief manager of Guangzhou Yinfo Information Technology Co., Ltd.</b></p>
+
+            <p><b>Field: Expert in macromolecular simulation and calculation</b></p>
+            <p class="clearfix"></p>
+            <img src="https://2021.igem.org/wiki/images/3/36/T--DUT_China--hp_7b.jpg" class="portrait" alt="">
+            <p>Fortunately, our team got a chance to discuss with Mr. Zhang for better using of molecular dynamics
+                simulation that support our project designing. He and his company are dedicated to make computational
+                biology more accessible to biological researches. All the necessary measurement methods for evaluating
+                the overall stability of our assembly system in the aqueous environment and Ca2+ binding site
+                maintenance were suggested by Mr. Zhang. He also offered us professional suggestions of parameters
+                setting and forcefield choosing in protein simulation. The obstacles of unreasonable energy minimization
+                caused by un-rational initial structure were overcome with the aid of Mr. Zhang. More detailed
+                information is offered in the model part. Furthermore, he and his company selflessly provide free high
+                speed and accurate super computational calculate resources to run our molecular dynamics simulations
+                since he thought our project may greatly contribute to solving accumulated PET pollution challenges.
+                Thanks for his selflessly support!</p>
+
+            <p><b>Take away:</b> We obtained professional guidance and aid in molecular dynamic simulations and
+                available free
+                super computational calculate resources to run our molecular dynamics simulations. Meanwhile, we further
+                understood the significant roles of each domain in enzymes applied in our project and how do they
+                contribute to enzymatic activity function. We also decide to apply flexible GS linker because it
+                effectively minimizes the surface area of solvation and thus make each protein physically close to each
+                other with synergistic relationship, which has been demonstrated in our dry experiment part. More
+                importantly, we obtained a deep insight of how to make use of modern computational technology to design,
+                explain and improve our project.</p>
+
+            <h4>Name: Zhiwei Zhu</h4>
+
+            <img src="https://2021.igem.org/wiki/images/7/70/T--DUT_China--hp_8.png" class="portrait" alt="">
+
+            <p><b>Occupation: Professor, School of Bioengineering, Dalian University of Technology</b></p>
+
+            <p><b>Field: Protein chemistry, synthetic biology, genetic engineering</b></p>
+
+            <p class="clearfix"></p>
+            <p>For avoiding the mismatch of three scaffolds components and maintain their expression level in general
+                same level, we discussed with Pro. Zhu. He strongly recommended us to use the same cis acting element
+                for both the 3 genes translate 3 different functional components. T7 promoter, RBS, lac operator, T7
+                terminator and His tag of pET28a (+) were available for each of the 3 target genes. Furthermore, Pro.
+                Zhu suggested to secret our enzymes into extracellular spaces so that un-penetrate PET material could be
+                effectively degraded by our designed enzymes. He said this suggestion may also avoid the mis-matching of
+                enzymes components because the peptides translated from mRNA will not be further folded before secreting
+                into the extracellular spaces because of the transporting proteins locking effects. After secretion, the
+                peptides will spontaneously fold into functional state.</p>
+
+            <p><b>Take away:</b> We re-designed our plasmids for ensuring the rationality of enzymes components correct
+                assembly ratio and avoiding mismatching expression level of 3 unique components. Deciding to add signal
+                peptide in our system to secreting our newly designed proteins according to Prof. Zhu's suggestions, in
+                which the secreted proteins with large quantities of disulfide bonds will be much easier to be
+                successfully folded in the oxidizated extracellular environment and assembled in the extracellular
+                spaces. Meanwhile, we obtained a deep insight of how unmatured peptides is secreted into extracellular
+                spaces and folded to become matured functional proteins.</p>
+
+            <h3>The third stage</h3>
+            <p>Experts in the field of synthetic biology and protein engineering research have a deep understanding on
+                making use of genetic elements via synthetic biology methodology. So, we hope that our project will
+                become feasible and reasonable with their guidance. Simultaneously, their professional advices also
+                significantly support our project and experiment developed smoothly. At this stage, we initiate our
+                experiment sectors and many of our imaginations were becoming reality with the guidance of different
+                experts.</p>
+
+            <h4>Name: Ziying Zhang</h4>
+            <img src="https://2021.igem.org/wiki/images/b/be/T--DUT_China--hp_7a.jpg" class="portrait" alt="">
+
+            <p><b>Occupation: Chief manager of Guangzhou Yinfo Information Technology Co., Ltd.</b></p>
+
+            <p><b>Field: Expert in macromolecular simulation and calculation</b></p>
+            <p class="clearfix"></p>
+            <img src="https://2021.igem.org/wiki/images/3/36/T--DUT_China--hp_7b.jpg" class="portrait" alt="">
+
+            <p>Our simulated proteins system was collapsed in explicit simulation due to unknown reasons. Therefore, we
+                discussed with Mr. Zhang for further help. After repeated checking, Mr. Zhang finally find out the crux.
+                The topology in our simulated document is not included disulfide bonds, which ultimately lead to the
+                collapse of our final simulation structure. Simultaneously, he also pointed out that the TIT3P may not
+                be accurate to simulate our system because it is a type of early 3 points water model that is too old
+                and imprecise to simulate our structure.</p>
+
+            <p><b>Take away:</b> Reconstruct our structure topology that is applicable to be simulated via molecular
+                dynamics
+                simulations. Substitute original TIT3P water model with more advanced water model.</p>
+
+            <h4>Name: Yanbin Feng</h4>
+            <img src="https://2021.igem.org/wiki/images/e/e6/T--DUT_China--hp_9.jpg" class="portrait" alt="">
+
+            <p><b>Occupation: Associate professor, School of Bioengineering, Dalian University of Technology</b></p>
+
+            <p><b>Field: Biocatalyst and biosynthesis guided by protein evolution</b></p>
+            <p class="clearfix"></p>
+            <p>Our meeting with assistant professor Yanbin Feng was focused on the signaling peptide that has been
+                applied in our research. After one month period of experiments, our experiments result has revealed that
+                the pelB signaling peptide applied possess insufficient ability to secret PETase, MHETase and
+                Hydrophobin effectively. Therefore, we were looking for a new alternative solution to produce PETase,
+                MHETase, Hydrophobin as a complex and then we sought help from assistant professor Yanbin Feng, who
+                dedicated in protein designing. He suggested us that we should wipe off signaling peptide and synthesize
+                modular enzymes system in cytoplasm. The maintaining of signal peptide would prevent the further folding
+                of each enzyme according to signaling transportation mechanisms reported in previously published
+                article. Therefore, with signaling peptide in our sequence of enzymes, most enzymes would not
+                successfully fold and lagged in cytoplasm. Only few of these enzymes successfully secreted and then
+                folded. According to our experiment results, it may be inevitable to assembly these enzymes in the
+                cytoplasm of the cell and then broken the cell to obtain our target enzymes. Furthermore, the
+                feasibility of the signaling peptide applied in our research was only demonstrated in the secreting of
+                free PETase without RIDD and GSlinker that involved in our research. It may not be applicable to be
+                further used in the system of secreting MHETase and Hydrophobin.</p>
+
+            <p><b>Take away:</b> The feasibility of maintaining pelB signaling peptide in our research need to be
+                reconsidered
+                according to previously published articles and our experiment results. The assembly complex released via
+                ultrasonic wave would be more applicable and effective to obtain our target enzymes complex.</p>
+
+            <h4>Name: Chengba Zhu</h4>
+            <img src="https://2021.igem.org/wiki/images/d/de/T--DUT_China--hp_10a.jpg" class="portrait" alt="">
+
+            <p><b>Occupation: postdoc at RWTH Aachen University</b></p>
+
+            <p><b>Field: Microalgae engineering and plastic degradation</b></p>
+            <p class="clearfix"></p>
+            <img src="https://2021.igem.org/wiki/images/c/c2/T--DUT_China--hp_10b.jpg" class="portrait" alt="">
+            <p>We were fortunate to discuss with Dr. Zhu about the enzymatic activity detection problem. In our
+                experiment, we found both the reference group and induced protein expression revealed possible enzymatic
+                activity, which made us feel confused. Dr. Zhu is also dedicated to research related to <i>Is</i>PETase
+                Therefore, we seek Dr. Zhu for further help and solutions. Finally, after listening our detailed
+                experiment procedures, he pointed out that our model substrate 4-(p-nitrophenyl) butyric ester may be
+                easily degraded to be final product when exposing to light and Tris-HCl buffer, which may account for
+                our abnormal experimental results. He suggested that we should held our experiment in dark place. We
+                finally verified that the exposure to light is the main cause of our experiment failure. With his help,
+                we finished our corresponding experiment.</p>
+
+            <p><b>Take away:</b> We recognized the reason of our abnormal experiment results and finally finished our
+                experiment with the aid of Dr. Zhu. He pointed out that our model substrate 4-(p-nitrophenyl) butyric
+                ester may be easily degraded to be final product when exposing to light and Tris-HCl buffer, which may
+                account for our abnormal experimental results.</p>
+
+            <h3>The fourth stage</h3>
+            <p>We are currently trying to make use of artificially designed scaffold fused to degradation enzymes to
+                accelerate PET decomposing rate at mild temperature. We expect to apply synthetic biology to solve the
+                challenges faced in the application of its industry, including protein expression, collection and using.
+                From lab to industry, what are the challenges for future application and how can we maximize our
+                influence on society?</p>
+
+            <h4>Project Sustainability</h4>
+            <h4>Name: Yu Fan</h4>
+            <img src="https://2021.igem.org/wiki/images/d/d6/T--DUT_China--hp_11.jpg" class="portrait" alt="">
+            <p><b>Occupation: Professor, School of Foreign Languages, Dalian University of Technology</b></p>
+
+            <p><b>Field: Language and diplomacy, international policies research</b></p>
+
+            <p class="clearfix"></p>
+            <p>Pro. Fan from the School of Foreign Languages of Dalian University of Technology has nearly ten years of
+                experience in leading the Model United Nations and has a deep understanding of various United Nations
+                documents and backgrounds.</p>
+
+            <p>We had a conversation with Prof. Fan. We elaborated on the purpose and reality of the project. Prof. Fan
+                thought that our project was totally in line with the basic core of SDGs: SUSTAINABLE CITIES AND
+                COMMUNITIES and LIFE ON LAND. Our project is based on environmental care, solving human problems with
+                engineering thinking and methods, providing a convenient way for possible PET degradation, which is of
+                positive significance and value for preventing the accumulated PET materials in environment. Our project
+                is contributing to SDG goals in terms of SUSTAINABLE CITIES AND COMMUNITIES and LIFE ON LAND. But the
+                teacher also mentioned that the biosafety issues involved cannot be ignored, especially the potential of
+                engineering bacteria to spread resistance genes, pollute the environment and harm the human body. The
+                biosafety protection of SDG and the relevant documents of the United Nations on biosafety have paid
+                attention to related issues. We should have a deeper understanding of the connection between SDG and the
+                iGEM community and the connection between human beings as a species, and clarify the responsibility and
+                feelings of the concept of sustainable development.</p>
+
+            <p><b>Take away:</b> Sustainable, biosafety, responsible</p>
+
+            <h4>Name: JIN TU DI Group</h4>
+            <img src="https://2021.igem.org/wiki/images/e/e8/T--DUT_China--hp_1.png" alt="">
+            <p>At this stage, we re-interviewed with the member of researchers from JIN TU DI Group, who is professional
+                in current Chinese degradable plastic market and field. Their suggestion clearly mentioned the
+                significance of biosafety and real practical using efficiency. Any product needs to be ensured that they
+                possess corresponding function without safe risks. Many experiment products do not well serve for
+                society needs because of lacking of these necessary principles. We also visited their laboratory and
+                their producing line, which enhanced our understanding of real-sustainable production mode.
+                Simultaneously, they remind us of researching all the relevant laws requested by government to form our
+                possible products into a safe and responsible norm. Relevant laws and clauses for industrial production
+                for plastic degradation and recycling are offered by their company manager and well introduced by
+                professional engineers.</p>
+
+            <p><b>Take away:</b> Through this visit, we obtained a new perspective as engineers and stakeholders for
+                sustainable production mode. Basic clauses and laws related to our project and relevant fields were well
+                introduced to us and we knew more about current industrial production technology and cooperation between
+                different departments. On these bases, we re-understood how to propagandize one new proposed product to
+                market, via which we draw up our business plan.</p>
+
+            <h4>Public Level</h4>
+            <h4>Public Acceptance</h4>
+            <p>We hope that our project can promote the research of PET degradation, and act as an alternative to
+                traditional methods coupled with high pollution. The public took a conservative and hesitant attitude
+                towards the emergence of new things. In order to further understand the public's acceptance to our
+                proposed methods and knowledge to current PET pollution condition, how difficult it is for our
+                engineered parts to be applied and promoted industrially, and what factors affect the public's
+                acceptance of new things, we conducted a detailed questionnaire survey. Detailed questionnaire results
+                and analysis can be found below.</p>
+
+            <p>We hope that our project will improve the urgent problem of plastic pollution and provide a more
+                effective, applicable and green biodegradation method. In the process of talking with enterprises and
+                the community, we realized that one of the challenges of our project is to make people really pay
+                attention to and understand the close connection between plastic pollution and their own lives,
+                especially in the process of talking with plastic companies, we found that the current plastic
+                components are mainly PE, PET, etc., but the degradation and recycling methods of PE are more mature,
+                but PET is not optimistic. And the current degradation method of PET plastic is highly polluting and
+                energy consuming, which is not the ideal degradation method. It is with this inspiration that our
+                project was born. A detailed questionnaire survey was conducted to further understand the public's
+                knowledge of plastic pollution and plastic composition, and to promote our project to the public. The
+                detailed questionnaire results and analysis are as follows.</p>
+
+            <img src="https://2021.igem.org/wiki/images/e/eb/T--DUT_China--hp_q1.jpg" class="col-12" alt="">
+            <p><b>Question 1:</b> What is your job?</p>
+
+            <p>According to the results of the questionnaire, the occupational distribution of the respondents was
+                roughly balanced. The number of students was 219, the number of researchers was 167, and the number of
+                the general public was 182, which is roughly balanced and in line with our expectations. The
+                respondents' occupations are widely distributed, and the results can basically reflect the opinions of
+                people from various occupations in society.</p>
+
+            <img src="https://2021.igem.org/wiki/images/7/78/T--DUT_China--hp_q2.jpg" class="col-12" alt="">
+            <p><b>Question 2:</b> What do you usually use to carry your shopping items?</p>
+
+            <p>From the overall data, nearly one-third of people will use plastic bags provided by supermarkets in their
+                daily lives, plastic bags are widely distributed in people's daily use, and only one in ten people will
+                reuse plastic bags, which means that if there is no effective way to degrade plastic, plastic will
+                continue to accumulate in daily life.</p>
+
+            <img src="https://2021.igem.org/wiki/images/8/8f/T--DUT_China--hp_q3.png" class="col-12" alt="">
+            <p><b>Question 3:</b> Would you mind if the garbage bag is degradable?</p>
+
+            <p>More than half of the respondents do not care whether the plastic is degradable or not. Although
+                degradable plastic has been popularized to a certain extent, people's awareness of using degradable
+                plastic in their life is not strong, which means most of the plastic used is still hard to degrade
+                plastic products. This gives us some inspirations: firstly, we can carry out publicity and
+                popularization of degradable plastics; secondly, we should find more widely applicable degradation
+                solutions for the existing plastic accumulation.</p>
+
+            <img src="https://2021.igem.org/wiki/images/7/7e/T--DUT_China--hp_q4.jpg" class="col-12" alt="">
+            <p><b>Question 4:</b> Do you think PET plastic is easy to degrade?</p>
+
+            <p>After a brief science on PET plastic, more than half of the respondents think that PET plastic is easy to
+                degrade, which is very different from the current situation we are facing, and there is no efficient and
+                mild effective way to degrade PET plastic, which brings us the inspiration that people's inadequate
+                knowledge of plastic material misleads their attitude and way to use plastic products.</p>
+
+            <img src="https://2021.igem.org/wiki/images/8/88/T--DUT_China--hp_q5.jpg" class="col-12" alt="">
+            <p><b>Question 5:</b> What are the benefits of using biological methods to degrade PET plastic?</p>
+
+            <p>In terms of the benefits of biodegradation of PET, most people believe its fast degradation rate,
+                environmental benefits and low costs. This shows the public's recognition of biotechnology.</p>
+            <p>In contrast, "will not cause secondary pollution" has been suspected by some people. Therefore, we need
+                stronger evidence about the final product verification and safety to ensure that our product is accepted
+                and used.</p>
+
+            <img src="https://2021.igem.org/wiki/images/1/12/T--DUT_China--hp_q6.jpg" class="col-12" alt="">
+            <p><b>Question 6:</b> Do you think plastic degradation is very difficult or easy in nature?</p>
+
+            <p>What shocked us is that nearly half of the people think plastic degradation is very simple. The daily use
+                of plastics may make everyone take it for granted that it is easy to degrade, which ultimately leads to
+                the widespread phenomenon of plastic waste and serious pollution. While the project is committed to
+                degrading plastics, this data makes us also aware of the necessity of universal education. The increase
+                in public awareness will become an effective means of improving the environment.</p>
+
+            <img src="https://2021.igem.org/wiki/images/f/fa/T--DUT_China--hp_q7.jpg" class="col-12" alt="">
+            <p><b>Question 7:</b> What is your acceptance of the method of linking multiple functional proteins
+                together, that
+                is, the
+                method of degrading plastics by multiple backbone proteins?</p>
+
+            <p>From the graph, testers do not have a high degree of recognition of the multi-frame protein degradation
+                method. The number of approved people is only 13.93%, and most people are not clear about the method or
+                have doubts. It can be seen that our project has a certain degree of innovation and difficulty. Although
+                relevant studies have proved that multi-skeleton proteins can better improve the efficiency of the
+                experiment, it is still necessary to fully demonstrate the feasibility of the experiment in the early
+                stage and in the process of the project to ensure that the experiment can be successfully completed and
+                recognized by the public.</p>
+
+            <img src="https://2021.igem.org/wiki/images/c/c1/T--DUT_China--hp_q8.png" class="col-12" alt="">
+            <p><b>Question 8:</b> Where do you think plastic can be found?</p>
+
+            <p>From the overall data, the respondents have a relatively average understanding of the question plastic
+                distribution set answers, it is evident that the respondents still have a certain basis of knowledge of
+                the widespread distribution of plastic such as mountains, oceans medium and the location of the human
+                body, and recognize the urgency of the spread of plastic pollution and harm solution.</p>
+
+            <img src="https://2021.igem.org/wiki/images/0/01/T--DUT_China--hp_q9.jpg" class="col-12" alt="">
+            <p><b>Question 9:</b> If there is a mild and efficient plastic degradation method, but the cost is high,
+                would you
+                use it?</p>
+
+            <p>According to the questionnaire results, more than 80% of people would not use efficient but expensive
+                plastic degradation methods, indicating that people still give priority to economic issues such as
+                practicality and cost of degradation solutions. The distribution of answers to this question is
+                generally in line with our expectation, indicating that we still ultimately pursue the economic
+                feasibility of optimized methods.</p>
+
+            <img src="https://2021.igem.org/wiki/images/d/d0/T--DUT_China--hp_q10.jpg" class="col-12" alt="">
+            <p><b>Question 10:</b> What do you think is the urgency of research in plastic degradation?</p>
+
+            <p>According to the results of the questionnaire, the perception of urgency of research on plastics is at a
+                slight extreme, with less than 30% of respondents not feeling a sense of urgency and more than 30%
+                believing that the current status of plastic degradation is already very urgent. In this regard, we
+                believe that we need to promote the knowledge of plastic degradation to the public, and at the same
+                time, we can actively explore and mobilize people with the same ambition to take action with us.</p>
+
+
+            <p><b>Conclusion:</b></p>
+            <p>The respondents were mainly practitioners and students in the biological industry, accounting for more
+                than 90%. The questionnaire mainly investigated the relative professional people's understanding of
+                plastic pollution and their views on the difficulty and advantages of biodegradation of plastic. The
+                respondents generally believe that the research on plastic degradation is very urgent, and the use of
+                biological degradation of plastic is beneficial to the environment and will not cause secondary
+                pollution, but they have a wait-and-see attitude towards the cost and ease of operation.</p>
+            <p class="caption text-center">
+                Word frequency statistics
+            </p>
+            <table>
+                <tr>
+                    <th>Word</th>
+                    <th>Frequency</th>
+                </tr>
+                <tr>
+                    <td>Plastics</td>
+                    <td>57 times</td>
+                </tr>
+                <tr>
+                    <td>Degradation/degradable</td>
+                    <td>15 times</td>
+                </tr>
+                <tr>
+                    <td>Respondents</td>
+                    <td>7 times</td>
+                </tr>
+                <tr>
+                    <td>PET</td>
+                    <td>7 times</td>
+                </tr>
+                <tr>
+                    <td>Public</td>
+                    <td>6 times</td>
+                </tr>
+                <tr>
+                    <td>Pollution</td>
+                    <td>6 times</td>
+                </tr>
+                <tr>
+                    <td>Urgency</td>
+                    <td>4 times</td>
+                </tr>
+                <tr>
+                    <td>Effective</td>
+                    <td>4 times</td>
+                </tr>
+            </table>
+            <img src="https://2021.igem.org/wiki/images/7/75/T--DUT_China--hp_words.jpg" class="mx-auto col-12 col-md-8"
+                 alt="">
+        </article>
+        <article class="article">
+            <h2 class="marked">5 Computer algorithm applied in our work</h2>
+            <p>The following is the modeling and analysis of the data. My idea is to build a decision tree or
+                neural network model, using specific data in the questionnaire as a dependent variable and other
+                data as an independent variable to establish an analysis and prediction model. For example, use
+                other factors on the questionnaire to analyze "do you care if garbage bags are degradable?" Or
+                "do you think PET plastic degrades easily?"</p>
+            <p>The feasibility of this is that due to the large scale of the data, there is some relevance among the
+                options in the problem.</p>
+            <p>We tried to draw a column chart for each column and observe their quantity distribution.</p>
+            <img src="https://2021.igem.org/wiki/images/c/cc/T--DUT_China--hp_m1.png" class="col-12" alt="">
+            <p>After carefully considering the data, we decided to establish a decision tree model based on
+                comprehensive learning (a machine learning method).</p>
+            <code>
+                # Set independent and dependent variables<br>
+                X = df.loc[:,df.columns != 'Think whether PET plastic is easy to degrade']<br>
+                Y = df.loc[:,df.columns == 'Think whether PET plastic is easy to degrade']<br>
+            </code>
+            <p>Take "care about when the garbage bag is degradable" as an example, first divide the data set, then
+                automatically divide the training set and the test set by the <span class="mono">train_test_split</span> function
+                in <span class="mono">sklearn.model_selection</span> package, and finally determine 449 rows of data as
+                the training set and 150 rows of data as the test set.</p>
+            <p>The decision tree model was established by the <span class="mono">DecisionTreeClassifier</span> function
+                in the package <span class="mono">sklearn.tree</span>, and the decision tree model was automatically
+                fitted by the <span class="mono">fit</span> function. The
+                optimal parameters were determined by searching the optimal decision tree in the <span class="mono">sklearn.model_selection</span>
+                package.</p>
+            <p>The optimal hyperparameters were determined by optimizing the decision tree through grid
+                search.</p>
+            <code>
+                'max_depth' : 6<br>
+                'min_samples_leaf' : 2<br>
+                'min_samples_split' : 3<br>
+            </code>
+            <p>Finally, cross-validation was used to calculate the accuracy of the optimization model, the accuracy
+                of the model prediction is 81.81092436974791%.</p>
+            <p>This is the visual structure of the decision tree model drawn by us with software Graphviz.</p>
+            <img src="https://2021.igem.org/wiki/images/4/44/T--DUT_China--hp_m2.png" class="col-12" alt="">
+            <p>Similarly, "care about whether the garbage bag is degradable" was used as the dependent
+                variable. The method is similar, and the accuracy of model prediction is 75.8053221285155%.</p>
+            <img src="https://2021.igem.org/wiki/images/6/6c/T--DUT_China--hp_m3.png" class="col-12" alt="">
+        </article>
+    </article>
+</section>
+<div id="footer-point"></div>
+<script>
+    //About the top-scroll--linked to general.js
+    window.onload = init;
+</script>
+<script>
+    $(document).ready(function () {
+        $('#nav-bar').load('top.html');
+        $('#footer-point').load('footer.html');
+    });
+</script>
+</body>
+</html>
