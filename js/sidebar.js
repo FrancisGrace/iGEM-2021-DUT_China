@@ -86,7 +86,7 @@ new Vue({
                 that.pageView(that.canvasArray[i], i, that.articleArray[i]);//Update
             }
             let textT = document.getElementById("main-text").offsetTop;
-            let footerT = document.getElementById("footer").offsetTop;
+            let footerT = document.getElementById("footer-point").offsetTop;
             let sidebarH = document.getElementById("sidebar").clientHeight;
             let currentH = document.documentElement.scrollTop || document.body.scrollTop;
             if (currentH > textT - 130 && currentH + sidebarH < footerT - 130)
